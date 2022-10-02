@@ -92,7 +92,7 @@ a.btn:before {
     transition: 0.3s;
 }
 a.btn.btn--y {
-    background-color: #2a97fe;
+    background-color: rgba(172, 161, 155, 1.0);
 }
 a.btn.btn--w {
     background-color: #fff;
@@ -102,7 +102,7 @@ a:hover.btn:before {
 }
 a:hover.btn.btn--y,
 a:hover.btn.btn--w {
-    background-color: #30c4fe;
+    background-color: rgba(172, 161, 155, 1.0);
 }
 
 a.totop {
@@ -112,7 +112,7 @@ a.totop {
     width: 100px;
     height: 100px;
     border-radius: 196px 0 0 0;
-    background-color: #309afe;
+    background-color: rgba(172, 161, 155, 0.8);
     color: #000;
     text-decoration: none;
     z-index: 999;
@@ -220,7 +220,7 @@ a.totop span {
 /* main */ 
 .main_bg{
     position: fixed;
-    background-image: url(img/main_bg.jpg);
+    background-image: url(img/main_01.jpg);
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -232,7 +232,7 @@ a.totop span {
 @media only screen and (max-width: 767px) {
 .main_bg{
     position: fixed;
-    background-image: url(img/main_bg.jpg);
+    background-image: url(img/main_01.jpg);
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -313,11 +313,11 @@ header {
     display: block;
     width: 100%;
     height: 4px;
-    background-color: #0ebff5;
+    background-color: rgba(172, 161, 155, 1.0);
 }
 
 .header__menu ul .menu__list.contact a {
-    background-color: #2a9ffe;
+    background-color: rgba(172, 161, 155, 1.0);
     padding: 5px 15px;    
     border-radius: 20px;
     text-shadow: none;
@@ -325,7 +325,7 @@ header {
 .header__menu ul .menu__list.contact a:after {display: none;}
 .header__menu ul .menu__list.contact a:hover{
     border-bottom: none;
-    background-color: #3090fe;
+    background-color: rgba(172, 161, 155, 1.0);
 }
 
 /* MENU */
@@ -333,7 +333,7 @@ header {
     position: absolute;
     right: 0;
     margin-top: 0;
-    background: #309afe;
+    background: rgba(172, 161, 155, 1.0);
     border-radius: 50px;
     padding: 10px;
     margin: 10px;
@@ -352,7 +352,7 @@ header {
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: #3060fe;
+    background-color: rgba(172, 161, 155, 1.0);
     z-index: 1111;
 }
 .menu{
@@ -512,7 +512,7 @@ header {
     width: 180px;
     height: 180px;
     border-radius: 118px;
-    background-color: #3082fe;
+    background-color: rgba(172, 161, 155, 1.0);
     margin: 0 auto 40px;
     vertical-align: middle;
 }
@@ -568,7 +568,7 @@ header {
     line-height:80px;
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: rgba(61, 62, 63, 0.562);
+    /* background-color: rgba(61, 62, 63, 0.562); */
     color: rgba(245, 241, 241, 0.897);
 }
 .wrapper #main .main__copy h1 {
@@ -607,9 +607,9 @@ header {
 
 /* フッター */
 footer {
-    background-color: #2a74fe;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    background-color: rgba(172, 161, 155, 1.0);
+    padding-top: 80px;
+    padding-bottom: 20px;
     text-align: center;
     font-size: 10px;
 }
@@ -636,7 +636,7 @@ footer {
 }
  .about__copy {
     color: #fff;
-    text-shadow: 0px 0px 15px #2b6198;
+    text-shadow: 0px 0px 15px rgba(172, 161, 155, 1.0);
     display: inline-block;
     width: 100%;
     max-width: 32vw;
@@ -659,7 +659,7 @@ footer {
     display: inline-block;
     width: 100%;
     max-width: calc(100% - 32vw);
-    background-color: rgba(42, 176, 254, 0.8);
+    background-color: rgba(172, 161, 155, 0.8);
     vertical-align: middle;
 }
 .about__detail p {
@@ -676,7 +676,7 @@ footer {
 @media only screen and (max-width: 960px) {
  .about__copy {
     color: #fff;
-    text-shadow: 0px 0px 15px #2b6198;
+    text-shadow: 0px 0px 15px rgba(172, 161, 155, 1.0);
     display: block;
     width: 100%;
     max-width: none;
@@ -688,7 +688,7 @@ footer {
     width: 100%;
     min-width: auto;
     max-width: none;
-    background-color: rgba(42, 151, 254, 0.8);
+    background-color: rgba(172, 161, 155, 0.8);
     vertical-align: middle;
 }
 .about__copy p{
@@ -734,7 +734,7 @@ footer {
     display: block;
     width: 240px;
     height: 240px;
-    background-color: #3071fe;
+    background-color: rgba(172, 161, 155, 1.0);
     top: -90px;
     left: -90px;
     border-radius: 120px;
