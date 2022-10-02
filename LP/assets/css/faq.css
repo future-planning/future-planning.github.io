@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.faq__btn-area-row {
+    margin-top: 8px;
+    display: flex;
+}
+.faq__btn-area-row .btn-m:nth-child(n + 2) {
+    margin-left: 16px;
+}
+.faq__btn--shrink {
+    letter-spacing: -0.2em;
+}
+.faq__question {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+.faq__answer {
+    padding-left: 1em;
+    text-indent: -1em;
+    letter-spacing: -0.01em;
+}
+.faq__answer--indent-none {
+    text-indent: 0;
+}
+.faq__costume-rental-shop {
+    font-weight: 700;
+}
