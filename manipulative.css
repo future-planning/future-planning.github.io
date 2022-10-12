@@ -9,7 +9,7 @@ body {
 
 /* reset */
 p,ul {
-    display: block;
+    /*display: block;*/
     margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
@@ -45,25 +45,9 @@ li {
 .hide_pc-sp{display: none !important;}
 }
 
-/* common */
-.wrapper--w {
-    width: 85%;
-    max-width: 1260px;
-    margin: 0 auto;
-    padding: 0px 0;
-}
+
 /* 事業概要 */
-.wrapper--work {
-    width: 85%;
-    max-width: 1260px;
-    margin: 0 auto;
-    padding: 160px 0;
-}
-.wrapper--work-bottom {
-    width: 85%;
-    max-width: 1260px;
-    margin: 0 auto;
-}
+
 
 a{
     transition: 0.2s;
@@ -75,21 +59,7 @@ a.btn {
     text-decoration: none;
     padding: 12px 50px;
     border-radius: 20px;
-}
-a.btn:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -40px;
-    margin: auto 0;
-    background-image: url(img/arrow_r.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 71px;
-    height: 14px;
-    transition: 0.3s;
+
 }
 a.btn.btn--y {
     background-color: rgba(172, 161, 155, 1.0);
@@ -106,7 +76,7 @@ a:hover.btn.btn--w {
 }
 
 a.totop {
-    position: fixed;
+    position: scroll;
     right: 0;
     bottom: 0;
     width: 100px;
@@ -126,7 +96,7 @@ a.totop span {
 }
 a.totop:before {
     content: "";
-    display: block;
+    /*display: block;*/
     position: absolute;
     bottom: 56px;
     left: 0;
@@ -139,13 +109,13 @@ a.totop:before {
 }
 
 .btn__back{
-    display: block;
+    /*display: block;*/
     text-align: center;
     margin: 80px 0 0 0;
 }
 .btn__back a.btn:before {
     content: "";
-    display: block;
+    /*display: block;*/
     position: absolute;
     top: 0;
     bottom: 0;
@@ -219,7 +189,7 @@ a.totop span {
 
 /* main */ 
 .main_bg{
-    position: fixed;
+    position: scroll;
     background-image: url(img/main_01.jpg);
     background-size: cover;
     background-position: center;
@@ -231,7 +201,7 @@ a.totop span {
 
 @media only screen and (max-width: 767px) {
 .main_bg{
-    position: fixed;
+    position: scroll;
     background-image: url(img/main_01.jpg);
     background-size: cover;
     background-position: center;
@@ -244,7 +214,7 @@ a.totop span {
 
 /* ヘッダー */
 header {
-    position: fixed;
+    position: scroll;
     width: 100%;
     z-index: 999;
 }
@@ -274,14 +244,14 @@ header {
     display: block;
     height: 60px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: #ACA19A;
 }
-#top .header__menu {
+#top /*.header__menu {
     background: none;
-}
+}*/
 .header__menu ul {
     /*width: 50vw; min-width: 600px;*/
-    padding: 15px;
+    padding: 0px 0px;
     position: absolute;
     top: 0;
     right: 0;
@@ -292,8 +262,8 @@ header {
 
 .header__menu ul .menu__list a{
     display: block;
-    padding: 5px 0;
-    margin: 0 15px;
+    padding: 15px 15px;
+    margin: 0 0px;
     color: rgb(248, 249, 250);
     text-decoration: none;
     font-weight: bold;
@@ -356,7 +326,7 @@ header {
     z-index: 1111;
 }
 .menu{
-    position: fixed;
+    position: scroll;
     top: 0;
     right: 0;
     z-index: 9999;
@@ -544,14 +514,14 @@ header {
 
 .wrapper #main {
     position: relative;
-    display: block;
+    /*display: block;*/
     width: 100%;
     height: 900px;
 }
 .wrapper #main .main__copy {
-    display: block;
-    position: absolute;
-    color: #84784A;
+    /*display: block;*/
+    /*position: absolute;*/
+    color: #48382B;
     font-size: 120%;
     line-height: 1.7;
     /* margin:30px 20% 20px 20%; */
@@ -569,7 +539,7 @@ header {
     padding-top: 50px;
     padding-bottom: 20px;
     /* background-color: rgba(61, 62, 63, 0.562); */
-    color: rgba(245, 241, 241, 0.897);
+    /*color: rgba(245, 241, 241, 0.897);*/
 }
 .wrapper #main .main__copy h1 {
     font-size: 405%;
@@ -677,14 +647,14 @@ footer {
  .about__copy {
     color: #fff;
     text-shadow: 0px 0px 15px rgba(172, 161, 155, 1.0);
-    display: block;
+    /*display: block;*/
     width: 100%;
     max-width: none;
     vertical-align: middle;
     margin-bottom: 8%;
 }
 .about__detail {
-    display: block;
+    /*display: block;*/
     width: 100%;
     min-width: auto;
     max-width: none;
@@ -774,8 +744,8 @@ footer {
     text-decoration: none;
     color:#000;
 }
-#news .news__lineup .lineup__list li a:hover{
-    opacity: 0.6;
+/*#news .news__lineup .lineup__list li a:hover{
+    opacity: 0.6;*/
 }
 #news .news__lineup .lineup__list .date{
     display: inline-block;
@@ -850,6 +820,7 @@ footer {
 /* ------------------------------------ */
 .service__content ul .content__detail {
     padding: 30px 0;
+    display: flex;
 }
 .service__content ul .content__detail .detail__text{
     display: inline-block;
@@ -874,14 +845,55 @@ footer {
     width: 50%;
     vertical-align: top;
 }
+
+.service__content ul .content__detail .detail__img2{
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+
+.service__content ul .content__detail .detail__img3{
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
 .service__content ul .content__detail .detail__img img{
     width: calc(100% - 30px);
     padding-left: 30px;
 }
 
+.service__content ul .content__detail .detail__img2 img{
+    width: calc(100% - 30px);
+    padding-left: 30px;
+}
+
+.service__content ul .content__detail .detail__img3 img{
+    width: calc(100% - 30px);
+    padding-left: 30px;
+}
+
+.service__content ul .content__detail .detail__img3 p{
+    width: calc(100% - 30px);
+    padding-left: 30px;
+}
+
+.detail_shop img{
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+}
+
+.detail_shop p{
+    width:100%;
+    padding-left: 30px;
+    display: flex;
+}
+
+
+
 @media only screen and (max-width: 767px) {
 .service__content ul .content__detail .detail__text{
-    display: block;
+    /*display: block;*/
     width: 100%;
     vertical-align: top;
 }
@@ -891,7 +903,7 @@ footer {
     line-height: 1.7;
 }
 .service__content ul .content__detail .detail__img {
-    display: block;
+    display: flex;
     width: 100%;
     vertical-align: top;
     padding-top: 6%;
@@ -902,19 +914,55 @@ footer {
 }
 }
 
+
 /* ------------------------------------ */
-/* calendar */
+/* スタッフ紹介（STAFF） */
 /* ------------------------------------ */
-.annotation {
-    margin: 30px 20%;
- }
-.tzcal {
-    text-align: center;
-    margin-bottom: 50px;    
+.staff__content ul .staff__detail {
+    padding: 30px 0;
+    display: flex;
+
 }
-.questionnaire__button {
-    text-align: center;
-    margin-bottom: 50px;
+.staff__content ul .staff__detail .staff__text{
+    /*display: inline-block;*/
+    width: 100%;
+    vertical-align: top;
+    float: left;
+    display: flex;
+    height: 20px;
+}
+.staff__content ul .staff__detail .staff__text h3{
+    margin: 0 0 6% 0;
+    font-size: 22px;
+    float: left;
+    display: flex;
+    width:20%;
+    height: 20px;
+}
+.staff__content ul .staff__detail .staff__text h3 span{
+    margin-left: 2em;
+    font-size: 16px;
+    float: left;
+    display: flex;
+  
+}
+.staff__content ul .staff__detail .staff__text p{
+    padding-right: 30px;
+    padding-bottom: 10%;
+    line-height: 1.7;
+    float: left;
+    display: flex;
+      height: 20px;
+      width:20%;
+}
+.staff__content ul .staff__detail .staff__img{
+    /*display: inline-block;*/
+
+    width: 30%;
+    vertical-align: top;
+    float: left;
+    display: flex;
+
 }
 /* ------------------------------------ */
 /* text */
@@ -933,6 +981,9 @@ footer {
     font-size: 10%;
  }
 
+.shoptext{
+    text-align: center;
+}
 
 /* ------------------------------------ */
 /* privacy-policy */
