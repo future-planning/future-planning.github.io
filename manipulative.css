@@ -100,14 +100,29 @@ li {
 a {
     transition: 0.2s;
 }
-
+@media only screen and (max-width: 767px) {
 a.btn {
-    position: relative;
+   margin-left:  20px;
+    width:200px;
+    color: #000;
+    text-decoration: none;
+    padding: 12px 50px;
+    float:left;
+    text-align: center;
+}
+}
+@media only screen and (min-width: 767px) {
+a.btn {
+    position: absolute;
+        top: 130px;
+    left: -200px;
     color: #000;
     text-decoration: none;
     padding: 12px 50px;
     float: right;
 }
+}
+
 
 a.btn.btn--y {
     background-color: #48382B;
@@ -120,6 +135,7 @@ a:hover.btn:before {
 
 a:hover.btn.btn--y {
     background-color: rgba(172, 161, 155, 1.0);
+   
 }
 
 
@@ -178,13 +194,13 @@ a.totop:before {
     .main_bg {
         position: scroll;
         background-image: url(img/main_01.jpg);
-        background-size: cover;
-        background-position: center;
-        width: 100vw;
-        height: 100vh;
+
+        width: auto;
+
         z-index: -999;
         transition: 0.3s;
     }
+
 }
 
 hr {
@@ -647,6 +663,17 @@ header {
 
 }
 
+@media only screen and (max-width: 767px) {
+    img.banner {
+        width: 300px;
+        height: auto;
+    }
+
+    .costplan {
+        width: 300px;
+    }
+}
+
 /* SERVICES */
 #access__content {
     display: flex;
@@ -787,71 +814,6 @@ footer {
 }
 
 
-.service__content ul .content__detail {
-    padding: 30px 0;
-    display: flex;
-}
-
-.service__content ul .content__detail .detail__text {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-}
-
-.service__content ul .content__detail .detail__text h3 {
-    margin: 0 0 6% 0;
-    font-size: 22px;
-}
-
-.service__content ul .content__detail .detail__text h3 span {
-    margin-left: 2em;
-    font-size: 16px;
-}
-
-.service__content ul .content__detail .detail__text p {
-    padding-right: 30px;
-    padding-bottom: 10%;
-    line-height: 1.7;
-}
-
-.service__content ul .content__detail .detail__img {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-}
-
-.service__content ul .content__detail .detail__img2 {
-    display: inline-block;
-    width: 20%;
-    vertical-align: top;
-}
-
-.service__content ul .content__detail .detail__img3 {
-    display: inline-block;
-    width: 20%;
-    vertical-align: top;
-}
-
-.service__content ul .content__detail .detail__img img {
-    width: calc(100% - 30px);
-    padding-left: 30px;
-}
-
-.service__content ul .content__detail .detail__img2 img {
-    width: calc(100% - 30px);
-    padding-left: 30px;
-}
-
-.service__content ul .content__detail .detail__img3 img {
-    width: calc(100% - 30px);
-    padding-left: 30px;
-}
-
-.service__content ul .content__detail .detail__img3 p {
-    width: calc(100% - 30px);
-    padding-left: 30px;
-}
-
 .detail_shop img {
     width: 100%;
     padding-left: 10px;
@@ -930,7 +892,6 @@ footer {
 
 .intrior__content ul .content__detail .detail__img2 {
     display: inline-block;
-    width: 20%;
     vertical-align: top;
 }
 
@@ -939,6 +900,15 @@ footer {
     width: 20%;
     vertical-align: top;
 }
+
+.liimage .detail__img2 {
+    display: flex;
+    width: 40%;
+    vertical-align: top;
+  
+}
+
+
 
 .intrior__content ul .content__detail .detail__img img {
     width: calc(100% - 30px);
@@ -970,6 +940,11 @@ footer {
     width: 100%;
     padding-left: 30px;
     display: flex;
+}
+
+.liimage{
+    position: relative;
+
 }
 
 
@@ -1005,6 +980,7 @@ footer {
 /* ------------------------------------ */
 /* サービス案内ページ（SERVICE） */
 /* ------------------------------------ */
+@media only screen and (min-width: 767px) {
 .service__content ul .content__detail {
     padding: 30px 0;
     display: flex;
@@ -1040,7 +1016,7 @@ footer {
 
 .service__content ul .content__detail .detail__img2 {
     display: inline-block;
-    width: 20%;
+   
     vertical-align: top;
 }
 
@@ -1082,7 +1058,7 @@ footer {
     display: flex;
 }
 
-
+}
 
 @media only screen and (max-width: 767px) {
     .service__content ul .content__detail .detail__text {
@@ -1098,7 +1074,7 @@ footer {
     }
 
     .service__content ul .content__detail .detail__img {
-        display: flex;
+        
         width: 100%;
         vertical-align: top;
         padding-top: 6%;
@@ -1108,6 +1084,19 @@ footer {
         width: 100%;
         padding-left: 0;
     }
+    
+    .service__content ul .content__detail {
+        padding: 30px 0;
+        
+        
+    }
+.service__content ul .content__detail .detail__img2 img {
+    width: 60%;
+    float: left;
+    display: flex;
+    
+}
+
 }
 
 
@@ -1118,7 +1107,7 @@ footer {
     height: 1000px;
 }
 
-.staff__detail{
+.staff__detail {
     height: 490px;
     width: 50%;
     float: left;
@@ -1172,7 +1161,7 @@ footer {
 
 }
 
-.staff__detail2{
+.staff__detail2 {
     height: 490px;
     width: 50%;
     float: left;
@@ -1218,7 +1207,7 @@ footer {
 .staff__content ul .staff__detail2 .staff__img {
     /*display: inline-block;*/
 
-    width: 30%;
+    
     vertical-align: top;
     float: left;
     display: flex;
@@ -1282,8 +1271,9 @@ footer {
 
 #menu .ordermade p {
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
 }
+@media only screen and (min-width: 767px) {
 #menu .menulist {
 
     background-color: #F3F0E9;
@@ -1293,6 +1283,19 @@ footer {
     margin: 0 auto;
     padding: 30px;
 }
+}
+
+@media only screen and (max-width: 767px) {
+#menu .menulist {
+
+    background-color: #F3F0E9;
+    border-color: #48382B;
+    text-align: center;
+    
+    margin: 0 auto;
+    padding: 30px;
+}
+}
 
 #menu .menulist h3 {
     background-color: #433838;
@@ -1301,6 +1304,13 @@ footer {
 
 
 }
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9; 
+}
+
+
 
 
 
