@@ -167,10 +167,11 @@ a.totop:before {
     background-image: url(img/main_01.jpg);
     background-size: cover;
     background-position: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: -999;
     transition: 0.3s;
+    margin-top: 3%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -224,9 +225,11 @@ header {
     top: 0;
     right: 0;
     display: block;
-    height: 60px;
+    height: 10%;
     width: 100%;
     background: #ACA19A;
+    height: 7em;
+    text-align: center;
 }
 
 #top
@@ -245,17 +248,55 @@ header {
 .header__menu ul .menu__list {
     display: inline-block;
 }
+/* .header__menu_li {
+    text-decoration: none;
+    margin-top:  20px;
+    margin-left: 20px;
+    color: #48382B;
+    font-size: 40px;
+    font-weight:  bold;
+}    */
+.header__menu_li {
+    display: block;
+    /* position: relative; */
+    background-image: url(img/header_logo.jpg);
+    /* background-size: cover;
+    background-position: center; */
+    width: 20%;
+    height: 53%;
+    z-index: 999;
+    transition: 0.3s;
+    margin-top: 1.5%;
+    margin-left: 4%;
+}   
 
 .header__menu ul .menu__list a {
     display: block;
     padding: 15px 15px;
-    margin: 0 0px;
+    margin: 1 1px;
     color: rgb(248, 249, 250);
     text-decoration: none;
     font-weight: bold;
-    /* text-shadow: rgb(0, 0, 0) 50px 0 10px; */
-    text-shadow: 1px 1px 2px rgb(7, 7, 7), 0 0 2em rgb(15, 15, 15), 0 0 0.5em rgb(11, 11, 12);
-    font-size: 20px;
+    font-size: 145%;
+    font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;
+    font-weight: 100;
+    /* margin-top: 1%; */
+}
+.menu__list_reserve a {
+    float: right;
+    padding: 15px 15px;
+    margin: 1 1px;
+    color: rgb(248, 249, 250);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 145%;
+    font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;
+    font-weight: 100;
+    /* margin-top: 1%; */
+    background-color: #48382B;
+    text-align: center;
+    outline: 1px solid rgb(255, 255, 255);
+    outline-offset: -5px;
 }
 
 .header__menu ul .menu__list a:after {
@@ -485,7 +526,7 @@ header {
 #title {
     position: relative;
     text-align: center;
-    /*width: 180px;*/
+    width: 100%;
     height: 100%;
     margin: 0 auto 40px;
     vertical-align: middle;
@@ -607,7 +648,17 @@ header {
 }
 
 /* SERVICES */
-
+#access__content {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+#access__text {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+}
 
 /* CONTACT */
 
@@ -1069,7 +1120,7 @@ footer {
 
 .staff__detail{
     height: 490px;
-    width: 100%;
+    width: 50%;
     float: left;
 }
 
@@ -1077,6 +1128,7 @@ footer {
 .staff__text {
     /*display: inline-block;*/
     height: 100px;
+    width: 50%;
     vertical-align: top;
 
     display: flex;
@@ -1113,7 +1165,7 @@ footer {
 .staff__content ul .staff__detail .staff__img {
     /*display: inline-block;*/
 
-    width: 30%;
+    width: 50%;
     vertical-align: top;
     float: left;
     display: flex;
@@ -1122,7 +1174,7 @@ footer {
 
 .staff__detail2{
     height: 490px;
-    width: 100%;
+    width: 50%;
     float: left;
 }
 
