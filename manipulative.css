@@ -1081,10 +1081,19 @@ footer {
     .intrior__content ul .content__detail .detail__img img {
         width: 100%;
         padding-left: 0;
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
-
+.intrior__content {
+    display: flex;
+    width: 80%;
+    height: 294px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 205px;
+}
 
 /* ------------------------------------ */
 /* サービス案内ページ（SERVICE） */
