@@ -847,15 +847,32 @@ footer {
 
 .detail_shop img {
     width: 100%;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     display: flex;
+    height: 294px;
+}
+
+.shop__matter {
+    /* width: 100%; */
+    position: relative;
+    text-align: center;
+    height: 60px;
+    background: #F3F0E9 0% 0% no-repeat padding-box;
+    opacity: 0.7;
 }
 
 .detail_shop p {
+    /* display: flex; */
     width: 100%;
-    padding-left: 30px;
-    display: flex;
+    /* padding-left: 30px; */
+    text-align: center;
+    padding-top: 10px;
+    font: normal normal 300 22px/24px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #522F12;
+    opacity: 1;
 }
+
 
 .cotent__border {
     position: relative;
@@ -1024,13 +1041,13 @@ footer {
 
 .detail_shop img {
     width: 100%;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     display: flex;
 }
 
 .detail_shop p {
     width: 100%;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     display: flex;
 }
 
@@ -1140,13 +1157,13 @@ footer {
 
 .detail_shop img {
     width: 100%;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     display: flex;
 }
 
 .detail_shop p {
     width: 100%;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     display: flex;
 }
 
@@ -1195,28 +1212,142 @@ footer {
 /* ------------------------------------ */
 /* スタッフ紹介（STAFF） */
 /* ------------------------------------ */
-.staff__content {
-    height: 1000px;
+.staff__background {
+    display: flex;
+    width: 80%;
+    height: 960px;
+    margin: 0 auto;
+    background: #ACA19A 0% 0% no-repeat padding-box;
+    flex-flow: column;
+    opacity: 1;
+}
+.title__content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    margin: 0 auto;
+}
+.title__mater {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font: normal normal bold 42px/61px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
 }
 
-.staff__detail {
-    height: 490px;
+.title__subtitle {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font: normal normal normal 22px/52px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.staff__content {
+    display: flex;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+    padding-top: 82px;
+}
+.staff__columnbox {
+    display: flex;
+    flex-flow: column;
     width: 50%;
+    height: 400px;
+    float: left;
+}
+.staff__detail {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 400px;
     float: left;
 }
 
-
-.staff__text {
-    /*display: inline-block;*/
+.staff__introduction {
+    position: relative;
+    flex-direction: column;
+    text-align: center;
     height: 100px;
     width: 50%;
-    vertical-align: top;
-
-    display: flex;
-
 }
 
-.staff__content ul .staff__detail .staff__text h3 {
+.staff__img {
+    position: relative;
+    width: 40%;
+    height: 400px;
+    padding-left: 20px;
+    padding-right: 12px;
+}
+
+.staff__text {
+    display: flex;
+    position: relative;
+    width: 70%;
+    vertical-align: top;
+}
+
+
+.staff__position {
+    position: relative;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    font: normal normal normal 23px/40px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #48382B;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    margin-right: 12px;
+    opacity: 1;
+}
+
+.staff__mater {
+    position: relative;
+    width: 70%;
+    height: 65px;
+    text-align: left;
+    font: normal normal normal 22px/52px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.staff__qualification {
+    display: flex;
+    position: relative;
+    width: 70%;
+    height: 275px;
+    vertical-align: top;
+}
+
+.staff__comment {
+    position: relative;
+    text-align: left;
+    margin: 0 auto;
+    width: 95%;
+    height: 202px;
+    margin-top: 10px;
+} 
+.staff__comment p {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font: normal normal normal 26px/52px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+
+/* .staff__content ul .staff__detail .staff__text h3 {
     margin: 0 0 6% 0;
     font-size: 22px;
     float: left;
@@ -1244,21 +1375,21 @@ footer {
 }
 
 .staff__content ul .staff__detail .staff__img {
-    /*display: inline-block;*/
-
+    display: inline-block;
+    position: relative;
     width: 50%;
     vertical-align: top;
     float: left;
     display: flex;
 
-}
+} 
 
 .staff__detail2 {
     height: 490px;
     width: 50%;
     float: left;
 }
-
+*/
 
 .staff__text2 {
     /*display: inline-block;*/
@@ -1328,6 +1459,10 @@ footer {
 
 .shoptext {
     text-align: center;
+    font: normal normal normal 26px/52px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #433838;
+    opacity: 1;
 }
 
 /* ------------------------------------ */
@@ -1355,16 +1490,57 @@ footer {
     }
 }
 
-#menu .ordermade h3 {
+.ordermade__title {
+    width: 80%;
+    height: 65px;
+    margin: 0 auto;
+    padding-top: 30px;
     background-color: #48382B;
-    color: #FFFFFF;
     text-align: center;
+    font: normal normal normal 30px/40px Noto Sans JP;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-bottom: 63px;
+    opacity: 1;
 }
 
-#menu .ordermade p {
+.ordermade__mater {
     text-align: center;
-    font-size: 26px;
+    font: normal normal normal 26px/52px Noto Sans JP;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #433838;
+    opacity: 1;
+    margin-bottom: 40px;    
 }
+.ordermade__numbers {
+    display: flex;
+    width: 20%;
+    height: 79px;
+    text-align: center;
+    margin: 0 auto;
+}
+.ordermade__time {
+    position: relative;
+    /* width: 10%; */
+    text-align: center;
+    font: normal normal normal 32px/52px Noto Sans JP;
+    letter-spacing: 0px;
+    margin: 0 auto;
+    color: #433838;
+}
+
+.ordermade__cost {
+    position: relative;
+    /* width: 10%; */
+    text-align: center;
+    font: normal normal bold 50px/52px Noto Sans JP;
+    letter-spacing: 0px;
+    margin: 0 auto;
+    color: #433838;
+}
+
 @media only screen and (min-width: 767px) {
 #menu .menulist {
 
@@ -1389,6 +1565,22 @@ footer {
 }
 }
 
+.menulist__outside {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+    height: 247px;
+    margin: 0 auto;
+    padding-top: 10px;
+
+    text-align: left;
+    font: normal normal normal 22px/42px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #433838;
+    opacity: 1;    
+}
+
 #menu .menulist h3 {
     background-color: #433838;
     color: #FFFFFF;
@@ -1396,6 +1588,7 @@ footer {
 
 
 }
+
 
 iframe {
   width: 100%;
