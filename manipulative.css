@@ -122,6 +122,7 @@ a {
         text-decoration: none;
         padding: 12px 50px;
         float: right;
+        margin-top: 150px;
     }
 }
 
@@ -893,7 +894,7 @@ footer {
     /* display: flex; */
     width: 100%;
     /* padding-left: 30px; */
-    text-align: center;
+    text-align: left;
     padding-top: 10px;
     font: normal normal 300 22px/24px Noto Sans JP;
     letter-spacing: 0px;
@@ -1360,7 +1361,7 @@ footer {
     width: 70%;
     height: 65px;
     text-align: left;
-    font: normal normal normal 22px/52px Noto Sans JP;
+    font: normal normal normal 22px/50px Noto Sans JP;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
