@@ -1669,12 +1669,14 @@ footer {
     display: flex;
     /* padding-top: 13px; */
     width: 25%;
-    margin-left: 1%;
+    height: 90%;
+    margin-left: 1px;
 }
 
 .detail__img3 {
     padding-top: 13px;
-    width: 50%;
+    width: 25%;
+    height: 70%;
     margin-left: 1%;
     background-color: rgba(233, 229, 222, 1.0);
 }
@@ -1715,7 +1717,7 @@ footer {
         font-weight: 600;
         text-decoration: underline;
         text-align: left;
-        font: normal normal bold 17px/42px Noto Sans JP;
+        font: normal normal bold 15px/40px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         opacity: 1;
@@ -1725,9 +1727,9 @@ footer {
     }
 
     .detail__list {
-        height: 318px;
+        height: 60%;
         text-align: left;
-        font: normal normal normal 15px/33px Noto Sans JP;
+        font: normal normal normal 13px/31px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         opacity: 1;
@@ -1784,8 +1786,9 @@ footer {
 .detail__img2--kanpo {
     display: flex;
     position: relative;
-    width: 95%;
+    width: 60%;
     height: 100%;
+    margin: 0 auto;
 }
 
 .intrior__content {
@@ -1842,21 +1845,48 @@ footer {
 }
 
 .detail__img2--kanpo img {
-    width: 100%;
+    width: 80%;
     height: 50vh;
     float: left;
     display: flex;
     padding-left: 20px;
 }
-
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1650px) {
     .detail__text--kanpo {
-        width: 100%;
+        width: 50%;
+        vertical-align: top;
+    }
+
+    .detail__img2--kanpo img {
+        width: 80%;
+        float: left;
+        display: flex;
+        padding-left: 0px;
+    }
+}
+@media only screen and (max-width: 1350px) {
+    .detail__text--kanpo {
+        width: 50%;
+        vertical-align: top;
+    }
+
+    .detail__img2--kanpo img {
+        width: 90%;
+        height: 35vh;
+        float: left;
+        display: flex;
+        padding-left: 0px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .detail__text--kanpo {
+        width: 50%;
         vertical-align: top;
     }
 
     .detail__img2--kanpo img {
         width: 100%;
+        height: 35vh;
         float: left;
         display: flex;
         padding-left: 0px;
@@ -1933,7 +1963,7 @@ footer {
 
     .service__content ul .content__detail .detail__img2 img {
         width: calc(100% - 30px);
-        padding-left: 32px;
+        padding-left: 2%;
     }
 
     .service__content ul .content__detail .detail__img3 img {
