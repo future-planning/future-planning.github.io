@@ -394,6 +394,20 @@ a.totop:before {
     }
 
 }
+@media only screen and (max-width: 460px) {
+    .main_bg {
+        position: scroll;
+        background-image: url(img/main_01.jpg);
+
+        width: 100%;
+        ;
+        height: 20vh;
+        z-index: -999;
+        transition: 0.3s;
+        margin-top: 30%;
+    }
+
+}
 
 @media only screen and (max-width: 410px) {
     .main_bg {
