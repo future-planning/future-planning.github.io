@@ -1250,7 +1250,7 @@ header {
 /* フッター */
 footer {
     background-color: rgba(172, 161, 155, 1.0);
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 20px;
     text-align: center;
     font-size: 10px;
@@ -3064,6 +3064,7 @@ iframe {
     letter-spacing: 0px;
     color: #595757;
     opacity: 1;
+    margin-bottom: 40px;
 }
 
 .footer__borderline {
