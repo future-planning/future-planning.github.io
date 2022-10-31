@@ -157,7 +157,7 @@ a {
 @media only screen and (max-width: 767px) {
     a.btn {
         margin-left: 0px;
-        width: 100%;
+        width: 90%;
         color: #000;
         text-decoration: none;
         padding: 12px 0px;
@@ -236,8 +236,8 @@ a.btn.btn--y {
 }
 @media only screen and (max-width: 645px) {
     a.btn.btn--y {
-        /* width: 25%;
-        height: 70px; */
+        width: 25%;
+        /* height: 70px; */
         background-color: #48382B;
         color: #FFFFFF;
         
@@ -248,6 +248,7 @@ a.btn.btn--y {
         padding: 12px 50px;
         float: right;
         margin-top: 85%;
+        margin-left: 10%;
      
     }
 }
@@ -491,7 +492,8 @@ header {
 
 @media only screen and (max-width: 673px) {
     .menu__list--sp a {
-        font: normal normal normal 21px/37px Noto Sans JP;
+        font: normal normal normal 18px/35px Noto Sans JP;
+        text-align: center;
      }
 }
 
@@ -501,8 +503,14 @@ header {
         height: 100%;
         text-align: right;
         margin-top: 10px;
-        margin-right: 26%;
+        margin-right: 45%;
     }
+}
+@media only screen and (max-width: 476px) {
+    .menu__list--sp a {
+        font: normal normal normal 18px/35px Noto Sans JP;
+        text-align: center;
+     }
 }
 
 
@@ -1740,7 +1748,7 @@ footer {
 .detail__img2--kanpo {
     display: flex;
     position: relative;
-    width: 100%;
+    width: 95%;
     height: 100%;
 }
 
