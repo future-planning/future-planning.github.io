@@ -1182,7 +1182,8 @@ header {
 .contact__content {
     /* text-align: center; */
     width: 50%;
-    height: 700px;
+    /* height: 700px; */
+    height: 200px;
     margin: 0 auto;
     font-size: 100%;
     vertical-align: baseline;
@@ -1528,6 +1529,12 @@ footer {
     vertical-align: top;
 
 }
+.detail__img2 {
+    display: flex;
+    /* padding-top: 13px; */
+    width: 25%;
+    margin-left: 1%;
+}
 
 .detail__img3 {
     padding-top: 13px;
@@ -1625,13 +1632,22 @@ footer {
 }
 
 .liimage {
+    display: flex;
     position: relative;
+    width: 50%;
+    height: 100%;
+}
 
+.detail__img2--kanpo {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .intrior__content {
     display: flex;
-    width: 80%;
+    width: 70%;
     height: 294px;
     text-align: center;
     margin: 0 auto;
@@ -1683,19 +1699,21 @@ footer {
 }
 
 .detail__img2--kanpo img {
-    width: 50%;
+    width: 100%;
+    height: 50vh;
     float: left;
     display: flex;
+    padding-left: 20px;
 }
 
 @media only screen and (max-width: 960px) {
     .detail__text--kanpo {
-        width: 50%;
+        width: 100%;
         vertical-align: top;
     }
 
     .detail__img2--kanpo img {
-        width: 50%;
+        width: 100%;
         float: left;
         display: flex;
     }
@@ -2394,6 +2412,141 @@ footer {
 @media only screen and (max-width: 767px) {
     .contact-top {
         margin-top: 55px;
+    }
+}
+
+.contact__btn {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 10%;
+    height: 300%;
+}
+
+a.btn--contact {
+    color: #fff;
+    text-align: center;
+    background-color: #433838;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    top: 0px;
+    left: 0px;
+}
+
+a.btn--contact:hover {
+    color: #fff;
+    background: #433838;
+}
+
+a.btn-c {
+    font-size: 1.8rem;
+    position: relative;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    border-radius: 100vh;
+}
+
+a.btn-c:before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.6rem;
+    line-height: 1;
+    position: absolute;
+    /* top: calc(50% - .8rem); */
+    /* right: 1rem; */
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 1082px) {
+    a.btn-c {
+        font-size: 1.3rem;
+        position: relative;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+        border-radius: 100vh;
+    }
+
+    a.btn-c:before {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 1.3rem;
+        line-height: 1;
+        position: absolute;
+        /* top: calc(50% - .8rem); */
+        /* right: 1rem; */
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 863px) {
+    a.btn-c {
+        font-size: 1.0rem;
+        position: relative;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+        border-radius: 100vh;
+    }
+
+    a.btn-c:before {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 1.0rem;
+        line-height: 1;
+        position: absolute;
+        /* top: calc(50% - .8rem); */
+        /* right: 1rem; */
+        margin: 0;
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 1930px) {
+    .contact__btn {
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        width: 18%;
+        height: 300%;
+    }
+
+    a.btn-c {
+        font-size: 1.2rem;
+        position: relative;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+        border-radius: 100vh;
+    }
+
+    a.btn-c:before {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 1.2rem;
+        line-height: 1;
+        position: absolute;
+        /* top: calc(50% - .8rem); */
+        /* right: 1rem; */
+        margin: 0;
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 863px) {
+    .contact__btn {
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        width: 30%;
+        height: 300%;
+    }
+
+    a.btn-c {
+        font-size: 1.2rem;
+        position: relative;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+        border-radius: 100vh;
+    }
+
+    a.btn-c:before {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 1.2rem;
+        line-height: 1;
+        position: absolute;
+        /* top: calc(50% - .8rem); */
+        /* right: 1rem; */
+        margin: 0;
+        padding: 0;
     }
 }
 
