@@ -329,10 +329,10 @@ a.totop:before {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     z-index: -999;
     transition: 0.3s;
-    margin-top: 2%;
+    margin-top: 114px;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -476,7 +476,7 @@ header {
     /* height: 10%; */
     width: 100%;
     background: #ACA19A;
-    height: 140px;
+    height: 114px;
     text-align: center;
 }
 
@@ -554,7 +554,7 @@ header {
     background-color: #48382B;
     outline: 1px solid rgb(255, 255, 255);
     outline-offset: -5px;
-    height: 139px;
+    height: 114px;
     width: 13%;
 }
 
@@ -579,6 +579,7 @@ header {
 
 .header__menu ul .menu__list {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .header__menu_li {
@@ -617,7 +618,6 @@ header {
 
 .header__menu ul .menu__list a {
     display: block;
-    position: relative;
     padding: 15px 15px;
     margin: 1 1px;
     text-decoration: none;
@@ -910,11 +910,11 @@ header {
 
 /* title */
 #title {
-    position: relative;
+    /* position: relative; */
     text-align: center;
     width: 100%;
     height: 100%;
-    margin: 0 auto 40px;
+    margin: 0 auto 80px;
     vertical-align: middle;
 }
 
@@ -1050,23 +1050,19 @@ header {
 }
 
 .costplan {
-    display: table-cell;
-    vertical-align: middle;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 80%;
-    height: 2.5rem;
-    font-size: 30px;
+    display: block;
+    margin: 40px auto;
+    width: 300px;
+    height: 3rem;
+    font-size: 22px;
+    background-color: #48382B;
 }
 
 .costplan a {
-    font-weight: 400;
+    font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
+    vertical-align: -webkit-baseline-middle;
 }
 
 @media only screen and (max-width: 1890px) {
@@ -1561,7 +1557,7 @@ footer {
 
 .detail__matter {
     text-align: left;
-    font: normal normal normal 26px/52px Noto Sans JP;
+    font: normal normal normal 20px/52px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -1610,6 +1606,23 @@ footer {
         width: 100%;
         padding-left: 0;
     }
+}
+
+.cotent__btn {
+    display: block;
+    margin: 40px auto;
+    width: 300px;
+    height: 3rem;
+    font-size: 22px;
+    background-color: #48382B;
+    text-align: center;
+}
+
+.cotent__btn a {
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+    vertical-align: -webkit-baseline-middle;
 }
 
 /* ------------------------------------ */
@@ -1666,9 +1679,7 @@ footer {
 
 }
 .detail__img2 {
-    display: flex;
-    /* padding-top: 13px; */
-    width: 25%;
+    width: 20%;
     margin-left: 1%;
 }
 
@@ -1683,11 +1694,9 @@ footer {
     height: 48px;
     padding-top: 13px;
     background-color: rgba(233, 229, 222, 1.0);
-    font-size: 28px;
-    font-weight: 600;
     text-decoration: underline;
     text-align: left;
-    font: normal normal bold 28px/52px Noto Sans JP;
+    font: normal normal bold 22px/52px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -1699,7 +1708,7 @@ footer {
 .detail__list {
     height: 318px;
     text-align: left;
-    font: normal normal normal 26px/44px Noto Sans JP;
+    font: normal normal normal 18px/44px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -1880,6 +1889,9 @@ footer {
 /* ------------------------------------ */
 /* サービス案内ページ（SERVICE） */
 /* ------------------------------------ */
+.service__content {
+    margin: auto 150px;
+}
 @media only screen and (min-width: 767px) {
     .service__content ul .content__detail {
         padding: 30px 0;
@@ -1888,7 +1900,7 @@ footer {
 
     .service__content ul .content__detail .detail__text {
         display: inline-block;
-        width: 50%;
+        width: 60%;
         vertical-align: top;
     }
 
@@ -1910,7 +1922,7 @@ footer {
 
     .service__content ul .content__detail .detail__img {
         display: inline-block;
-        width: 50%;
+        width: 40%;
         vertical-align: top;
     }
 
@@ -1922,7 +1934,7 @@ footer {
 
     .service__content ul .content__detail .detail__img3 {
         display: inline-block;
-        width: 25%;
+        width: 20%;
         vertical-align: top;
     }
 
@@ -1942,8 +1954,8 @@ footer {
     }
 
     .service__content ul .content__detail .detail__img3 p {
-        width: calc(100% - 30px);
-        padding-left: 30px;
+        width: calc(100% - 10px);
+        padding-left: 10px;
     }
 
     .detail_shop img {
