@@ -96,11 +96,6 @@ li {
     }
 }
 
-@media only screen and (max-width: 468px) {
-    .hide_min {
-        display: none !important;
-    }
-}
 /* Mart公式販売 */
 a {
     transition: 0.2s;
@@ -406,63 +401,28 @@ header {
     text-align: center;
 }
 
+.menu__list--sp {
+    text-align: right;
+    margin-right: 40%;
+}
+
 .menu__list--sp a {
     position: absolute;
     background-color: #48382B;
     outline: 1px solid rgb(255, 255, 255);
     outline-offset: -5px;
     text-align: center;
-    height: 27%;
-    width: 12%;
-    /* display: block; */
-    /* position: relative; */
-    padding: 15px 15px;
-    margin: 1 1px;
+    height: 69px;
+    width: 69px;
     text-decoration: none;
-    font-weight: 100;
-    text-align: left;
-    font: normal normal normal 26px/42px Noto Sans JP;
+    font: normal normal normal 14px/68px Noto Sans JP;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
-    top: 9%;
+    top: 0;
     border-radius: 50%;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
+    margin-top: 9px;
 }
-
-.menu__list--sp {
-    height: 100%;
-    /* position: absolute; */
-    text-align: right;
-    margin-top: 10px;
-    margin-right: 40%;
-}
-
-@media only screen and (max-width: 673px) {
-    .menu__list--sp a {
-        font: normal normal normal 18px/35px Noto Sans JP;
-        text-align: center;
-     }
-}
-
-
-@media only screen and (max-width: 540px) {
-    .menu__list--sp {
-        height: 100%;
-        text-align: right;
-        margin-top: 10px;
-        margin-right: 45%;
-    }
-}
-@media only screen and (max-width: 476px) {
-    .menu__list--sp a {
-        font: normal normal normal 18px/35px Noto Sans JP;
-        text-align: center;
-     }
-}
-
 
 .menu__resrve {
     background-color: #48382B;
@@ -632,12 +592,13 @@ header {
     position: absolute;
     right: 0;
     margin-top: 10px;
+    margin-right: 15px;
     background: rgba(172, 161, 155, 1.0);
     border-radius: 60px;
     background: #48382B 0% 0% no-repeat padding-box;
     box-shadow: 3px 3px 4px #00000066;
     opacity:
-        margin: 10px;
+    margin: 10px;
     display: inline-block;
 }
 
@@ -874,7 +835,7 @@ header {
         top: 22%;
         left: 0;
         right: 0;
-        margin-top: 40px;
+        margin-top: 70px;
         margin-bottom: 0px;
         color: #48382B;
         font-size: 32px;
@@ -985,18 +946,18 @@ header {
 .costplan {
     display: block;
     margin: 40px auto;
-    width: 300px;
-    height: 3rem;
+    width: 350px;
+    height: 55px;
     font-size: 22px;
     background-color: #48382B;
     text-align: center;
+    line-height: 55px;
 }
 
 .costplan a {
     font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
-    vertical-align: -webkit-baseline-middle;
 }
 
 .banner {
@@ -1364,18 +1325,18 @@ footer {
 .cotent__btn {
     display: block;
     margin: 40px auto;
-    width: 300px;
-    height: 3rem;
+    width: 350px;
+    height: 55px;
     font-size: 22px;
     background-color: #48382B;
     text-align: center;
+    line-height: 55px;
 }
 
 .cotent__btn a {
     font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
-    vertical-align: -webkit-baseline-middle;
 }
 
 @media only screen and (max-width: 460px) {
