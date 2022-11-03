@@ -403,7 +403,7 @@ header {
 
 .menu__list--sp {
     text-align: right;
-    margin-right: 40%;
+    margin-right: 43%;
 }
 
 .menu__list--sp a {
@@ -1399,7 +1399,7 @@ footer {
 
 }
 .detail__img2 {
-    width: 20%;
+    width: 48%;
     margin-left: 1%;
 }
 
@@ -1652,7 +1652,7 @@ footer {
 
 .service__content ul .content__detail .detail__img3 {
     display: inline-block;
-    width: 20%;
+    width: 51%;
     vertical-align: top;
 }
 
@@ -1731,13 +1731,14 @@ footer {
 
     .detail__img2 {
         width: 45%;
-        height: 270px;
+        height: auto;
         float: left;
         display: inline-block;
     }
 
     .service__content ul .content__detail .detail__img3 {
         padding-top: 0px;
+        height: auto;
         width: 53%;
         margin-left: 1%;
         background-color: rgba(233, 229, 222, 1.0);
@@ -1745,24 +1746,22 @@ footer {
     }
 
     .detail__text3 {
-        height: 48px;
+        height: auto;
         padding-top: 0px;
         background-color: rgba(233, 229, 222, 1.0);
-        font-size: 28px;
-        font-weight: 600;
         text-decoration: underline;
         text-align: left;
-        font: normal normal bold 17px/28px Noto Sans JP;
+        font: normal normal bold 16px/24px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         opacity: 1;
-        margin-top: 12px;
+        margin-top: 10px;
     }
 
     .detail__list {
-        height: 210px;
+        height: auto;
         text-align: left;
-        font: normal normal normal 15px/28px Noto Sans JP;
+        font: normal normal normal 14px/22px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         opacity: 1;
