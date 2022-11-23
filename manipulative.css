@@ -1874,6 +1874,19 @@ iframe {
         opacity: 1;
         /* margin-top: 1%; */
     }
+    .detail__matter {
+        font: normal normal normal 16px/48px Noto Sans JP;
+    }
+    
+    .detail__list {
+        font: normal normal normal 16px/48px Noto Sans JP;
+    }
+    .staff__position {
+        font: normal normal normal 15px/32px Noto Sans JP;
+    }
+    .staff__comment p {
+        font: normal normal normal 18px/41px Noto Sans JP;
+    }
 }
 
 /* max-width: 1082px */
