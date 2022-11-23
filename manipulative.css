@@ -859,15 +859,17 @@ footer {
     /* text-decoration: none;
     border-bottom: 1px solid #433838;
     padding-bottom: 0.5px; */
+    margin-top: -8px;
 }
 
 .detail__list {
     text-align: left;
-    font: normal normal normal 0.9rem/47px Noto Sans JP;
+    font: normal normal normal 0.8rem/47px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
     font-weight: 540;
+    margin-top: -25px;
 }
 
 
