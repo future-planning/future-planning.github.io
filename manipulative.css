@@ -205,7 +205,7 @@ header {
     height: 69px;
     width: 69px;
     text-decoration: none;
-    font: normal normal normal 14px/68px Noto Sans JP;
+    font: normal normal normal 1.2rem/68px Noto Sans JP;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -405,7 +405,7 @@ header {
 .menu-list a {
     color: #000;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.0rem;
     display: inline-block;
     margin: 11px 0;
     transition: all 0.5s ease;
@@ -521,7 +521,7 @@ header {
     margin-top: 120px;
     margin-bottom: 0px;
     color: #48382B;
-    font-size: 40px;
+    font-size: 1.8rem;
     /* background-image: linear-gradient(transparent 60%, rgb(221, 207, 200) 10%) */
 }
 
@@ -584,7 +584,7 @@ header {
     margin: 40px auto;
     width: 350px;
     height: 55px;
-    font-size: 22px;
+    font-size: 1.2rem;
     background-color: #48382B;
     text-align: center;
     line-height: 55px;
@@ -703,7 +703,7 @@ footer {
     width: 100%;
     /* padding-left: 10px; */
     display: flex;
-    height: 294px;
+    height: 20vh;
 }
 
 .shop__matter {
@@ -719,7 +719,7 @@ footer {
     width: 100%;
     /* padding-left: 30px; */
     text-align: left;
-    font: normal normal 300 14px/20px Noto Sans JP;
+    font: normal normal 300 0.9rem/20px Noto Sans JP;
     color: #522F12;
     opacity: 1;
 }
@@ -736,7 +736,7 @@ footer {
 
 .detail__title {
     text-align: left;
-    font: normal normal bold 26px/48px Noto Sans JP;
+    font: normal normal bold 1.3rem/48px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -745,7 +745,7 @@ footer {
 
 .detail__matter {
     text-align: left;
-    font: normal normal normal 16px/48px Noto Sans JP;
+    font: normal normal normal 0.9rem/48px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -765,7 +765,7 @@ footer {
     margin: 40px auto;
     width: 350px;
     height: 55px;
-    font-size: 22px;
+    font-size: 1.2rem;
     background-color: #48382B;
     text-align: center;
     line-height: 55px;
@@ -799,7 +799,7 @@ footer {
 
 .intrior__content ul .content__detail .detail__text h3 span {
     margin-left: 2em;
-    font-size: 16px;
+    font-size: 0.9rem;
 }
 
 .intrior___content ul .content__detail .detail__text p {
@@ -852,7 +852,7 @@ footer {
     /* background-color: rgba(233, 229, 222, 1.0); */
     text-decoration: underline;
     text-align: left;
-    font: normal normal bold 18px/48px Noto Sans JP;
+    font: normal normal bold 1.0rem/48px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -863,7 +863,7 @@ footer {
 
 .detail__list {
     text-align: left;
-    font: normal normal normal 16px/47px Noto Sans JP;
+    font: normal normal normal 0.9rem/47px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -969,7 +969,7 @@ footer {
 
 .service__content ul .content__detail .detail__text h3 span {
     margin-left: 2em;
-    font-size: 16px;
+    font-size: 0.9rem;
 }
 
 .service__content ul .content__detail .detail__text p {
@@ -1035,7 +1035,7 @@ footer {
 .staff__background {
     display: flex;
     /* width: 80%; */
-    height: 960px;
+    height: auto;
     margin: auto 20%;
     background: #ACA19A 0% 0% no-repeat padding-box;
     flex-flow: column;
@@ -1063,7 +1063,7 @@ footer {
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    font: normal normal normal 22px/52px Noto Sans JP;
+    font: normal normal normal 1.1rem/52px Noto Sans JP;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -1075,15 +1075,15 @@ footer {
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    height: 400px;
-    padding-top: 82px;
+    height: auto;
+    padding-top: 20px;
 }
 
 .staff__columnbox {
     display: flex;
     flex-flow: column;
     width: 50%;
-    height: 400px;
+    height: auto;
     float: left;
 }
 
@@ -1129,7 +1129,7 @@ footer {
 .staff__position {
     width: 35%;
     text-align: center;
-    font: normal normal normal 16px/34px Noto Sans JP;
+    font: normal normal normal 0.9rem/34px Noto Sans JP;
     letter-spacing: 0px;
     color: #48382B;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -1140,7 +1140,7 @@ footer {
 .staff__mater {
     width: 65%;
     text-align: left;
-    font: normal normal normal 16px/36px Noto Sans JP;
+    font: normal normal normal 0.9rem/36px Noto Sans JP;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -1163,7 +1163,7 @@ footer {
 .staff__comment p {
     width: 100%;
     text-align: left;
-    font: normal normal normal 16px/39px Noto Sans JP;
+    font: normal normal normal 0.9rem/39px Noto Sans JP;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -1190,7 +1190,7 @@ footer {
 
 .staff__content ul .staff__detail2 .staff__text2 h3 span {
     margin-left: 2em;
-    font-size: 16px;
+    font-size: 0.9rem;
     float: left;
     display: flex;
 
@@ -1238,7 +1238,7 @@ footer {
 
 .shoptext {
     text-align: center;
-    font: normal normal normal 16px/43px Noto Sans JP;
+    font: normal normal normal 0.9rem/43px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -1314,7 +1314,7 @@ a.btn-c:before {
     padding: 5px 0;
     background-color: #48382B;
     text-align: center;
-    font: normal normal normal 26px/40px Noto Sans JP;
+    font: normal normal normal 1.2rem/40px Noto Sans JP;
     font-weight: 500;
     letter-spacing: 0px;
     color: #FFFFFF;
@@ -1324,7 +1324,7 @@ a.btn-c:before {
 
 .ordermade__mater {
     text-align: center;
-    font: normal normal normal 16px/39px Noto Sans JP;
+    font: normal normal normal 0.9rem/39px Noto Sans JP;
     font-weight: 500;
     letter-spacing: 0px;
     color: #433838;
@@ -1343,7 +1343,7 @@ a.btn-c:before {
 .ordermade__time {
     /* width: 10%; */
     text-align: center;
-    font: normal normal normal 28px/52px Noto Sans JP;
+    font: normal normal normal 1.5vw/52px Noto Sans JP;
     letter-spacing: 0px;
     margin: 0 25px;
     color: #433838;
@@ -1352,7 +1352,7 @@ a.btn-c:before {
 .ordermade__cost {
     /* width: 10%; */
     text-align: center;
-    font: normal normal bold 35px/47px Noto Sans JP;
+    font: normal normal bold 1.8vw/47px Noto Sans JP;
     letter-spacing: 0px;
     margin: 0 25px;
     color: #433838;
@@ -1365,7 +1365,7 @@ a.btn-c:before {
     width: 50%;
     margin: 0 auto;
     padding-top: 10px;
-    font: normal normal normal 14px/32px Noto Sans JP;
+    font: normal normal normal 0.9rem/32px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -1399,22 +1399,22 @@ a.btn-c:before {
     text-align: center;
     background: #433838 0% 0% no-repeat padding-box;
     opacity: 1;
-    font: normal normal bold 22px/36px Noto Sans JP;
+    font: normal normal bold 1.0rem/36px Noto Sans JP;
     letter-spacing: 0px;
     font-weight: 500;
     width: 85%;
     margin: auto;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .menutext {
     text-align: left;
-    font: normal normal normal 16px/34px Noto Sans JP;
+    font: normal normal normal 0.9rem/34px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     width: 80%;
     margin: auto;
-    height: 80px;
+    height: 70px;
 }
 
 iframe {
@@ -1478,7 +1478,7 @@ iframe {
 /* SERVICES */
 .adress__text {
     text-align: left;
-    font: normal normal normal 16px/40px Noto Sans JP;
+    font: normal normal normal 0.9rem/40px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
@@ -1518,7 +1518,7 @@ iframe {
     width: 30%;
     height: 87px;
     margin: 0 auto;
-    font: normal normal normal 18px/42px Noto Sans JP;
+    font: normal normal normal 1.0rem/42px Noto Sans JP;
     font-weight: 500;
     letter-spacing: 0px;
     color: #595757;
@@ -1551,7 +1551,7 @@ iframe {
 }
 
 .footer__copyright {
-    font: normal normal normal 18px/27px Meiryo;
+    font: normal normal normal 1.0rem/27px Meiryo;
     color: #707070;
 }
 
@@ -1574,7 +1574,7 @@ iframe {
     background-repeat: no-repeat;
     background-size: contain;
     width: 71px;
-    height: 14px;
+    height: 1.2rem;
     transition: 0.3s;
 
 }
@@ -1584,7 +1584,7 @@ iframe {
 }
 
 .content__chart ul li {
-    padding: 16px 0;
+    padding: 0.9rem 0;
     border-bottom: 1px solid #707070;
 }
 
@@ -1620,7 +1620,7 @@ iframe {
         padding-left: 0px;
     }
     .adress__text {
-        font: normal normal normal 16px/39px Noto Sans JP;
+        font: normal normal normal 0.9rem/39px Noto Sans JP;
     }
 }
 
@@ -1641,7 +1641,25 @@ iframe {
         opacity: 1;
         /* margin-top: 1%; */
     }
+    .intrior__content {
+        height: auto;
+        padding-bottom: 100px;
+    }
 
+    .detail_shop img  {
+        height: auto;
+    }
+    
+    .detail_shop p {
+        font: normal normal 300 12px/1.0rem Noto Sans JP;
+    }
+    .staff__background {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .staff__content {
+        padding-top: 30px;
+    }
     .contact__explanation {
         text-align: center;
         font: normal normal normal 21px/47px Noto Sans JP;
@@ -1692,7 +1710,7 @@ iframe {
     }
 
     .staff__img {
-        padding-left: 18px;
+        padding-left: 1.0rem;
         padding-right: 0px;
     }
     .staff__img:before {
@@ -1738,7 +1756,7 @@ iframe {
         width: 30%;
         height: 87px;
         margin: 0 auto;
-        font: normal normal normal 16px/40px Noto Sans JP;
+        font: normal normal normal 0.9rem/40px Noto Sans JP;
         font-weight: 500;
         letter-spacing: 0px;
         color: #595757;
@@ -1791,7 +1809,7 @@ iframe {
         padding-left: 0px;
     }
     .adress__text {
-        font: normal normal normal 14px/37px Noto Sans JP;
+        font: normal normal normal 1.2rem/37px Noto Sans JP;
     }
 }
 
@@ -1811,7 +1829,7 @@ iframe {
         position: relative;
         /* width: 10%; */
         text-align: center;
-        font: normal normal normal 32px/52px Noto Sans JP;
+        /* font: normal normal normal 32px/52px Noto Sans JP; */
         letter-spacing: 0px;
         margin: 0 auto;
         color: #433838;
@@ -1821,7 +1839,7 @@ iframe {
         position: relative;
         /* width: 10%; */
         text-align: center;
-        font: normal normal bold 40px/43px Noto Sans JP;
+        /* font: normal normal bold 40px/43px Noto Sans JP; */
         letter-spacing: 0px;
         margin: 0 auto;
         color: #433838;
@@ -1832,7 +1850,7 @@ iframe {
 
 @media only screen and (min-width: 1260px) {
     .about__detail p {
-        font-size: 18px !important;
+        font-size: 1.0rem !important;
         font-weight: bold;
         line-height: 3.5;
         padding: 4vw;
@@ -1868,27 +1886,27 @@ iframe {
         text-decoration: none;
         font-weight: 100;
         text-align: left;
-        font: normal normal normal 14px/32px Noto Sans JP;
+        font: normal normal normal 1.2rem/32px Noto Sans JP;
         letter-spacing: 0px;
         color: #FFFFFF;
         opacity: 1;
         /* margin-top: 1%; */
     }
     .detail__matter {
-        font: normal normal normal 14px/46px Noto Sans JP;
+        font: normal normal normal 0.9rem/46px Noto Sans JP;
     }
     
     .detail__list {
-        font: normal normal normal 14px/46px Noto Sans JP;
+        font: normal normal normal 0.9rem/46px Noto Sans JP;
     }
     .staff__position {
-        font: normal normal normal 13px/30px Noto Sans JP;
+        font: normal normal normal 0.8rem/30px Noto Sans JP;
     }
     .staff__comment p {
-        font: normal normal normal 16px/39px Noto Sans JP;
+        font: normal normal normal 0.9rem/39px Noto Sans JP;
     }
     .menutext {
-        font: normal normal normal 14px/32px Noto Sans JP;
+        font: normal normal normal 0.9rem/32px Noto Sans JP;
     }
     a.btn-c {
         font-size: 1.0rem;
@@ -1936,7 +1954,7 @@ iframe {
         position: relative;
         /* width: 10%; */
         text-align: center;
-        font: normal normal normal 22px/42px Noto Sans JP;
+        font: normal normal normal 2vw/42px Noto Sans JP;
         letter-spacing: 0px;
         margin: 0 auto;
         color: #433838;
@@ -1946,7 +1964,7 @@ iframe {
         position: relative;
         /* width: 10%; */
         text-align: center;
-        font: normal normal bold 40px/42px Noto Sans JP;
+        font: normal normal bold 3vw/42px Noto Sans JP;
         letter-spacing: 0px;
         margin: 0 auto;
         color: #433838;
@@ -1957,7 +1975,7 @@ iframe {
         width: 30%;
         height: 87px;
         margin: 0 auto;
-        font: normal normal normal 16px/40px Noto Sans JP;
+        font: normal normal normal 0.9rem/40px Noto Sans JP;
         font-weight: 500;
         letter-spacing: 0px;
         color: #595757;
@@ -2111,7 +2129,7 @@ iframe {
     }
 
     .about__detail p {
-        font-size: 16px;
+        font-size: 0.9rem;
         font-weight: bold;
         line-height: 3.5;
         padding: 4vw;
@@ -2251,7 +2269,7 @@ iframe {
         font-size: 100%;
         vertical-align: baseline;
         /*padding-left: 1%;*/
-        font: normal normal bold 18px/44px Noto Sans JP;
+        font: normal normal bold 1.0rem/44px Noto Sans JP;
         font-weight: 100;
         margin-bottom: 200px;
     }
@@ -2285,6 +2303,16 @@ iframe {
 
     .contact-top {
         margin-top: 55px;
+    }
+
+    .staff__position {
+        font: normal normal normal 3%/30px Noto Sans JP;
+    }
+    .staff__comment p {
+        font: normal normal normal 0.7rem/39px Noto Sans JP;
+    }
+    .staff__mater {
+        font: normal normal normal 0.7rem/36px Noto Sans JP;
     }
 
     .voice__content {
@@ -2382,6 +2410,15 @@ iframe {
 /* max-width: 645px */
 
 @media only screen and (max-width: 645px) {
+    .staff__position {
+        font: normal normal normal 3%/30px Noto Sans JP;
+    }
+    .staff__comment p {
+        font: normal normal normal 0.7rem/39px Noto Sans JP;
+    }
+    .staff__mater {
+        font: normal normal normal 0.7rem/36px Noto Sans JP;
+    }
     a.btn.btn--y {
         width: 25%;
         /* height: 70px; */
@@ -2401,9 +2438,9 @@ iframe {
 }
 
 
-/* max-width: 600px */
+/* max-width: 608px */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 608px) {
     .service__content {
         margin: auto 5%;
     }
@@ -2471,7 +2508,7 @@ iframe {
         background-color: rgba(233, 229, 222, 1.0);
         text-decoration: underline;
         text-align: left;
-        font: normal normal bold 16px/24px Noto Sans JP;
+        font: normal normal bold 0.9rem/24px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         opacity: 1;
@@ -2481,7 +2518,7 @@ iframe {
     .detail__list {
         height: auto;
         text-align: left;
-        font: normal normal normal 16px/24px Noto Sans JP;
+        font: normal normal normal 0.9rem/24px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         opacity: 1;
@@ -2490,7 +2527,7 @@ iframe {
 
     .liimage {
         position: relative;
-        height: 318px;
+        height: 31.0rem;
     }
 
     .detail__text--kanpo {
@@ -2518,13 +2555,11 @@ iframe {
     .main_bg {
         position: scroll;
         background-image: url(img/main_01_sp.jpg);
-
         width: 100%;
-        ;
-        height: 20vh;
+        height: 40vh;
         z-index: -999;
         transition: 0.3s;
-        margin-top: 85px;
+        margin-top: 50px;
     }
 
     #title {
@@ -2608,7 +2643,7 @@ iframe {
 
     .detail__matter {
         text-align: left;
-        font: normal normal normal 18px/45px Noto Sans JP;
+        font: normal normal normal 1.0rem/45px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         opacity: 1;
@@ -2705,7 +2740,7 @@ iframe {
         width: 100%;
         height: auto;
         text-align: left;
-        font: normal normal normal 18px/30px Noto Sans JP;
+        font: normal normal normal 1.0rem/30px Noto Sans JP;
         letter-spacing: 0px;
         color: #FFFFFF;
         opacity: 1;
@@ -2722,7 +2757,7 @@ iframe {
         width: 100%;
         height: 100%;
         text-align: left;
-        font: normal normal normal 16px/32px Noto Sans JP;
+        font: normal normal normal 0.9rem/32px Noto Sans JP;
         letter-spacing: 0px;
         color: #FFFFFF;
         opacity: 1;
@@ -2746,7 +2781,7 @@ iframe {
         margin: 0 auto;
         width: 100%;
         height: 1000px;
-        padding-top: 18px;
+        padding-top: 1.0rem;
     }
 
     .staff__columnbox {
@@ -2761,7 +2796,7 @@ iframe {
         text-align: left;
         width: 90%;
         margin: 0 auto 20px;
-        font: normal normal normal 18px/36px Noto Sans JP;
+        font: normal normal normal 1.0rem/36px Noto Sans JP;
     }
 
     a.btn--contact {
@@ -2820,7 +2855,7 @@ iframe {
         margin: 0 auto;
         padding-top: 30px;
         text-align: left;
-        font: normal normal normal 14px/26px Noto Sans JP;
+        font: normal normal normal 1.2rem/26px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         opacity: 1;
@@ -2842,7 +2877,7 @@ iframe {
 
     .ordermade__mater {
         text-align: left;
-        font: normal normal normal 18px/32px Noto Sans JP;
+        font: normal normal normal 1.0rem/32px Noto Sans JP;
         font-weight: 500;
         letter-spacing: 0px;
         color: #433838;
@@ -2913,7 +2948,7 @@ iframe {
 
     .menutext {
         text-align: left;
-        font: normal normal normal 16px/26px Noto Sans JP;
+        font: normal normal normal 0.9rem/26px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         width: 86%;
@@ -2941,7 +2976,7 @@ iframe {
         width: 100%;
         height: 254px;
         text-align: left;
-        font: normal normal normal 16px/28px Noto Sans JP;
+        font: normal normal normal 0.9rem/28px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
         opacity: 1;
@@ -2969,6 +3004,11 @@ iframe {
 /* max-width: 540px */
 
 @media only screen and (max-width: 540px) {
+    .main_bg {
+        height: 35vh;
+        margin-top: 60px;
+    }
+
     .sns-icon {
         width: 5%;
     }
@@ -2978,7 +3018,7 @@ iframe {
         width: 50%;
         height: 87px;
         margin: 0 auto;
-        font: normal normal normal 16px/34px Noto Sans JP;
+        font: normal normal normal 0.9rem/34px Noto Sans JP;
         font-weight: 500;
         letter-spacing: 0px;
         color: #595757;
