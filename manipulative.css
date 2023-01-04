@@ -1618,18 +1618,18 @@ iframe {
 
     .ordermade__time {
         text-align: right;
-        font: normal normal normal 1rem/28px Noto Sans JP;
+        font: normal normal normal 1.2rem/28px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
-        width: 50%;
+        width: 40%;
         padding-right: 5%;
     }
 
     .ordermade__cost {
-        width: 50%;
+        width: 60%;
         padding-left: 5%;
         text-align: left;
-        font: normal normal bold 1rem/28px Noto Sans JP;
+        font: normal normal bold 1.4rem/28px Noto Sans JP;
         letter-spacing: 0px;
         color: #433838;
     }
