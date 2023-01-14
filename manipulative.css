@@ -41,24 +41,8 @@ a {
     transition: 0.2s;
 }
 
-a.btn.btn--y {
-    background-color: #48382B;
-    color: #FFFFFF;
-    position: absolute;
-    top: 130px;
-    left: -98%;
-    text-decoration: none;
-    padding: 12px 50px;
-    float: right;
-    margin-top: 30%;
-}
-
 a:hover.btn:before {
     right: -52px;
-}
-
-a:hover.btn.btn--y {
-    background-color: rgba(172, 161, 155, 1.0);
 }
 
 /* ------------------------------------ */
@@ -95,18 +79,6 @@ header {
     border-radius: 0 0 196px 0;
     background-color: #020341;
     z-index: 9999;
-}
-
-.heaer__logo a.logo__img {
-    display: block;
-    position: absolute;
-    width: 110px;
-    top: 37px;
-    left: 15px;
-}
-
-.heaer__logo a.logo__img img {
-    width: 100%;
 }
 
 .header__menu {
@@ -163,9 +135,6 @@ header {
     text-align: center;
 }
 
-/* ------------------------------------ */
-/* top */
-/* ------------------------------------ */
 .header__menu ul {
     text-align: right;
     position: absolute;
@@ -206,19 +175,6 @@ header {
     opacity: 1;
 }
 
-.menu__list_reserve a {
-    float: right;
-    padding: 15px 15px;
-    color: rgb(248, 249, 250);
-    font-size: 145%;
-    font-family: "Noto Sans JP";
-    font-weight: 100;
-    background-color: #48382B;
-    text-align: center;
-    outline: 1px solid rgb(255, 255, 255);
-    outline-offset: -5px;
-}
-
 .header__menu ul .menu__list a:after {
     content: "";
     display: block;
@@ -226,25 +182,6 @@ header {
     transition: 0.2s;
 }
 
-.header__menu ul .menu__list.contact a {
-    background-color: rgba(172, 161, 155, 1.0);
-    padding: 5px 15px;
-    border-radius: 20px;
-    text-shadow: none;
-}
-
-.header__menu ul .menu__list.contact a:after {
-    display: none;
-}
-
-.header__menu ul .menu__list.contact a:hover {
-    border-bottom: none;
-    background-color: rgba(172, 161, 155, 1.0);
-}
-
-/* ------------------------------------ */
-/* MENU */
-/* ------------------------------------ */
 .hamburger-menu-wrapper {
     position: absolute;
     right: 0;
@@ -255,10 +192,6 @@ header {
     background: #48382B 0% 0% no-repeat padding-box;
     box-shadow: 3px 3px 4px #00000066;
     display: inline-block;
-}
-
-.hamburger-menu-wrapper.bounce-effect {
-    animation: bounce 0.3s ease 1;
 }
 
 .menu-overlay {
@@ -394,7 +327,6 @@ header {
     transition-delay: 0s, 0.3s;
 }
 
-
 @keyframes bounce {
     0% {
         transform: rotate(0);
@@ -443,42 +375,15 @@ header {
     font-size: 14px;
 }
 
-#privacy-policy #title h2 {
-    position: absolute;
-    top: 13%;
-    line-height: 1.2;
-    margin: 0px;
-}
-
-#privacy-policy #title p {
-    position: absolute;
-    top: 60%;
-}
-
-
 /* ------------------------------------ */
-/* トップページ */
+/* MAIN */
 /* ------------------------------------ */
-
-
 .wrapper #main {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-}
-
-@media only screen and (min-width: 768px) {
-    .wrapper #main {
-        max-width: 720px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .wrapper #main {
-        max-width: 1140px;
-    }
 }
 
 .costplan__outside {
@@ -516,122 +421,44 @@ header {
     text-decoration: none;
 }
 
-/* ------------------------------------ */
-/* CONTACT */
-/* ------------------------------------ */
-.contact__explanation {
-    text-align: center;
-    font: normal normal normal 26px/52px Noto Sans JP;
-    letter-spacing: 0px;
-    color: #433838;
-    opacity: 1;
-    padding-bottom: 50px;
-}
-
-.wpcf7-form-control {
-    height: 40px;
-    font-size: 100%;
-}
-
-.contact__content {
-    width: 50%;
-    height: 200px;
-    margin: 0 auto;
-    font-size: 100%;
-    vertical-align: baseline;
-    padding-left: 30%;
-    font: normal normal bold 26px/52px Noto Sans JP;
-    font-weight: 100;
-    margin-bottom: 200px;
-}
-
-/* ------------------------------------ */
-/* フッター */
-/* ------------------------------------ */
-footer {
-    background-color: rgba(172, 161, 155, 1.0);
-    padding-bottom: 20px;
-    text-align: center;
-    font-size: 10px;
-}
-
 .banner {
     width: 100%;
 }
 
-.footer__logo {
-    width: 15%;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-
-.logo {
-    width: 100px;
-}
-
 /* ------------------------------------ */
-/* 会社案内ページ（ABOUT） */
+/* コンセプト（CONCEPT） */
 /* ------------------------------------ */
+.service__content {
+    margin: auto;
+}
 
-.about__copy {
-    color: #fff;
-    text-shadow: 0px 0px 15px rgba(172, 161, 155, 1.0);
+.service__content ul .content__detail {
+    padding: 30px 0;
+    display: flex;
+}
+
+.service__content ul .content__detail .detail__text {
     display: inline-block;
-    width: 100%;
-    max-width: 32vw;
-    vertical-align: middle;
+    width: 50%;
+    vertical-align: top;
 }
 
-.about__copy h2 {
-    margin: 0 0 30px 0;
+.service__content ul .content__detail .detail__text p {
+    padding-right: 30px;
+    padding-bottom: 3%;
+    line-height: 1.7;
 }
 
-.about__copy h2 span {
-    padding-left: 2em;
-    font-size: 70%;
-    font-weight: normal;
-}
-
-.about__copy p {
-    font-size: 223%;
-    font-weight: bold;
-}
-
-.about__detail {
+.service__content ul .content__detail .detail__img {
     display: inline-block;
-    width: 100%;
-    max-width: calc(100% - 32vw);
-    background-color: rgba(172, 161, 155, 0.8);
-    vertical-align: middle;
+    width: 50%;
+    vertical-align: top;
 }
 
-.about__detail p {
-    font-size: 1.4vw;
-    font-weight: bold;
-    line-height: 3.5;
-    padding: 4vw;
-    margin: -2% 0;
+.service__content ul .content__detail .detail__img img {
+    width: calc(100% - 30px);
+    padding-left: 30px;
 }
-
-.about__detail p .btn {
-    margin-top: 0.5em;
-}
-
-.shop__matter {
-    text-align: center;
-    background: #F3F0E9 0% 0% no-repeat padding-box;
-    opacity: 0.7;
-}
-
-.detail_shop p {
-    width: 100%;
-    text-align: left;
-    font: normal normal 300 0.9rem/20px Noto Sans JP;
-    color: #522F12;
-    opacity: 1;
-}
-
 
 .cotent__border {
     position: relative;
@@ -640,6 +467,11 @@ footer {
 
 .number__img {
     position: absolute;
+}
+
+.borderline {
+    height: 47px;
+    border-bottom: 3px solid rgba(172, 161, 155, 0.8);
 }
 
 .detail__title {
@@ -657,11 +489,6 @@ footer {
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
-}
-
-.borderline {
-    height: 47px;
-    border-bottom: 3px solid rgba(172, 161, 155, 0.8);
 }
 
 .content__btn {
@@ -685,9 +512,13 @@ footer {
 /* ------------------------------------ */
 /* お店の特徴（INTERIOR） */
 /* ------------------------------------ */
-.detail_shop p {
-    width: 100%;
-    display: flex;
+.shoptext {
+    text-align: center;
+    font: normal normal normal 0.9rem/26px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #433838;
+    opacity: 1;
+    margin-bottom: 20px;
 }
 
 .interior__content {
@@ -698,59 +529,19 @@ footer {
     padding-bottom: 205px;
 }
 
-/* ------------------------------------ */
-/* サービス案内ページ（SERVICE） */
-/* ------------------------------------ */
-.service__content {
-    margin: auto;
+.shop__matter {
+    text-align: center;
+    background: #F3F0E9 0% 0% no-repeat padding-box;
+    opacity: 0.7;
 }
 
-.service__content ul .content__detail {
-    padding: 30px 0;
+.detail_shop p {
     display: flex;
-}
-
-.service__content ul .content__detail .detail__text {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-}
-
-.service__content ul .content__detail .detail__text h3 {
-    margin: 0 0 6% 0;
-    font-size: 22px;
-}
-
-.service__content ul .content__detail .detail__text h3 span {
-    margin-left: 2em;
-    font-size: 0.9rem;
-}
-
-.service__content ul .content__detail .detail__text p {
-    padding-right: 30px;
-    padding-bottom: 3%;
-    line-height: 1.7;
-}
-
-.service__content ul .content__detail .detail__img {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-}
-
-.service__content ul .content__detail .detail__img2 {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.service__content ul .content__detail .detail__img img {
-    width: calc(100% - 30px);
-    padding-left: 30px;
-}
-
-.service__content ul .content__detail .detail__img2 img {
-    width: calc(100% - 30px);
-    padding-left: 32px;
+    width: 100%;
+    text-align: left;
+    font: normal normal 300 0.9rem/20px Noto Sans JP;
+    color: #522F12;
+    opacity: 1;
 }
 
 .detail_shop img {
@@ -758,12 +549,6 @@ footer {
     height: 100%;
     display: flex;
 }
-
-.detail_shop p {
-    width: 100%;
-    display: flex;
-}
-
 
 /* ------------------------------------ */
 /* スタッフ紹介（STAFF） */
@@ -859,12 +644,17 @@ footer {
     border: 1px solid #000;
     content: '';
 }
+
+.img__full {
+    width: 100%;
+    height: 100%;
+}
+
 .staff__text {
     display: flex;
     width: 85%;
     margin-bottom: 20px;
 }
-
 
 .staff__position {
     width: 90px;
@@ -909,133 +699,9 @@ footer {
     opacity: 1;
 }
 
-.staff__text2 {
-    height: 100px;
-    vertical-align: top;
-    display: flex;
-}
-
-.staff__content ul .staff__detail2 .staff__text2 h3 {
-    margin: 0 0 6% 0;
-    font-size: 22px;
-    float: left;
-    display: flex;
-    width: 150px;
-    height: 40px;
-}
-
-.staff__content ul .staff__detail2 .staff__text2 h3 span {
-    margin-left: 2em;
-    font-size: 0.9rem;
-    float: left;
-    display: flex;
-}
-
-.staff__content ul .staff__detail2 .staff__text2 p {
-    padding-right: 30px;
-    padding-bottom: 10%;
-    line-height: 1.7;
-    float: left;
-    display: flex;
-    height: 20px;
-    width: 150px;
-}
-
-.staff__content ul .staff__detail2 .staff__img {
-    vertical-align: top;
-    float: left;
-    display: flex;
-}
-
-
 /* ------------------------------------ */
-/* text */
+/* 施術メニュー（MENU） */
 /* ------------------------------------ */
-.text-m {
-    text-align: center;
-    color: #131005;
-    font-size: 100%;
-    line-height: 1.7;
-    margin: 15px 25%;
-    margin-top: 20px;
-}
-
-.text-s {
-    text-align: center;
-    color: #0f0d08;
-    font-size: 10%;
-}
-
-.shoptext {
-    text-align: center;
-    font: normal normal normal 0.9rem/26px Noto Sans JP;
-    letter-spacing: 0px;
-    color: #433838;
-    opacity: 1;
-    margin-bottom: 20px;
-}
-
-/* ------------------------------------ */
-/* privacy-policy */
-/* ------------------------------------ */
-#privacy-policy h3 {
-    padding: 24px 0 0 0;
-}
-
-#privacy-policy p {
-    padding: 6px 0;
-}
-
-/* ------------------------------------ */
-/* 施術メニュー */
-/* ------------------------------------ */
-.contact-top {
-    margin-top: 100px;
-}
-
-.contact__btn {
-    display: flex;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: 300%;
-    justify-content: center;
-}
-
-a.btn--contact {
-    color: #fff;
-    text-align: center;
-    background-color: #433838;
-    margin-top: 0px;
-    margin-bottom: 100px;
-    top: 0px;
-    left: 0px;
-}
-
-a.btn--contact:hover {
-    color: #fff;
-    background: #433838;
-}
-
-a.btn-c {
-    display: block;
-    margin: 40px auto;
-    width: 350px;
-    height: 55px;
-    font-size: 1.2rem;
-    background-color: #48382B;
-    text-align: center;
-    line-height: 55px;
-    box-shadow: 4px 4px 0px 0 rgb(172 161 155);
-    text-decoration: none;
-}
-
-a.btn-c:before {
-    font-family: 'Font Awesome 5 Free';
-    font-size: 1.6rem;
-    line-height: 1;
-}
-
 .ordermade__title {
     height: 40px;
     margin: auto;
@@ -1086,18 +752,6 @@ a.btn-c:before {
     color: #433838;
 }
 
-.menulist__outside {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin: 0 auto;
-    padding-top: 10px;
-    font: normal normal normal 0.9rem/32px Noto Sans JP;
-    letter-spacing: 0px;
-    color: #433838;
-    opacity: 1;
-}
-
 #menu .menulist {
     position: relative;
     background-color: #F3F0E9;
@@ -1142,32 +796,21 @@ a.btn-c:before {
     margin-bottom: 5px
 }
 
-iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-}
-
-.borderline_vertical {
-    width: 20px;
-    height: 100%;
-    border-right: 3px solid #ACA19A;
-    padding: 2px 8px;
-    opacity: 1;
-    margin-right: 20px;
-}
-
-
-/* ------------------------------------ */
-/* SERVICES */
-/* ------------------------------------ */
-.adress__text {
+.menulist__outside {
+    display: flex;
+    flex-direction: column;
     text-align: left;
-    font: normal normal normal 0.9rem/26px Noto Sans JP;
+    margin: 0 auto;
+    padding-top: 10px;
+    font: normal normal normal 0.9rem/32px Noto Sans JP;
     letter-spacing: 0px;
     color: #433838;
     opacity: 1;
 }
 
+/* ------------------------------------ */
+/* アクセス（ACCESS） */
+/* ------------------------------------ */
 #access__content {
     display: flex;
     text-align: center;
@@ -1182,15 +825,85 @@ iframe {
     text-align: left;
 }
 
+.adress__text {
+    text-align: left;
+    font: normal normal normal 0.9rem/26px Noto Sans JP;
+    letter-spacing: 0px;
+    color: #433838;
+    opacity: 1;
+}
+
+iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
 .access__map {
     border: 0;
     width: 60%;
     height: 464px;
 }
 
+/* ------------------------------------ */
+/* お問い合わせ（CONTACT） */
+/* ------------------------------------ */
+.contact__btn {
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300%;
+    justify-content: center;
+}
 
-.sns-icon {
-    width: 3%;
+a.btn--contact {
+    color: #fff;
+    text-align: center;
+    background-color: #433838;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    top: 0px;
+    left: 0px;
+}
+
+a.btn--contact:hover {
+    color: #fff;
+    background: #433838;
+}
+
+a.btn-c {
+    display: block;
+    margin: 40px auto;
+    width: 350px;
+    height: 55px;
+    font-size: 1.2rem;
+    background-color: #48382B;
+    text-align: center;
+    line-height: 55px;
+    box-shadow: 4px 4px 0px 0 rgb(172 161 155);
+    text-decoration: none;
+}
+
+a.btn-c:before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+/* ------------------------------------ */
+/* フッター */
+/* ------------------------------------ */
+footer {
+    background-color: rgba(172, 161, 155, 1.0);
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.footer__logo {
+    width: 15%;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .footer__address {
@@ -1206,55 +919,26 @@ iframe {
     margin-bottom: 40px;
 }
 
-.footer__borderline {
-    text-align: center;
-    margin: 0 auto;
-    width: 25%;
-    border-bottom: 1px solid #707070;
-    opacity: 1;
-    margin-top: 25px;
-}
-
-.footer__links {
-    display: flex;
-    width: 50%;
-    height: 32px;
-    text-align: center;
-    text-decoration: none !important;
-    margin: 0 auto;
-    font: normal normal normal 22px/50px Noto Sans JP;
-    letter-spacing: 0px;
-    color: #595757;
-    opacity: 1;
-    padding-left: 10%;
-    margin-bottom: 30px;
-}
-
 .footer__copyright {
     font: normal normal normal 14px/27px Meiryo;
     color: #707070;
 }
 
-
-/* max-width: 1450px */
-
-@media only screen and (max-width: 1450px) {
-    .interior__content {
-        height: auto;
-        padding-bottom: 100px;
+/* min-width: 768px */
+@media only screen and (min-width: 768px) {
+    .wrapper #main {
+        max-width: 720px;
     }
+}
 
-    .detail_shop img  {
-        height: auto;
-    }
-    
-    .detail_shop p {
-        font: normal normal 300 12px/1.0rem Noto Sans JP;
+/* min-width: 1200px */
+@media only screen and (min-width: 1200px) {
+    .wrapper #main {
+        max-width: 1140px;
     }
 }
 
 /* max-width: 1200px */
-
 @media only screen and (max-width: 1200px) {
     .hide_pc {
         display: block !important;
@@ -1281,11 +965,28 @@ iframe {
         top: 33px;
         left: 10px;
     }
-
 }
 
 /* max-width: 767px */
 @media only screen and (max-width: 767px) {
+    #title {
+        margin: 0 auto 30px;
+    }
+
+    #title p {
+        margin-bottom: 30px;
+    }
+
+    #title h2 {
+        top: 22%;
+        left: 0;
+        right: 0;
+        margin-top: 40px;
+        margin-bottom: 0px;
+        color: #48382B;
+        font-size: 28px;
+    }
+
     .header__logo {
         height: 350px;
     }
@@ -1310,31 +1011,15 @@ iframe {
         margin-top: 50px;
     }
 
-    #title {
-        margin: 0 auto 30px;
-    }
-
-    #title p {
-        margin-bottom: 30px;
-    }
-
-    #title h2 {
-        top: 22%;
-        left: 0;
-        right: 0;
-        margin-top: 40px;
-        margin-bottom: 0px;
-        color: #48382B;
-        font-size: 28px;
-    }
-
     .wrapper #main {
+        max-width: 720px;
         width: 100%;
         padding-right: 0px;
         padding-left: 0px;
         margin-right: auto;
         margin-left: auto;
     }
+
     .wrapper .block-l {
         width: calc(100% - 30px);
         padding-right: 15px;
@@ -1343,6 +1028,10 @@ iframe {
 
     .wrapper .block-l2 {
         width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .block-l {
         margin-bottom: 80px;
     }
 
@@ -1362,11 +1051,71 @@ iframe {
         line-height: 55px;
         box-shadow: 4px 4px 0px 0 rgb(172, 161, 155);
     }
-    
+
     .costplan a {
         font-weight: 600;
         color: #FFFFFF;
         text-decoration: none;
+    }
+
+    .number__img img {
+        width: 80%;
+    }
+
+    .service__content ul .content__detail {
+        padding: 0 0 30px;
+        display: block;
+    }
+
+    .service__content ul .content__detail .detail__text {
+        width: 100%;
+        vertical-align: top;
+    }
+
+    .service__content ul .content__detail .detail__text p {
+        padding-right: 0;
+        padding-bottom: 4%;
+        line-height: 1.7;
+    }
+
+    .service__content ul .content__detail .detail__img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+        padding-top: 6%;
+        text-align: center;
+    }
+
+    .service__content ul .content__detail .detail__img img {
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .borderline {
+        height: 30px;
+    }
+
+    .detail__title {
+        font: normal normal bold 22px/48px Noto Sans JP;
+        text-align: center;
+    }
+
+    .detail__matter {
+        text-align: left;
+        font: normal normal normal 1.0rem/45px Noto Sans JP;
+        letter-spacing: 0px;
+        color: #433838;
+        opacity: 1;
+    }
+
+    .detail_shop p {
+        width: 100%;
+        font: normal normal 300 1rem/19px Noto Sans JP;
+        color: #522F12;
+        opacity: 1;
+        justify-content: center;
     }
 
     .content__btn {
@@ -1401,6 +1150,14 @@ iframe {
         text-align: center;
         margin: 0 auto;
         padding-bottom: 20px;
+        height: auto;
+    }
+
+    .shop__matter {
+        text-align: center;
+        height: 100%;
+        background: #F3F0E9 0% 0% no-repeat padding-box;
+        opacity: 0.7;
     }
 
     .title__mater {
@@ -1429,11 +1186,8 @@ iframe {
         margin-bottom: 30px;
     }
 
-    .shop__matter {
-        text-align: center;
-        height: 100%;
-        background: #F3F0E9 0% 0% no-repeat padding-box;
-        opacity: 0.7;
+    .title__content {
+        justify-content: center;
     }
 
     .staff__content {
@@ -1445,13 +1199,6 @@ iframe {
         padding-top: 20px;
     }
 
-    .staff__comment {
-        position: relative;
-        text-align: left;
-        width: 90%;
-        margin: 20px 20px 70px;
-    }
-
     .staff__columnbox {
         display: flex;
         flex-flow: column;
@@ -1460,11 +1207,23 @@ iframe {
         float: left;
     }
 
-    .service__content ul .content__detail .detail__img img {
-        width: 100%;
-        height: auto;
-        padding-left: 0;
-        text-align: center;
+    .staff__position {
+        font: normal bold normal 1rem/28px Noto Sans JP;
+    }
+
+    .staff__mater {
+        font: normal normal normal 1rem/28px Noto Sans JP;
+    }
+
+    .staff__comment {
+        position: relative;
+        text-align: left;
+        width: 90%;
+        margin: 20px 20px 70px;
+    }
+
+    .staff__comment p {
+        font: normal normal normal 1rem/28px Noto Sans JP;
     }
 
     .ordermade__mater {
@@ -1504,6 +1263,10 @@ iframe {
         margin-bottom: 20px;
     }
 
+    #menu .menulist h3 {
+        width: 100%;
+    }
+
     .menutext {
         text-align: left;
         font: normal normal normal 1rem/28px Noto Sans JP;
@@ -1512,119 +1275,6 @@ iframe {
         width: 100%;
         margin: auto;
         height: 100px;
-    }
-
-    #menu .menulist h3 {
-        width: 100%;
-    }
-
-    .wrapper--w {
-        width: 96%;
-        padding: 90px 0;
-    }
-
-    .content__chart ul li p.chart__ttl {
-        width: 120px;
-        max-width: none;
-        min-width: auto;
-    }
-
-    .content__chart ul li p {
-        display: inline-block;
-        width: calc(100% - 120px);
-    }
-
-    .wrapper #main .main__copy h1 {
-        font-size: 100%;
-        line-height: 168%;
-        margin: 0;
-        margin-top: 20px;
-        margin-bottom: 60px;
-    }
-
-    .wrapper #main .main__copy p {
-        font-size: 100%;
-        letter-spacing: 0.2em;
-        line-height: 175%;
-        margin: 0;
-        margin-top: 20px;
-    }
-
-    .contact__explanation {
-        text-align: center;
-        font: normal normal normal 21px/47px Noto Sans JP;
-        letter-spacing: 0px;
-        color: #433838;
-        opacity: 1;
-        padding-bottom: 50px;
-    }
-
-    .contact__content {
-        width: 100%;
-        height: 700px;
-        margin: 0 auto;
-        font-size: 100%;
-        vertical-align: baseline;
-        font: normal normal bold 1.0rem/44px Noto Sans JP;
-        font-weight: 100;
-        margin-bottom: 200px;
-    }
-
-    .block-l {
-        margin-bottom: 80px;
-    }
-
-    .detail_shop p {
-        width: 100%;
-        font: normal normal 300 1rem/19px Noto Sans JP;
-        color: #522F12;
-        opacity: 1;
-        justify-content: center;
-    }
-
-    .title__content {
-        justify-content: center;
-    }
-
-    .wpcf7-form-control {
-        width: 100%;
-        height: 40px;
-        font-size: 100%;
-    }
-
-    .about__detail p {
-        font-size: 4vw;
-        font-weight: bold;
-        line-height: 2.3;
-        padding: 8vw;
-        margin: -2% 0;
-    }
-
-    .about__copy p {
-        font-size: 10vw;
-        font-weight: bold;
-        margin-bottom: 1em;
-    }
-
-    .liimage {
-        display: flex;
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    .contact-top {
-        margin-top: 55px;
-    }
-
-    .staff__position {
-        font: normal bold normal 1rem/28px Noto Sans JP;
-    }
-    .staff__comment p {
-        font: normal normal normal 1rem/28px Noto Sans JP;
-    }
-    .staff__mater {
-        font: normal normal normal 1rem/28px Noto Sans JP;
     }
 
     .menulist__outside {
@@ -1701,109 +1351,5 @@ iframe {
     .footer__copyright {
         font: normal normal normal 10px/19px Meiryo;
         color: #707070;
-    }
-
-    .borderline {
-        height: 30px;
-    }
-}
-
-/* max-width: 608px */
-
-@media only screen and (max-width: 608px) {
-    .service__content ul .content__detail .detail__text {
-        width: 100%;
-        vertical-align: top;
-    }
-
-    .service__content ul .content__detail .detail__text p {
-        padding-right: 0;
-        padding-bottom: 4%;
-        line-height: 1.7;
-    }
-
-    .service__content ul .content__detail .detail__img {
-
-        width: 100%;
-        height: auto;
-        vertical-align: top;
-        padding-top: 6%;
-        text-align: center;
-    }
-
-    .service__content ul .content__detail {
-        padding: 0 0 30px;
-        display: block;
-    }
-
-    .service__content ul .content__detail .detail__img2 img {
-        width: 100%;
-        float: left;
-        display: flex;
-        padding-left: 0px;
-    }
-
-    .detail__img2 {
-        width: 45%;
-        height: auto;
-        float: left;
-        display: inline-block;
-    }
-
-    .detail__text3 {
-        height: auto;
-        padding-top: 0px;
-        background-color: rgba(233, 229, 222, 1.0);
-        text-decoration: underline;
-        text-align: left;
-        font: normal normal bold 0.9rem/24px Noto Sans JP;
-        letter-spacing: 0px;
-        color: #433838;
-        opacity: 1;
-        margin-top: 10px;
-    }
-
-    .liimage {
-        position: relative;
-        height: 31.0rem;
-    }
-
-    .detail__text--kanpo {
-        width: 100%;
-        vertical-align: top;
-    }
-
-    .costplan__outside {
-        display: table;
-        position: relative;
-        background-color: #48382B;
-        width: 100%;
-        height: 70px;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: 500;
-        margin-top: 3%;
-        margin-bottom: 10%;
-        vertical-align: middle;
-        text-align: center;
-        box-shadow: 0px 3px 10px #00000066;
-        opacity: 1;
-    }
-
-    .number__img img {
-        width: 80%;
-    }
-
-    .detail__title {
-        font: normal normal bold 22px/48px Noto Sans JP;
-        text-align: center;
-    }
-
-    .detail__matter {
-        text-align: left;
-        font: normal normal normal 1.0rem/45px Noto Sans JP;
-        letter-spacing: 0px;
-        color: #433838;
-        opacity: 1;
     }
 }
