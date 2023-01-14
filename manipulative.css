@@ -59,44 +59,6 @@ a:hover.btn:before {
 
 a:hover.btn.btn--y {
     background-color: rgba(172, 161, 155, 1.0);
-
-}
-
-/* ------------------------------------ */
-/*topへのスクロール*/
-/* ------------------------------------ */
-a.totop {
-    position: scroll;
-    right: 0;
-    bottom: 0;
-    width: 100px;
-    height: 100px;
-    border-radius: 196px 0 0 0;
-    background-color: rgba(172, 161, 155, 0.8);
-    color: #000;
-    text-decoration: none;
-    z-index: 999;
-}
-
-a.totop span {
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
-    letter-spacing: 0.2em;
-    font-size: 11px;
-}
-
-a.totop:before {
-    content: "";
-    position: absolute;
-    bottom: 56px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-image: url(img/arrow_top.png);
-    background-size: contain;
-    width: 8px;
-    height: 66px;
 }
 
 /* ------------------------------------ */
@@ -124,7 +86,6 @@ hr {
 header {
     position: scroll;
     width: 100%;
-    z-index: 999;
 }
 
 .heaer__logo {
@@ -149,7 +110,7 @@ header {
 }
 
 .header__menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     display: block;
@@ -157,10 +118,11 @@ header {
     background: #ACA19A;
     height: 80px;
     text-align: center;
+    z-index: 999;
 }
 
 .header__menu--sp {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     display: block;
@@ -168,6 +130,7 @@ header {
     background: #ACA19A;
     height: 85px;
     text-align: center;
+    z-index: 999;
 }
 
 .menu__list--sp {
@@ -1324,7 +1287,7 @@ iframe {
 /* max-width: 767px */
 @media only screen and (max-width: 767px) {
     .header__logo {
-        height: 400px;
+        height: 350px;
     }
 
     .header__menu_li {
@@ -1333,8 +1296,8 @@ iframe {
         height: 100%;
         z-index: 999;
         transition: 0.3s;
-        margin-top: -115px;
-        margin-left: -165px;
+        margin-top: -95px;
+        margin-left: -135px;
     }
 
     .main_bg {
@@ -1569,26 +1532,6 @@ iframe {
     .content__chart ul li p {
         display: inline-block;
         width: calc(100% - 120px);
-    }
-
-    a.totop {
-        width: 70px;
-        height: 70px;
-        border-radius: 196px 0 0 0;
-    }
-
-    a.totop:before {
-        bottom: 36px;
-        width: 6px;
-        height: 50px;
-    }
-
-    a.totop span {
-        position: absolute;
-        bottom: 10px;
-        right: 4px;
-        letter-spacing: 0.2em;
-        font-size: 0.2em;
     }
 
     .wrapper #main .main__copy h1 {
