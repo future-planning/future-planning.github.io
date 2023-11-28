@@ -428,6 +428,11 @@ header {
 /* ------------------------------------ */
 /* コンセプト（CONCEPT） */
 /* ------------------------------------ */
+#concept {
+    margin-top: -80px;
+    padding-top: 40px;
+}
+
 .service__content {
     margin: auto;
 }
@@ -538,6 +543,11 @@ header {
 /* ------------------------------------ */
 /* スタッフ紹介（STAFF） */
 /* ------------------------------------ */
+#staff {
+    margin-top: -80px;
+    padding-top: 80px;
+}
+
 .staff__background {
     display: flex;
     height: auto;
@@ -687,6 +697,11 @@ header {
 /* ------------------------------------ */
 /* 施術メニュー（MENU） */
 /* ------------------------------------ */
+#order {
+    margin-top: -80px;
+    padding-top: 40px;
+}
+
 .ordermade__title {
     height: 40px;
     margin: auto;
@@ -796,6 +811,11 @@ header {
 /* ------------------------------------ */
 /* アクセス（ACCESS） */
 /* ------------------------------------ */
+#access {
+    margin-top: -80px;
+    padding-top: 40px;
+}
+
 #access__content {
     display: flex;
     text-align: center;
