@@ -593,6 +593,7 @@ header {
 
 .staff__content {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     text-align: center;
     margin: 0 auto;
