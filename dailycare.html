@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おおもり整体院 | 習慣ケア</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #fdfcf8; /* 生成り色 */
+            color: #2c2c2c;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Zen Old Mincho', serif;
+        }
+        .text-ink {
+            color: #1a1a1a;
+        }
+        /* アコーディオンのアニメーション */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.active {
+            opacity: 1;
+        }
+        /* 画像のフィルター */
+        .img-warm {
+            filter: sepia(10%) contrast(105%);
+        }
+        /* フローティングフッターのパディング確保 */
+        .pb-floating {
+            padding-bottom: 80px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-stone-200 pb-floating">
+
+    <!-- Navigation (Non-floating) -->
+    <nav class="w-full bg-[#fdfcf8] py-8 border-b border-stone-200">
+        <div class="container mx-auto px-6 text-center">
+            <span class="text-lg tracking-[0.2em] font-bold text-stone-600 serif">
+                おおもり整体院
+            </span>
+        </div>
+    </nav>
+
+    <!-- 1. First View -->
+    <header class="relative py-24 md:py-32 px-6 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full z-0 opacity-20 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2000&auto=format&fit=crop" alt="Background Nature" class="w-full h-full object-cover img-warm">
+        </div>
+
+        <div class="container mx-auto max-w-4xl text-center relative z-10">
+            <!-- 説明コピー（サブタイトル） -->
+            <p class="text-stone-500 font-bold tracking-widest text-sm md:text-base mb-6 serif">
+                整体師が考える、身体をゼロに戻すための腸活・眠活習慣
+            </p>
+            
+            <!-- メインコピー -->
+            <h1 class="text-3xl md:text-5xl font-bold leading-relaxed tracking-wide mb-10 text-ink">
+                今の身体は、<br>
+                本来の状態ではありません。
+            </h1>
+            
+            <!-- 補足文 -->
+            <div class="bg-white/80 inline-block p-6 md:p-8 shadow-sm backdrop-blur-sm border border-stone-200 max-w-2xl">
+                <p class="text-base md:text-lg leading-loose font-medium text-stone-800">
+                    整体で整え、腸や睡眠まで含めて見直す。<br>
+                    本来の状態へ戻すための習慣を、<br class="md:hidden">私たちは大切にしています。
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Outer vs Inner Approach -->
+    <section class="py-24 bg-white px-6 border-b border-stone-100">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <span class="text-stone-500 font-bold tracking-widest text-xs uppercase mb-2 block">Our Approach</span>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-ink">なぜ「整体だけ」では足りないのか</h2>
+                <p class="text-stone-600 font-medium leading-relaxed max-w-2xl mx-auto">
+                    不調を感じたとき、多くの方は「外側からのケア」を求めます。<br>
+                    もちろん大切ですが、それだけでは不十分なケースも多いのです。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-stone-50 p-8 border border-stone-200">
+                    <h3 class="serif text-xl font-bold mb-4 flex items-center text-stone-800">
+                        <i data-lucide="activity" class="mr-2 text-stone-400"></i>
+                        外側（アウターケア）
+                    </h3>
+                    <p class="text-xs font-bold text-stone-500 mb-4 bg-white inline-block px-2 py-1">整体・ストレッチ</p>
+                    <ul class="space-y-3 text-sm font-medium text-stone-700">
+                        <li class="flex items-start"><span class="mr-2 text-stone-400">●</span>歪んだ骨格や筋肉を正しい位置へ戻す</li>
+                        <li class="flex items-start"><span class="mr-2 text-stone-400">●</span>血流や神経の通り道を整える</li>
+                        <li class="flex items-start"><span class="mr-2 text-stone-400">●</span>今ある不調に対して直接アプローチする</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#FDF8F3] p-8 border border-[#DCCbb5]">
+                    <h3 class="serif text-xl font-bold mb-4 flex items-center text-[#8C7B65]">
+                        <i data-lucide="leaf" class="mr-2 text-[#bfa588]"></i>
+                        内側（インナーケア）
+                    </h3>
+                    <p class="text-xs font-bold text-[#8C7B65] mb-4 bg-white inline-block px-2 py-1">腸活・眠活・生活習慣</p>
+                    <ul class="space-y-3 text-sm font-medium text-stone-700">
+                        <li class="flex items-start"><span class="mr-2 text-[#DCCbb5]">●</span>身体を作り替えるための材料を整える</li>
+                        <li class="flex items-start"><span class="mr-2 text-[#DCCbb5]">●</span>回復しやすい体内環境をつくる</li>
+                        <li class="flex items-start"><span class="mr-2 text-[#DCCbb5]">●</span>日常のダメージを蓄積させにくくする</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-stone-800 text-stone-200 p-8 md:p-12 rounded-sm text-center shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-stone-600 via-stone-400 to-stone-600"></div>
+                <h3 class="text-xl serif font-bold mb-8 text-white">車に例えるなら</h3>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 text-sm md:text-base font-medium mb-8">
+                    <!-- 整体 -->
+                    <div class="flex flex-col items-center group">
+                        <div class="w-20 h-20 rounded-full bg-stone-700 flex items-center justify-center mb-4 border border-stone-600 shadow-lg group-hover:bg-stone-600 transition-colors">
+                            <i data-lucide="car" class="w-8 h-8 text-stone-300"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-stone-400 text-xs mb-1 font-bold">整体</span>
+                            <span class="text-white text-lg serif">車体の整備</span>
+                        </div>
+                    </div>
+
+                    <!-- Plus Icon -->
+                    <div class="flex items-center justify-center">
+                        <i data-lucide="plus" class="w-8 h-8 text-stone-500"></i>
+                    </div>
+
+                    <!-- インナーケア -->
+                    <div class="flex flex-col items-center group">
+                        <div class="w-20 h-20 rounded-full bg-stone-700 flex items-center justify-center mb-4 border border-stone-600 shadow-lg group-hover:bg-stone-600 transition-colors">
+                            <i data-lucide="fuel" class="w-8 h-8 text-stone-300"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-stone-400 text-xs mb-1 font-bold">インナーケア</span>
+                            <span class="text-white text-lg serif">良質なガソリン</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-8 leading-loose text-stone-300 max-w-lg mx-auto text-sm md:text-base">
+                    どちらか一方が欠けても、車はスムーズに走り続けられません。<br>
+                    <span class="text-white border-b border-stone-500 pb-1">外と内の両方を整えることで、身体の状態を底上げする</span><br>
+                    ことを大切にしています。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Concept: Dot vs Line -->
+    <section class="py-24 bg-stone-100 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-ink">なぜ「日常の習慣」が必要なのか</h2>
+                <div class="w-12 h-1 bg-stone-400 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12 items-center mb-20">
+                <div class="md:w-1/2 space-y-8">
+                    <p class="text-lg leading-loose font-medium text-stone-800 text-justify">
+                        整体は、身体を整える<span class="border-b-2 border-stone-800 font-bold pb-1">「点」</span>のケア。<br>
+                        日常生活は、身体が戻っていく<span class="border-b-2 border-stone-800 font-bold pb-1">「線」</span>の時間。
+                    </p>
+                    <p class="leading-loose text-stone-700">
+                        施術は大切なきっかけですが、身体をゼロに近い状態で保つには、通わない日の積み重ねが欠かせません。
+                    </p>
+                    <p class="text-xl serif font-bold text-stone-900 pt-2 border-l-4 border-stone-400 pl-4">
+                        私たちは、内側からのケアを無理なく続ける習慣によって、その「間」を支えることが大切だと考えています。
+                    </p>
+                </div>
+                
+                <div class="md:w-1/2 w-full bg-white p-10 shadow-lg border border-stone-200 relative">
+                    <div class="flex items-center justify-between mb-10 relative z-10">
+                        <div class="flex flex-col items-center group">
+                            <div class="w-6 h-6 rounded-full bg-stone-800 mb-2 ring-4 ring-stone-200"></div>
+                            <span class="text-sm font-bold text-stone-600">施術日</span>
+                        </div>
+                        <div class="flex-1 h-0.5 bg-stone-300 mx-4 relative">
+                            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-white px-3 text-xs font-bold text-stone-500 border border-stone-200 py-1 rounded-full">
+                                日常（線）
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 rounded-full bg-stone-800 mb-2 ring-4 ring-stone-200"></div>
+                            <span class="text-sm font-bold text-stone-600">施術日</span>
+                        </div>
+                    </div>
+                    <div class="bg-stone-50 p-6 border border-dashed border-stone-300 text-center">
+                        <p class="text-stone-800 font-bold mb-2">この「間」の品質を保つ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Two States & Pack Lineup -->
+    <section class="py-24 px-6 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4 text-ink">選べる2つの習慣ケア</h2>
+                <div class="w-12 h-1 bg-stone-200 mx-auto mb-6"></div>
+                <p class="text-lg font-medium text-stone-600 max-w-2xl mx-auto">
+                    整体で整えた身体を「戻さない」ために。あなたの今の状態に合わせて、<br class="hidden md:block">
+                    腸活または眠活のいずれかを日常の習慣に取り入れることをおすすめしています。
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Gut Pack -->
+                <div class="flex flex-col h-full bg-[#FDF8F3] border border-[#efe6db] rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="img/set1.jpg" alt="腸活パック" class="w-full h-full object-cover img-warm">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 text-xs font-bold text-[#8C7B65] tracking-widest uppercase">Basic Care</div>
+                    </div>
+                    <div class="p-8 md:p-10 flex-grow">
+                        <h3 class="serif text-3xl font-bold mb-4 text-ink">腸活パック</h3>
+                        <p class="font-bold text-[#8C7B65] mb-6">身体の回復スピードを支える「土台づくり」</p>
+                        <p class="text-sm leading-loose text-stone-600 font-medium mb-8">
+                            腸は「第二の脳」とも呼ばれ、免疫や回復力と深く関わっています。腸内環境が整うと、整体の効果がスムーズに身体へ浸透し、疲れにくい状態をキープできるようになります。
+                        </p>
+
+                        <div class="bg-white/60 p-6 border border-[#DCCbb5]/30 rounded-sm mb-8">
+                            <h4 class="text-xs font-bold text-[#8C7B65] mb-4 tracking-widest border-b border-[#DCCbb5]/30 pb-2">お届けするセット内容</h4>
+                            <ul class="text-sm font-bold text-[#5C5045] space-y-3">
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-[#DCCbb5] rounded-full mr-3"></span>グリーンBF</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-[#DCCbb5] rounded-full mr-3"></span>イエル ハーバル ティー【土】</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-[#DCCbb5] rounded-full mr-3"></span>八仙ゴジベリー（ゴジベリー/サジー）</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto text-center border-t border-[#efe6db] pt-8">
+                            <p class="text-3xl serif font-bold text-[#5C5045]">10,000<span class="text-base ml-1 font-sans">円</span></p>
+                            <p class="text-[10px] text-stone-400 font-bold">税込 / 送料込</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sleep Pack -->
+                <div class="flex flex-col h-full bg-[#F0F2EF] border border-[#e2e6e2] rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="img/set2.jpg" alt="眠活パック" class="w-full h-full object-cover img-warm">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 text-xs font-bold text-[#5C665C] tracking-widest uppercase">Recovery Care</div>
+                    </div>
+                    <div class="p-8 md:p-10 flex-grow">
+                        <h3 class="serif text-3xl font-bold mb-4 text-ink">眠活パック</h3>
+                        <p class="font-bold text-[#5C665C] mb-6">自律神経をリセットし「回復を助ける」</p>
+                        <p class="text-sm leading-loose text-stone-600 font-medium mb-8">
+                            睡眠は身体の緊張を解き、組織を修復するための唯一の時間です。眠りの質を高めることで、翌朝の身体の軽さが変わり、整体で整えた良い状態を定着させやすくなります。
+                        </p>
+
+                        <div class="bg-white/60 p-6 border border-[#8C9A8C]/30 rounded-sm mb-8">
+                            <h4 class="text-xs font-bold text-[#5C665C] mb-4 tracking-widest border-b border-[#8C9A8C]/30 pb-2">お届けするセット内容</h4>
+                            <ul class="text-sm font-bold text-[#4B524B] space-y-3">
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-[#8C9A8C] rounded-full mr-3"></span>ディープレスト</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-[#8C9A8C] rounded-full mr-3"></span>イエル ハーバル ティー【火】</li>
+                                <li class="invisible flex items-center"><span class="w-1.5 h-1.5 rounded-full mr-3"></span>ダミーテキスト</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto text-center border-t border-[#e2e6e2] pt-8">
+                            <p class="text-3xl serif font-bold text-[#2F382F]">10,000<span class="text-base ml-1 font-sans">円</span></p>
+                            <p class="text-[10px] text-stone-400 font-bold">税込 / 送料込</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Usage -->
+    <section class="py-24 px-6 bg-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="serif text-2xl md:text-3xl font-bold text-stone-800 mb-16">日常にメンテナンス習慣を</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 rounded-full bg-[#fdfcf8] border border-stone-200 flex items-center justify-center mb-6 shadow-sm">
+                        <i data-lucide="sun-moon" class="w-10 h-10 text-stone-400"></i>
+                    </div>
+                    <p class="font-bold text-stone-800 text-lg">朝や夜の<br>決まったタイミングで</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 rounded-full bg-[#fdfcf8] border border-stone-200 flex items-center justify-center mb-6 shadow-sm">
+                        <i data-lucide="calendar-check" class="w-10 h-10 text-stone-400"></i>
+                    </div>
+                    <p class="font-bold text-stone-800 text-lg">忘れた日は、<br>また翌日から</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 rounded-full bg-[#fdfcf8] border border-stone-200 flex items-center justify-center mb-6 shadow-sm">
+                        <i data-lucide="smile" class="w-10 h-10 text-stone-400"></i>
+                    </div>
+                    <p class="font-bold text-stone-800 text-lg">毎日完璧でなくて<br>大丈夫です</p>
+                </div>
+            </div>
+
+            <div class="mt-16 p-8 border-t border-b border-stone-100 bg-[#fdfcf8]/50 inline-block">
+                <p class="text-sm text-stone-500 font-bold tracking-widest leading-loose">
+                    生活に無理なく組み込めることを大切にしています。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Health Investment -->
+    <section class="py-24 bg-[#EBE9E4] px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-white p-10 md:p-16 shadow-xl border-l-8 border-[#2C3333]">
+                <h3 class="text-xs font-bold text-stone-400 tracking-[0.2em] mb-8 uppercase">To Your Future</h3>
+                <h2 class="text-2xl md:text-3xl serif font-bold leading-relaxed text-ink mb-10">
+                    「まだ動けるから大丈夫」と<br>思っていませんか？
+                </h2>
+                <div class="space-y-8 text-base leading-loose text-stone-700 font-medium">
+                    <p>
+                        健康は「消費」ではなく「投資」です。今の習慣が、10年後・20年後の歩き方や表情をつくります。
+                    </p>
+                    <p class="text-lg font-bold text-stone-800">
+                        「歳だから仕方ない」と諦める前に、<br>
+                        <span class="border-b-2 border-stone-400">身体を整える習慣を持つこと</span>を、私たちはおすすめしています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Voices (Professional) -->
+    <section class="py-24 px-6 container mx-auto max-w-5xl">
+        <div class="text-center mb-16">
+            <span class="text-stone-500 font-bold tracking-widest text-xs uppercase mb-2 block">Voice 01</span>
+            <h2 class="text-2xl font-bold text-ink">身体を仕事にしている人たちの声</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
+            <div class="bg-white border border-stone-200 p-8 flex flex-col items-center text-center">
+                <!-- 画像コンテナを変更：丸型から縦長角丸へ -->
+                <div class="w-full max-w-xs h-96 overflow-hidden mb-6 border border-stone-100 rounded-lg shadow-sm">
+                    <img src="img/hata.jpg" alt="" class="w-full h-full object-cover object-top">
+                </div>
+                <p class="text-sm leading-loose text-stone-800 font-medium mb-4">
+                    施術を受けて感じたのは、「本当の意味でのオーダーメイド」だという点です。その場の不調だけでなく、どんな動作や体の使い方が原因になっているのかを丁寧に深掘りし、根本から整えてくれます。パーソナルトレーナーとして多くの身体を見てきましたが、施術後の変化だけでなく、再発を防ぐためのセルフケアまで具体的に教えてもらえる点はとても価値が高いと感じました。整体で体を整えながらインナーケアを併せて行うことで、トレーニングや日常動作の質も大きく向上します。専門家の立場から見ても、安心しておすすめできる整体です。
+                </p>
+                <p class="text-xs font-bold text-stone-500 uppercase">パーソナルトレーナー　畑様</p>
+            </div>
+            <div class="bg-white border border-stone-200 p-8 flex flex-col items-center text-center">
+                <!-- 画像コンテナを変更：丸型から縦長角丸へ -->
+                <div class="w-full max-w-xs h-96 overflow-hidden mb-6 border border-stone-100 rounded-lg shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-full object-cover object-center">
+                </div>
+                <p class="text-sm leading-loose text-stone-800 font-medium mb-4">
+                    eスポーツは長時間同じ姿勢でプレイするため、首や肩、手指に負担がかかりやすい仕事です。腱鞘炎をきっかけに整体を受けましたが、整体に加えて眠りを整える習慣を取り入れてからは、睡眠後の回復感が高まり、長時間の練習でも集中力を保ちやすくなりました。自分では気づきにくい体の状態を整えてもらえることで、結果的にパフォーマンス向上につながったと感じています。
+                </p>
+                <p class="text-xs font-bold text-stone-500">e-スポーツプレイヤー Tensai様<br>(Crazy Racoon所属)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Voices (General) -->
+    <section class="py-24 px-6 bg-stone-100">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16">
+                <span class="text-stone-500 font-bold tracking-widest text-xs uppercase mb-2 block">Voice 02</span>
+                <h2 class="text-2xl font-bold text-ink">同じように悩んでいた方の声</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- User 01 (Male) -->
+                <div class="bg-white p-8 border border-stone-200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-400 mr-4 border border-blue-100">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-stone-800">40代男性 / IT経営者</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-loose text-stone-700 font-medium">
+                        肩や首の不調が続いていましたが、施術で「痛みのある場所」だけでなくお腹の状態まで含めて体を見ていただいたことが印象的でした。
+                        日々の食事やお酒の内容が、そのまま体の状態に影響していることも分かり、自宅でできるケアの方法まで教えてもらえたのはとても助かっています。
+                        いろいろな器具を試しても改善しなかったので、もっと早く相談すればよかったと感じています。
+                    </p>
+                </div>
+
+                <!-- User 02 (Female) -->
+                <div class="bg-white p-8 border border-stone-200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center text-pink-400 mr-4 border border-pink-100">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-stone-800">20代女性 / 営業職</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-loose text-stone-700 font-medium">
+                        仕事柄、帰りが遅くなる日も多く、寝不足や体の重さが当たり前になっていました。
+                        整体で体を整えてもらったあと、先生に勧めてもらったインナーケアを取り入れてから、眠りの深さが変わったように感じています。
+                        朝の目覚めが楽になり、仕事中の集中力も続きやすくなりました。
+                        インナーケアで日中のパフォーマンスが変わることに驚いています。
+                    </p>
+                </div>
+
+                <!-- User 03 (Female) -->
+                <div class="bg-white p-8 border border-stone-200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center text-pink-400 mr-4 border border-pink-100">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-stone-800">30代女性 / IT職</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-loose text-stone-700 font-medium">
+                        これまであまり体のメンテナンスを意識していませんでしたが、整体の先生に勧められてインナーケアを始めました。
+                        日々の生活に少しプラスするだけなので、忙しい時でも無理なく続けられています。
+                        体の調子が整ってきたことで、仕事中の集中力が上がったと感じています。
+                    </p>
+                </div>
+
+                <!-- User 04 (Female) -->
+                <div class="bg-white p-8 border border-stone-200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center text-pink-400 mr-4 border border-pink-100">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-stone-800">30代女性 / 医療職</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-loose text-stone-700 font-medium">
+                        もともと大きな不調はありませんでしたが、インナーケアを続けることで体のリズムがより安定してきたように感じています。
+                        肌の調子が崩れにくくなり、気分の浮き沈みも少なくなりました。
+                        日常を、穏やかな気持ちで過ごせていることが一番の変化です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Pricing Detail -->
+    <section class="py-24 px-6 bg-white border-y border-stone-100">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16">
+                <span class="text-stone-500 font-bold tracking-widest text-xs uppercase mb-2 block">Price Plan</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-ink serif">内容と価格</h2>
+                <div class="w-12 h-1 bg-stone-800 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Gut Pack Price -->
+                <div class="bg-[#FDF8F3] border-2 border-[#DCCbb5] rounded-sm p-8 flex flex-col items-center">
+                    <h3 class="serif text-xl font-bold text-[#8C7B65] mb-2">腸活パック</h3>
+                    <p class="text-xs font-bold text-[#bfa588] mb-6 tracking-wide">Gut Health Care</p>
+                    
+                    <div class="mb-10 text-center bg-white/50 w-full py-6 rounded-sm">
+                        <p class="text-xs font-bold text-stone-400 mb-2">月額（30日分）</p>
+                        <p class="text-4xl serif font-bold text-[#5C5045]">10,000<span class="text-base ml-1 font-sans">円</span></p>
+                        <p class="text-[10px] text-stone-400 font-bold mt-2">税込 / 送料無料</p>
+                    </div>
+
+                    <div class="w-full text-left space-y-12">
+                        <!-- Item 1 -->
+                        <div>
+                            <h4 class="font-bold text-[#5C5045] text-sm mb-4 border-l-2 border-[#DCCbb5] pl-3">グリーンBF</h4>
+                            <div class="flex flex-col sm:flex-row gap-6 items-start">
+                                <div class="w-full sm:w-28 h-28 flex-shrink-0 bg-white border border-[#DCCbb5]/20 rounded-sm overflow-hidden flex items-center justify-center shadow-inner">
+                                    <img src="img/cutout_green_box.jpg" alt="グリーンBF" class="w-full h-full object-contain p-1">
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="text-xs leading-loose text-stone-600 bg-white p-4 rounded-sm border border-[#DCCbb5]/20">
+                                        野菜や植物由来の成分をベースに、日々の食事では不足しがちな要素を補うことを目的としています。
+                                        腸まわりの状態が整うことで、整体で整えた体が回復しやすい土台をつくることを目指しています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div>
+                            <h4 class="font-bold text-[#5C5045] text-sm mb-4 border-l-2 border-[#DCCbb5] pl-3">ハーバル エレメンタルティー【土】</h4>
+                            <div class="flex flex-col sm:flex-row gap-6 items-start">
+                                <div class="w-full sm:w-28 h-28 flex-shrink-0 bg-white border border-[#DCCbb5]/20 rounded-sm overflow-hidden flex items-center justify-center shadow-inner">
+                                    <img src="img/IERU_EARTH.jpg" alt="ハーバル エレメンタルティー【土】" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="text-xs leading-loose text-stone-600 bg-white p-4 rounded-sm border border-[#DCCbb5]/20">
+                                        日常の中で取り入れやすいハーブティーです。
+                                        体をリラックスさせる時間をつくることで、腸まわりを含めた内側の巡りを意識しやすくなります。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div>
+                            <h4 class="font-bold text-[#5C5045] text-sm mb-4 border-l-2 border-[#DCCbb5] pl-3">ゴジベリージュースセット</h4>
+                            <div class="flex flex-col sm:flex-row gap-6 items-start">
+                                <div class="w-full sm:w-28 h-28 flex-shrink-0 bg-white border border-[#DCCbb5]/20 rounded-sm overflow-hidden flex items-center justify-center shadow-inner">
+                                    <img src="img/gojisaji.jpg" alt="ゴジベリージュースセット" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-grow text-xs leading-loose text-stone-600 bg-white p-4 rounded-sm border border-[#DCCbb5]/20">
+                                    <p class="mb-2">日常の食事だけでは摂りにくい植物由来の栄養を、無理なく補うためのジュースです。ゴジベリー（クコの実）とサジーをブレンドしています。</p>
+                                    <p>腸まわりの状態や巡りを意識することで、整体で整えた体を、より安定した状態で保ちやすくなります。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sleep Pack Price -->
+                <div class="bg-[#F0F2EF] border-2 border-[#8C9A8C] rounded-sm p-8 flex flex-col items-center">
+                    <h3 class="serif text-xl font-bold text-[#5C665C] mb-2">眠活パック</h3>
+                    <p class="text-xs font-bold text-[#8C9A8C] mb-6 tracking-wide">Sleep Health Care</p>
+
+                    <div class="mb-10 text-center bg-white/50 w-full py-6 rounded-sm">
+                        <p class="text-xs font-bold text-stone-400 mb-2">月額（30日分）</p>
+                        <p class="text-4xl serif font-bold text-[#2F382F]">10,000<span class="text-base ml-1 font-sans">円</span></p>
+                        <p class="text-[10px] text-stone-400 font-bold mt-2">税込 / 送料無料</p>
+                    </div>
+
+                    <div class="w-full text-left space-y-12">
+                        <!-- Item 1 -->
+                        <div>
+                            <h4 class="font-bold text-[#4B524B] text-sm mb-4 border-l-2 border-[#8C9A8C] pl-3">ディープレスト</h4>
+                            <div class="flex flex-col sm:flex-row gap-6 items-start">
+                                <div class="w-full sm:w-28 h-28 flex-shrink-0 bg-white border border-[#8C9A8C]/20 rounded-sm overflow-hidden flex items-center justify-center shadow-inner">
+                                    <img src="img/deeprest.jpg" alt="ディープレスト" class="w-full h-full object-contain p-1">
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="text-xs leading-loose text-stone-600 bg-white p-4 rounded-sm border border-[#8C9A8C]/20">
+                                        忙しい日常で乱れがちな生活リズムを整えることを目的としたサプリメントです。
+                                        整体後の体が、休むべき時間にきちんと休める状態へ向かうことをサポートします。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div>
+                            <h4 class="font-bold text-[#4B524B] text-sm mb-4 border-l-2 border-[#8C9A8C] pl-3">ハーバル エレメンタルティー【火】</h4>
+                            <div class="flex flex-col sm:flex-row gap-6 items-start">
+                                <div class="w-full sm:w-28 h-28 flex-shrink-0 bg-white border border-[#8C9A8C]/20 rounded-sm overflow-hidden flex items-center justify-center shadow-inner">
+                                    <img src="img/IERU_FIRE.jpg" alt="ハーバル エレメンタルティー【火】" class="w-full h-full object-contain p-1">
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="text-xs leading-loose text-stone-600 bg-white p-4 rounded-sm border border-[#8C9A8C]/20">
+                                        一日の終わりに、気持ちと体を切り替えるためのハーブティーです。
+                                        眠る前の時間を整えることで、回復のための時間を意識しやすくする役割を担っています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-xs text-stone-500 font-medium tracking-wider">※定期購入の回数縛りはありません。いつでもスキップ・解約が可能です。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section class="py-24 px-6 container mx-auto max-w-3xl">
+        <h2 class="text-center text-2xl font-bold mb-12 text-ink">よくある質問</h2>
+        <div class="space-y-4">
+            <!-- Q1 -->
+            <div class="border border-stone-200 bg-white rounded-lg">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleAccordion(1)">
+                    <span class="font-bold text-stone-800">Q1. 腸活と眠活、どちらを選べばいいですか？</span>
+                    <i data-lucide="chevron-down" id="icon-1"></i>
+                </button>
+                <div id="content-1" class="accordion-content">
+                    <div class="p-6 pt-0 text-stone-600 font-medium leading-loose">
+                        A. 迷う場合は、施術時にお声がけください。<br>
+                        体の状態を見たうえで、今の状態に合う考え方をお伝えします。
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="border border-stone-200 bg-white rounded-lg">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleAccordion(2)">
+                    <span class="font-bold text-stone-800">Q2. 途中でやめたり、スキップすることはできますか？</span>
+                    <i data-lucide="chevron-down" id="icon-2"></i>
+                </button>
+                <div id="content-2" class="accordion-content">
+                    <div class="p-6 pt-0 text-stone-600 font-medium leading-loose">
+                        A. はい、どちらも可能です。<br>
+                        この取り組みは「続けなければいけないもの」ではありません。体調や生活リズムに合わせて、一時的にスキップしたり、途中でやめたりしていただけます。ご自身のペースを大切にしてください。
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="border border-stone-200 bg-white rounded-lg">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleAccordion(3)">
+                    <span class="font-bold text-stone-800">Q3. 毎日きちんと続けられるか不安です。</span>
+                    <i data-lucide="chevron-down" id="icon-3"></i>
+                </button>
+                <div id="content-3" class="accordion-content">
+                    <div class="p-6 pt-0 text-stone-600 font-medium leading-loose">
+                        A. 毎日完璧に続ける必要はありません。<br>
+                        忘れた日は、また翌日からで大丈夫です。
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="border border-stone-200 bg-white rounded-lg">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleAccordion(4)">
+                    <span class="font-bold text-stone-800">Q4. 整体を受けていなくても利用できますか？</span>
+                    <i data-lucide="chevron-down" id="icon-4"></i>
+                </button>
+                <div id="content-4" class="accordion-content">
+                    <div class="p-6 pt-0 text-stone-600 font-medium leading-loose">
+                        A. 利用は可能ですが、整体と併せて取り入れていただくことで、体の変化をより感じやすくなると考えています。<br>
+                        施術で体を整え、その状態を日常で支える。この2つを組み合わせることで、体は安定しやすくなります。
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="border border-stone-200 bg-white rounded-lg">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleAccordion(5)">
+                    <span class="font-bold text-stone-800">Q5. サプリやジュースに抵抗があります。</span>
+                    <i data-lucide="chevron-down" id="icon-5"></i>
+                </button>
+                <div id="content-5" class="accordion-content">
+                    <div class="p-6 pt-0 text-stone-600 font-medium leading-loose">
+                        A. 私たちが選んでいるのは、刺激の強さや即効性を重視したものではありません。<br>
+                        日常に無理なく取り入れられることを重視していますので、ご不安な点があれば、施術時にご相談ください。
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="border border-stone-200 bg-white rounded-lg">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleAccordion(6)">
+                    <span class="font-bold text-stone-800">Q6. どれくらいで変化を感じますか？</span>
+                    <i data-lucide="chevron-down" id="icon-6"></i>
+                </button>
+                <div id="content-6" class="accordion-content">
+                    <div class="p-6 pt-0 text-stone-600 font-medium leading-loose">
+                        A. 体の感じ方には個人差があります。<br>
+                        すぐに変化を感じる方もいれば、生活の中で少しずつ安定していく方もいます。私たちは「急な変化」より、「崩れにくさ」を大切にしています。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-[#111] text-center text-stone-600 text-xs tracking-wider">
+        <p>&copy; 2026 おおもり整体院</p>
+    </footer>
+
+    <!-- 11. Floating Footer CTA (Split Design) -->
+    <div class="fixed bottom-0 left-0 w-full z-50 flex h-[70px] border-t border-stone-800 shadow-2xl">
+        <a href="https://online-mart-tokyo.myshopify.com/products/%E8%85%B8%E6%B4%BB%E3%83%91%E3%83%83%E3%82%AF" target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#FDF8F3] text-[#5C5045] font-bold text-sm tracking-widest hover:bg-[#efe6db] transition-colors border-r border-stone-200 flex items-center justify-center px-2">
+          <span class="flex items-center">
+            <i data-lucide="leaf" class="w-4 h-4 mr-2 text-[#8C7B65]"></i>
+                腸活パックを始める
+            </span>
+        </a>
+        <a href="https://online-mart-tokyo.myshopify.com/products/%E7%9C%A0%E6%B4%BB%E3%83%91%E3%83%83%E3%82%AF" target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#2C332C] text-[#fdfcf8] font-bold text-sm tracking-widest hover:bg-stone-900 transition-colors flex items-center justify-center px-2">
+            <span class="flex items-center">
+                <i data-lucide="moon" class="w-4 h-4 mr-2 text-[#8C9A8C]"></i>
+                眠活パックを始める
+            </span>
+        </a>
+    </div>
+    <script>
+        lucide.createIcons();
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+            if (isOpen) {
+                content.style.maxHeight = '0px';
+                content.classList.remove('active');   // 透明解除を戻す
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.add('active');      // 透明解除
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+
+</body>
+</html>
