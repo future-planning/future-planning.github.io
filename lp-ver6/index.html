@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>寝ても、休んでも、疲れが抜けないあなたへ｜おおもり整体院</title>
+    <meta name="description" content="その「なんとなく不調」、身体を整えることから始めませんか？国家資格者による60分オーダーメイド整体。大森駅徒歩8分・平日23時まで。初回限定4,400円。">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="../img/logo_seitai_Br.svg">
+    <meta property="og:title" content="寝ても、休んでも、疲れが抜けないあなたへ｜おおもり整体院">
+    <meta property="og:description" content="国家資格者による60分オーダーメイド整体。大森駅徒歩8分・平日23時まで。初回限定4,400円。">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145847191-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-145847191-1');
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* メイン色：淡いピンク（10/17修正案）。300が背景に使うメインのピンク */
+                        brand: { 50: '#fdf5f6', 100: '#f9e6e8', 200: '#f5d9dc', 300: '#f0cdd0', 500: '#d99aa1', 600: '#c27f88', 700: '#a8646e', 800: '#7d4a52' },
+                        accent: { 500: '#c98a3d', 600: '#b3762e' },
+                        cta: { 500: '#d4665f', 600: '#c0524b' }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+        body { font-family: "Noto Sans JP", sans-serif; }
+        /* 予約ボタン：弾む動き＋光が流れる演出 */
+        .cta-pulse { position: relative; overflow: hidden; animation: ctaPulse 2s ease-in-out infinite; }
+        .cta-pulse::after { content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; pointer-events: none;
+                            background: linear-gradient(100deg, transparent, rgba(255,255,255,.55), transparent); animation: ctaShine 2s ease-in-out infinite; }
+        @keyframes ctaPulse { 0%,100% { transform: scale(1); } 15% { transform: scale(1.07); } 30% { transform: scale(.98); } 45% { transform: scale(1.04); } 60% { transform: scale(1); } }
+        @keyframes ctaShine { 0%,50% { left: -60%; } 100% { left: 130%; } }
+        @media (prefers-reduced-motion: reduce) { .cta-pulse, .cta-pulse::after { animation: none; } }
+        /* ロゴSVGは余白が大きいので、文字部分だけを切り出して表示 */
+        .logo-crop { display: block; height: 19px; aspect-ratio: 650 / 83; background: url('../img/logo_seitai_Br.svg') no-repeat 46.6% 38.4% / 293.8% auto; }
+        /* ハンバーガーメニュー */
+        .menu-line { position: absolute; left: 0; width: 30px; height: 1px; background: #fff; transition: transform .4s, top .4s; }
+        .menu-line:nth-child(1) { top: 0; }
+        .menu-line:nth-child(2) { top: 8px; }
+        .is-open .menu-line:nth-child(1) { top: 4px; transform: rotate(45deg); }
+        .is-open .menu-line:nth-child(2) { top: 4px; transform: rotate(-45deg); }
+        #siteNav { opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s; }
+        #siteNav.is-open { opacity: 1; visibility: visible; }
+        .nav-arrow { position: relative; width: 36px; height: 1px; background: #c27f88; flex-shrink: 0; }
+        .nav-arrow::after { content: ""; position: absolute; right: -3px; top: -3px; width: 7px; height: 7px; border-radius: 9999px; background: #c27f88; }
+        /* 仮画像（本番画像に差し替える枠） */
+        .ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .4rem; padding: 1rem; text-align: center;
+              font-size: 12px; line-height: 1.5; color: #4a6b4a; border: 2px dashed #a9bfa9; border-radius: .75rem;
+              background: repeating-linear-gradient(45deg, #f4f7f4, #f4f7f4 10px, #e9f0e9 10px, #e9f0e9 20px); }
+        .ph svg { width: 28px; height: 28px; opacity: .6; }
+        .ph small { font-size: 10px; opacity: .7; }
+        /* 吹き出し */
+        .balloon { position: relative; background: #fff; border-radius: 9999px; padding: .75rem 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+        /* お悩みの吹き出し（写真側に向けて三角のしっぽを付ける） */
+        .worry-bubble { position: relative; background: #fff; padding: .9rem 1rem; font-weight: 500; line-height: 1.8; }
+        .worry-bubble > span, .worry-bubble .worry-mark { display: inline-block; }
+        @media (min-width: 640px) { .worry-bubble { white-space: nowrap; } }
+        .worry-bubble::before { content: ""; position: absolute; top: 50%; transform: translateY(-50%); border: 10px solid transparent; }
+        .worry-bubble.tail-left::before { left: -18px; border-right: 10px solid #fff; }
+        .worry-bubble.tail-right::before { right: -18px; border-left: 10px solid #fff; }
+        /* ファーストビュー（バナー風） */
+        .fv-banner { container-type: inline-size; }
+        .fv-badge { position: absolute; top: 0; right: 4%; z-index: 20; width: 19cqw; padding: 2.5cqw 0 5cqw;
+                    font-family: "Noto Serif JP", serif; font-weight: 700; font-size: 3.4cqw; line-height: 1.35; color: #3f3a2c; text-align: center;
+                    background: linear-gradient(180deg, #fffdf6, #f1e6c6); border-left: .8cqw solid #c9a54b; border-right: .8cqw solid #c9a54b;
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 86%, 0 100%); box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+        .fv-band { display: inline-block; background: #9cbf5a; color: #fff; padding: .05em .3em; }
+        .fv-tag { display: inline-block; background: #7d6b5d; color: #fff; padding: .15em .45em; }
+        .fv-marker { background: linear-gradient(transparent 62%, #fcd77f 62%); }
+        .fv-halo { text-shadow: 0 0 .5em #fff, 0 0 .25em #fff, 0 0 .1em #fff; }
+        .fv-halo .fv-band, .fv-halo .fv-tag { text-shadow: none; }
+        /* 不安の声（楕円の吹き出し。下側にしっぽ） */
+        .talk { position: relative; display: flex; align-items: center; justify-content: center; width: 62%; max-width: 280px; aspect-ratio: 5 / 3.6;
+                background: #fff; border: 3px solid #d4665f; border-radius: 50%; color: #374151; font-weight: 700; line-height: 1.8; }
+        .talk::before, .talk::after { content: ""; position: absolute; top: 100%; border-style: solid; }
+        .talk::before { left: 62%; margin-top: -4px; border-width: 18px 6px 0 10px; border-color: #d4665f transparent transparent transparent; }
+        .talk::after  { left: calc(62% + 4px); margin-top: -8px; border-width: 13px 3px 0 6px; border-color: #fff transparent transparent transparent; }
+        .talk.talk-r::before { left: auto; right: 62%; border-width: 18px 10px 0 6px; }
+        .talk.talk-r::after  { left: auto; right: calc(62% + 4px); border-width: 13px 6px 0 3px; }
+        /* モヤモヤ（もくもくした考え雲。しっぽは小さな丸） */
+        .think { position: relative; display: flex; align-items: center; justify-content: center; aspect-ratio: 200 / 130; padding: 0 6%; white-space: nowrap;
+                 color: #4b4038; font-weight: 700; font-size: clamp(10px, 2.7vw, 14px); line-height: 1.6; text-align: center;
+                 background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 130'%3E%3Cpath d='M40 105C15 105 6 82 24 70 9 55 24 30 48 38 55 15 85 9 98 27 110 7 146 12 150 35 176 30 193 56 178 72 195 89 180 113 155 106 145 123 114 124 102 110 88 124 54 122 40 105Z' fill='%23fff' stroke='%239a8f88' stroke-width='2.5'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+        .think::before, .think::after { content: ""; position: absolute; border-radius: 9999px; background: #fff; border: 2px solid #9a8f88; }
+        .think::before { width: 14px; height: 14px; bottom: -2px; right: 14%; }
+        .think::after  { width: 8px; height: 8px; bottom: -14px; right: 9%; }
+        .think.think-l::before { right: auto; left: 14%; }
+        .think.think-l::after  { right: auto; left: 9%; }
+        /* 口コミ評価のバッジ（月桂樹風） */
+        .laurel { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: 9999px;
+                  background: radial-gradient(circle, #fffaf0 58%, transparent 59%), conic-gradient(from 200deg, #c9a54b, #e8d39a, #c9a54b, #e8d39a, #c9a54b);
+                  color: #5b4a2c; text-align: center; line-height: 1.3; }
+        /* 初回限定コースのチケット */
+        .ticket-cut { position: relative; }
+        .ticket-cut::before, .ticket-cut::after { content: ""; position: absolute; left: -9px; width: 18px; height: 18px; border-radius: 9999px; background: #fbeaea; }
+        .ticket-cut::before { top: -9px; }
+        .ticket-cut::after  { bottom: -9px; }
+        .cloud { border: 2px solid #e8a3a0; border-radius: 52% 48% 55% 45% / 48% 56% 44% 52%; box-shadow: 4px -3px 0 -1px #fff, 4px -3px 0 1px #e8a3a0; }
+        .ph-inline { display: inline-block; padding: 0 .1em; border: 1px dashed #d4665f; color: #d4665f; border-radius: 4px; }
+        .worry-mark { text-decoration: underline; text-decoration-color: #d4665f; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 leading-relaxed pt-[60px]">
+
+    <!-- ヘッダー（固定） -->
+    <header class="fixed top-0 inset-x-0 z-[60] h-[60px] bg-white shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-between pl-4">
+        <a href="#top" aria-label="おおもり整体院 トップへ"><span class="logo-crop" role="img" aria-label="おおもり整体院"></span></a>
+        <div class="flex items-center h-full">
+            <a href="https://beauty.hotpepper.jp/kr/slnH000619064/coupon/" target="_blank" rel="noopener"
+               class="mr-3 flex items-center gap-1.5 border border-brand-600 outline outline-1 outline-brand-600 outline-offset-2 text-brand-700 text-sm px-3 py-1.5 hover:bg-brand-50 transition">
+                予約する<i data-lucide="send" class="w-4 h-4"></i>
+            </a>
+            <button type="button" id="menuTrigger" aria-controls="siteNav" aria-expanded="false" aria-label="メニューを開く"
+                    class="relative w-[60px] h-full bg-brand-600 text-white">
+                <span class="absolute left-1/2 top-[15px] -translate-x-1/2 w-[30px] h-[9px]">
+                    <span class="menu-line"></span><span class="menu-line"></span>
+                </span>
+                <span class="absolute inset-x-0 bottom-[10px] text-[11px] leading-none tracking-wide">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- メニュー -->
+    <nav id="siteNav" class="fixed inset-x-0 top-[60px] bottom-0 z-[55] bg-white/90 backdrop-blur-sm overflow-y-auto" aria-label="ページ内メニュー">
+        <ul class="max-w-2xl mx-auto px-6 py-4">
+            <li><a href="#top" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">トップ<span class="nav-arrow"></span></a></li>
+            <li><a href="#worries" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">こんなお悩みありませんか？<span class="nav-arrow"></span></a></li>
+            <li><a href="#approach" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">おおもり整体院の施術<span class="nav-arrow"></span></a></li>
+            <li><a href="#cause" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">継続が大切な理由<span class="nav-arrow"></span></a></li>
+            <li><a href="#reasons" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">当院が選ばれる5つの理由<span class="nav-arrow"></span></a></li>
+            <li><a href="#first-offer" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">初回限定コースのご案内<span class="nav-arrow"></span></a></li>
+            <li><a href="#flow" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">施術の流れ<span class="nav-arrow"></span></a></li>
+            <li><a href="#voice" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">お客様の声<span class="nav-arrow"></span></a></li>
+            <li><a href="#shop" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">店舗情報<span class="nav-arrow"></span></a></li>
+            <li><a href="#faq" class="flex items-center justify-between gap-4 py-4 border-b border-gray-700 text-gray-800">よくある質問<span class="nav-arrow"></span></a></li>
+        </ul>
+    </nav>
+
+    <!-- 01. ファーストビュー -->
+    <section id="top" class="relative overflow-hidden bg-brand-50">
+        <div class="relative max-w-3xl mx-auto px-5 pt-0 pb-10 text-center">
+            <div class="-mx-5 sm:mx-0 sm:rounded-b-2xl overflow-hidden shadow-lg">
+                <!-- バナー風ファーストビュー（文字はすべてHTML/CSS。人物写真のみ画像） -->
+                <div class="fv-banner relative bg-gradient-to-br from-[#f3f5f7] to-[#e6eaee] text-left text-gray-700 font-serif aspect-[608/783]">
+                    <!-- 人物写真（右側） -->
+                    <img src="../img/fv.jpg" width="1206" height="876" alt="おおもり整体院の施術風景。国家資格を持つ施術者が、仰向けの女性の首を丁寧にほぐしている" class="absolute right-0 bottom-0 w-[52%] h-[82%] object-cover object-[45%_50%] [mask-image:linear-gradient(to_right,transparent,#000_30%)]" fetchpriority="high">
+                    <!-- テキスト -->
+                    <div class="fv-halo relative z-10 px-[5cqw] pt-[5cqw]" style="font-size:3.74cqw">
+                        <p class="inline-block mt-[1cqw] pb-[1cqw] border-b-[.4cqw] border-gray-700 font-bold" style="font-size:4.61cqw">大森の国家資格整体院</p>
+                        <div class="mt-[3cqw] flex flex-wrap gap-[1.4cqw] w-[58%] leading-none" style="font-size:2.74cqw">
+                            <span class="fv-tag">肩・首のこり</span><span class="fv-tag">腰の重さ</span><span class="fv-tag">頭の重さ</span><span class="fv-tag">眠りが浅い</span>
+                        </div>
+                        <p class="mt-[4.5cqw] w-fit font-bold border-b-[.4cqw] border-gray-700" style="font-size:5.04cqw">整体<span style="font-size:3.6cqw">の</span></p>
+                        <p class="mt-[2cqw] leading-tight" style="font-size:6.12cqw"><span class="fv-band">身体全体を整え</span></p>
+                        <p class="mt-[2cqw] leading-tight" style="font-size:6.12cqw"><span class="fv-band">疲れにくく</span><span style="font-size:3.6cqw" class="ml-[1cqw]">なる</span></p>
+                        <p class="mt-[3cqw] font-bold leading-tight" style="font-size:6.84cqw"><span class="fv-marker">毎日を軽やかに</span></p>
+                        <p class="mt-[4.5cqw]" style="font-size:3.6cqw">通常8,800円の</p>
+                        <p class="mt-[1.5cqw] leading-tight" style="font-size:4.75cqw"><span class="fv-band">カウンセリング</span> <span style="font-size:3.96cqw">×</span></p>
+                        <p class="mt-[1.5cqw] leading-tight" style="font-size:4.75cqw"><span class="fv-band">オーダーメイド整体</span> <span style="font-size:3.6cqw">が</span></p>
+                        <p class="mt-[3cqw] whitespace-nowrap leading-none"><span class="fv-marker font-bold" style="font-size:9.36cqw">4,400</span><span class="fv-marker font-bold" style="font-size:5.76cqw">円</span><span style="font-size:5.04cqw">で受けられる！</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- 初回限定コース（10/17修正案：参考デザインに合わせる） -->
+            <div class="relative mt-10 bg-white border border-brand-500 px-5 pt-9 pb-6 max-w-md mx-auto shadow-sm">
+                <p class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-cta-500 text-white text-sm font-bold tracking-wider px-8 py-1.5 [clip-path:polygon(0_0,100%_0,calc(100%-12px)_50%,100%_100%,0_100%,12px_50%)]">初回限定キャンペーン</p>
+                <p class="font-bold text-cta-600 tracking-wider">初回限定コース</p>
+                <p class="mt-2 flex items-center justify-center gap-2">
+                    <span class="text-cta-500 line-through decoration-2">通常8,800円</span>
+                    <span class="bg-[#86a24d] text-white text-sm font-black px-2 py-0.5">50%OFF</span>
+                </p>
+                <p class="mt-1 font-bold text-[#6f8b3a]"><span class="text-lg">初回限定</span><span class="text-4xl font-black bg-[linear-gradient(transparent_70%,#fde68a_70%)]">4,400</span><span class="text-xl">円</span><span class="text-sm">（税込）</span></p>
+                <div class="relative mt-6 border-2 border-[#c5d6a2] px-3 pt-6 pb-4">
+                    <p class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white px-3 font-bold text-gray-700">施術内容</p>
+                    <div class="flex flex-wrap justify-center gap-1.5 text-sm">
+                        <span class="bg-[#9cbf5a] text-white px-2.5 py-1">丁寧なカウンセリング</span>
+                        <span class="bg-[#9cbf5a] text-white px-2.5 py-1">あなたにあったオーダーメイド整体</span>
+                        <span class="bg-[#9cbf5a] text-white px-2.5 py-1">施術後のインナーケア</span>
+                    </div>
+                    <p class="mt-3 font-bold text-gray-700">施術時間60分</p>
+                </div>
+                <p class="mt-5 text-sm font-bold text-gray-600">＼ スマホで1分で予約完了 ／</p>
+                <a href="https://beauty.hotpepper.jp/kr/slnH000619064/coupon/" target="_blank" rel="noopener"
+                   class="cta-pulse mt-2 flex items-center justify-center w-full bg-cta-500 hover:bg-cta-600 text-white text-lg font-bold rounded-full py-4 shadow-md transition">
+                    今すぐ予約する
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-7 h-7 rounded-full bg-white text-cta-500"><i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 01-2. 初回限定キャンペーン -->
+    <section class="pt-12 pb-14 px-5">
+        <div class="relative max-w-md mx-auto bg-[#f7f2ea] rounded-2xl px-5 pt-9 pb-7 text-center">
+            <p class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#e8968f] text-white font-bold rounded px-4 py-1">初回限定キャンペーン開催中</p>
+            <p class="flex items-center justify-center gap-1 text-base sm:text-lg font-bold text-gray-700 leading-relaxed">
+                <span class="text-2xl font-light text-gray-500" aria-hidden="true">＼</span>
+                <span class="whitespace-nowrap">気軽に整体をはじめられる<br><span class="bg-[linear-gradient(transparent_60%,#fde68a_60%)]">初回限定の特別価格</span></span>
+                <span class="text-2xl font-light text-gray-500" aria-hidden="true">／</span>
+            </p>
+            <div class="mt-5 bg-white rounded-xl px-4 py-5">
+                <p class="text-gray-500 line-through">通常価格 8,800円</p>
+                <p class="mt-1"><span class="text-5xl font-black text-brand-700 bg-[linear-gradient(transparent_70%,#fde68a_70%)]">4,400<span class="text-3xl">円</span></span><span class="text-sm text-gray-500 ml-1">（税込）</span></p>
+            </div>
+            <div class="relative mt-8 border border-gray-500 rounded-lg px-3 pt-6 pb-4">
+                <p class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-500 text-white text-sm font-bold rounded px-4 py-1">施術内容</p>
+                <div class="grid grid-cols-3 gap-2 text-xs sm:text-sm">
+                    <div>
+                        <img src="../img/v6_counseling.webp" width="663" height="661" alt="カルテを手に、お客様の話を聞く施術者" class="w-full aspect-square object-cover object-[50%_30%] rounded" loading="lazy">
+                        <p class="mt-1.5 leading-snug">丁寧な<br>カウンセリング</p>
+                    </div>
+                    <div>
+                        <img src="../img/v6_treatment.webp" width="663" height="922" alt="オーダーメイド整体の施術の様子" class="w-full aspect-square object-cover object-[50%_20%] rounded" loading="lazy">
+                        <p class="mt-1.5 leading-snug">あなたにあった<br>オーダーメイド整体</p>
+                    </div>
+                    <div>
+                        <img src="../img/v6_innercare_green.webp" width="561" height="646" alt="施術後に青汁を飲む女性" class="w-full aspect-square object-cover object-[50%_40%] rounded" loading="lazy">
+                        <p class="mt-1.5 leading-snug">施術後の<br>インナーケア</p>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-7 text-sm font-bold text-gray-600">＼ スマホで1分で予約完了 ／</p>
+            <a href="https://beauty.hotpepper.jp/kr/slnH000619064/coupon/" target="_blank" rel="noopener"
+               class="cta-pulse relative mt-2 block w-full bg-cta-500 hover:bg-cta-600 text-white text-lg font-bold rounded-full py-4 shadow-md transition">
+                いますぐ予約する<i data-lucide="chevron-right" class="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5"></i>
+            </a>
+            <p class="mt-2 text-xs text-gray-600">大森駅徒歩8分｜平日23時まで営業</p>
+        </div>
+    </section>
+
+    <!-- 02. こんなお悩みありませんか？ -->
+    <section id="worries" class="py-14 px-5">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-center text-brand-800">こんなお悩み、<br class="sm:hidden">ありませんか？</h2>
+            <div class="mt-8 bg-[#9cbf5a] rounded-xl px-5 py-7 space-y-7 text-gray-800">
+                <div class="flex items-center gap-5">
+                    <img src="../img/worry_shoulder.webp" width="899" height="973" alt="肩に手を当て、首・肩のこりに悩む女性" class="w-[44%] shrink-0 aspect-square object-cover" loading="lazy">
+                    <p class="worry-bubble tail-left flex-1 text-sm sm:text-base"><span>デスクワークで</span><span><span class="worry-mark">首や肩</span>がガチガチ</span></p>
+                </div>
+                <div class="flex flex-row-reverse items-center gap-5">
+                    <img src="../img/worry_back.webp" width="1011" height="972" alt="腰に手を当て、腰の重さに悩む女性" class="w-[44%] shrink-0 aspect-square object-cover" loading="lazy">
+                    <p class="worry-bubble tail-right flex-1 text-sm sm:text-base"><span>仕事終わりには</span><span><span class="worry-mark">腰や背中</span>がつらい</span></p>
+                </div>
+                <div class="flex items-center gap-5">
+                    <img src="../img/v6_worry_eyes.webp" width="650" height="603" alt="目をこすり、目や頭の疲れに悩む女性" class="w-[44%] shrink-0 aspect-square object-cover" loading="lazy">
+                    <p class="worry-bubble tail-left flex-1 text-sm sm:text-base"><span>夕方になると</span><span><span class="worry-mark">頭や目</span>までつらい</span></p>
+                </div>
+                <div class="flex flex-row-reverse items-center gap-5">
+                    <img src="../img/worry_morning.webp" width="895" height="972" alt="朝、ベッドの上であくびをする女性" class="w-[44%] shrink-0 aspect-square object-cover" loading="lazy">
+                    <p class="worry-bubble tail-right flex-1 text-sm sm:text-base"><span>しっかり寝たのに</span><span class="worry-mark">疲れが残っている</span></p>
+                </div>
+            </div>
+            <ul class="mt-6 w-fit mx-auto space-y-2 text-sm">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-brand-600 shrink-0"></i>休日に休んでも、月曜日にはまた疲れている</li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-brand-600 shrink-0"></i>最近なんとなく仕事に集中できない</li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-brand-600 shrink-0"></i>「年齢のせい」「疲れているだけ」と諦めかけている</li>
+            </ul>
+            <p class="mt-10 text-center font-bold text-lg text-brand-800">あなたと同じお悩みを抱える方が<br>たくさんいらっしゃいます。</p>
+        </div>
+    </section>
+
+    <!-- 03. お悩みランキング -->
+    <section class="py-14 px-5 bg-brand-50">
+        <div class="max-w-2xl mx-auto text-center">
+            <p class="text-sm text-gray-600">おおもり整体院にご来院された方の</p>
+            <h2 class="mt-1 font-serif text-2xl sm:text-3xl font-bold text-brand-800">お悩みランキング</h2>
+            <div class="mt-8 bg-[#9cbf5a] rounded-xl p-4 sm:p-6">
+                <ol class="bg-[#f4f2e8] rounded-lg px-6 sm:px-10 py-2 text-left divide-y divide-gray-400/60">
+                    <li class="flex items-center gap-6 sm:gap-8 py-3 sm:py-4"><span class="w-12 shrink-0 text-right font-black text-gray-700"><span class="text-3xl">1</span><span class="text-sm ml-0.5">位</span></span><span class="text-2xl sm:text-3xl font-black text-gray-900">首肩こり</span></li>
+                    <li class="flex items-center gap-6 sm:gap-8 py-3 sm:py-4"><span class="w-12 shrink-0 text-right font-black text-gray-700"><span class="text-3xl">2</span><span class="text-sm ml-0.5">位</span></span><span class="text-2xl sm:text-3xl font-black text-gray-900">腰痛</span></li>
+                    <li class="flex items-center gap-6 sm:gap-8 py-3 sm:py-4"><span class="w-12 shrink-0 text-right font-black text-gray-700"><span class="text-3xl">3</span><span class="text-sm ml-0.5">位</span></span><span class="text-2xl sm:text-3xl font-black text-gray-900">頭痛</span></li>
+                    <li class="flex items-center gap-6 sm:gap-8 py-3 sm:py-4"><span class="w-12 shrink-0 text-right font-black text-gray-700"><span class="text-3xl">4</span><span class="text-sm ml-0.5">位</span></span><span class="text-2xl sm:text-3xl font-black text-gray-900">眠り</span></li>
+                    <li class="flex items-center gap-6 sm:gap-8 py-3 sm:py-4"><span class="w-12 shrink-0 text-right font-black text-gray-700"><span class="text-3xl">5</span><span class="text-sm ml-0.5">位</span></span><span class="text-2xl sm:text-3xl font-black text-gray-900">姿勢</span></li>
+                </ol>
+            </div>
+            <div class="mt-10 bg-white rounded-2xl px-6 py-8 shadow-sm">
+                <p class="font-serif text-xl sm:text-2xl font-semibold text-brand-800 leading-relaxed">
+                    これらの不調を放っておくと、<br><span class="text-accent-600">「疲れやすい身体」</span>が<br>当たり前になってしまうかもしれません…。
+                </p>
+                <p class="mt-5 text-sm leading-loose text-gray-700">
+                    「疲れているから仕方ない」で終わらせず、<br class="sm:hidden">早めに身体を整えることが大切です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. おおもり整体院にお任せください -->
+    <section id="approach" class="py-14 px-5 bg-brand-300 text-gray-800">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold leading-relaxed text-brand-800">身体のお悩みの解決は<br>おおもり整体院に<br class="sm:hidden">お任せください。</h2>
+            <video class="mt-8 w-full aspect-video rounded-xl bg-black shadow-lg" controls playsinline preload="metadata"
+                   poster="../video/omori_intro_poster.jpg" aria-label="おおもり整体院の紹介動画">
+                <source src="../video/omori_intro.mp4" type="video/mp4">
+            </video>
+            <p class="mt-8 font-bold">おおもり整体院の施術は</p>
+            <div class="mt-4 grid grid-cols-3 gap-2 text-gray-800">
+                <div class="bg-white rounded-xl p-2">
+                    <img src="../img/v6_counseling.webp" width="663" height="661" alt="カルテを手に、お客様の話を聞きながらカウンセリングをする施術者" class="w-full aspect-square object-cover object-[50%_30%] rounded-xl" loading="lazy">
+                    <p class="mt-2 font-bold text-xs sm:text-sm text-brand-800 leading-snug">丁寧な<br>カウンセリング</p>
+                </div>
+                <div class="bg-white rounded-xl p-2">
+                    <img src="../img/v6_treatment.webp" width="663" height="922" alt="施術者がお客様の身体に手を当て、オーダーメイド整体を行っている様子" class="w-full aspect-square object-cover object-[50%_20%] rounded-xl" loading="lazy">
+                    <p class="mt-2 font-bold text-xs sm:text-sm text-brand-800 leading-snug">あなたにあった<br>オーダーメイド</p>
+                </div>
+                <div class="bg-white rounded-xl p-2">
+                    <img src="../img/v6_innercare_green.webp" width="561" height="646" alt="施術後にお出しする青汁を飲む女性" class="w-full aspect-square object-cover object-[50%_40%] rounded-xl" loading="lazy">
+                    <p class="mt-2 font-bold text-xs sm:text-sm text-brand-800 leading-snug">施術後の<br>インナーケア</p>
+                </div>
+            </div>
+            <p class="mt-6 leading-loose">
+                を組み合わせて、外側から整え、<br class="sm:hidden">内側からもコンディションを支えます。
+            </p>
+            <div class="mt-8 bg-white text-brand-800 rounded-2xl px-6 py-6">
+                <p class="font-serif text-xl sm:text-2xl font-semibold leading-relaxed">
+                    目指すのは、<br>「つらくない」だけではなく<br><span class="text-accent-600">本来の自分らしく動ける身体。</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05. 施術前後の変化 -->
+    <section class="py-14 px-5">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-center text-brand-800">1回の施術前後の変化！</h2>
+            <p class="mt-3 text-center text-sm text-gray-600">おおもり整体院に通うお客様の姿勢の変化</p>
+            <div class="mt-8 space-y-6">
+                <div class="grid grid-cols-2 gap-3">
+                    <div><p class="text-center text-xs font-bold text-gray-500 mb-1">BEFORE</p><img src="../img/v6_posture_before.webp" width="304" height="306" alt="施術前の姿勢を横から撮影した写真。耳の位置が基準線より前に出ている" class="w-full aspect-square object-cover rounded-xl" loading="lazy"></div>
+                    <div><p class="text-center text-xs font-bold text-brand-600 mb-1">AFTER</p><img src="../img/v6_posture_after.webp" width="338" height="321" alt="施術後の姿勢を横から撮影した写真。耳の位置が基準線に近づいている" class="w-full aspect-square object-cover rounded-xl" loading="lazy"></div>
+                </div>
+            </div>
+            <p class="mt-4 text-xs text-gray-500 text-center">※効果には個人差があります。</p>
+            <div class="mt-10 grid sm:grid-cols-2 gap-4">
+                <div class="border border-brand-100 rounded-xl p-5 bg-white shadow-sm">
+                    <i data-lucide="laptop" class="w-8 h-8 text-brand-600"></i>
+                    <p class="mt-3 font-medium leading-relaxed">首・肩まわりが軽くなり、パソコン仕事に集中しやすい身体へ</p>
+                </div>
+                <div class="border border-brand-100 rounded-xl p-5 bg-white shadow-sm">
+                    <i data-lucide="sunset" class="w-8 h-8 text-brand-600"></i>
+                    <p class="mt-3 font-medium leading-relaxed">腰や身体の重さをケアして、仕事終わりにも余裕のある毎日へ</p>
+                </div>
+                <div class="border border-brand-100 rounded-xl p-5 bg-white shadow-sm">
+                    <i data-lucide="scale" class="w-8 h-8 text-brand-600"></i>
+                    <p class="mt-3 font-medium leading-relaxed">身体のバランスを整えて、自然に動きやすい状態へ</p>
+                </div>
+                <div class="border border-brand-100 rounded-xl p-5 bg-white shadow-sm">
+                    <i data-lucide="battery-charging" class="w-8 h-8 text-brand-600"></i>
+                    <p class="mt-3 font-medium leading-relaxed">日々のコンディションを整え、休んだら回復できる身体を目指す</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06. 継続が大切な理由 -->
+    <section id="cause" class="py-14 px-5 bg-brand-50">
+        <div class="max-w-2xl mx-auto">
+            <p class="text-center text-sm font-bold text-brand-600">整体の効果を最大限実感いただくために</p>
+            <h2 class="mt-2 font-serif text-2xl sm:text-3xl font-bold text-center text-brand-800">1回の施術では<br>良い状態が続きにくい理由</h2>
+            <p class="mt-6 leading-loose">
+                施術を受けてその日は楽になっても、数日経つとまた元通り。そんな経験はありませんか？
+                毎日のデスクワーク、立ち仕事、スマホ、運動不足、睡眠、姿勢や身体の使い方など、日常生活の積み重ねによって身体には少しずつ負担がかかります。
+            </p>
+            <div class="mt-8 grid grid-cols-2 gap-3 text-center">
+                <div class="bg-white rounded-xl p-3">
+                    <p class="font-bold text-brand-700">施術後</p>
+                    <img src="../img/v6_after_smile.webp" width="269" height="382" alt="肩が軽くなり、すっきりした表情の女性" class="mt-2 w-full aspect-square object-cover object-top rounded-xl" loading="lazy">
+                    <p class="mt-2 text-sm leading-snug">筋肉の緊張がゆるみ、<br>身体が軽く動きやすい！</p>
+                </div>
+                <div class="bg-white rounded-xl p-3">
+                    <p class="font-bold text-gray-500">数日〜1週間後</p>
+                    <img src="../img/v6_return_pain.webp" width="282" height="382" alt="肩に手を当て、再びつらそうな表情の女性" class="mt-2 w-full aspect-square object-cover object-top rounded-xl" loading="lazy">
+                    <p class="mt-2 text-sm leading-snug">日常の負担で<br>こりや重さが戻ってくる…</p>
+                </div>
+            </div>
+            <div class="mt-10">
+                <div class="bg-white rounded-xl p-5 border border-gray-200">
+                    <p class="text-center font-bold text-gray-500 mb-4">よくあるパターン</p>
+                    <div class="flex flex-col items-center gap-1 text-sm text-center">
+                        <span class="bg-gray-100 rounded px-3 py-1.5 w-full">つらい状態</span>
+                        <i data-lucide="arrow-down" class="w-4 h-4 text-gray-400"></i>
+                        <span class="bg-gray-100 rounded px-3 py-1.5 w-full">整体で身体を整える</span>
+                        <i data-lucide="arrow-down" class="w-4 h-4 text-gray-400"></i>
+                        <span class="bg-gray-100 rounded px-3 py-1.5 w-full">動きやすい状態</span>
+                        <i data-lucide="arrow-down" class="w-4 h-4 text-gray-400"></i>
+                        <span class="bg-gray-100 rounded px-3 py-1.5 w-full">日常生活で再び負担</span>
+                        <i data-lucide="arrow-down" class="w-4 h-4 text-gray-400"></i>
+                        <span class="bg-gray-200 rounded px-3 py-1.5 w-full font-bold">元に戻る…</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 料金比較（3回通った場合） -->
+            <div class="mt-14 text-center">
+                <p class="bg-cta-500 text-white font-bold leading-relaxed px-4 py-4">
+                    しかし、通常価格の<span class="text-white px-0.5 bg-[linear-gradient(transparent_80%,#fcd77f_80%)]">1回8,800円</span>で<br>通い続けるのはハードルがありますよね。
+                </p>
+                <p class="mt-8 font-bold text-gray-700 leading-relaxed">
+                    そこでおおもり整体院では<br><span class="fv-marker">初めての方が3回目までお得に通える</span><br>キャンペーンをご用意しています。
+                </p>
+                <div class="mx-auto mt-6 w-0 h-0 border-x-[90px] border-x-transparent border-t-[34px] border-t-cta-500 relative">
+                    <span class="absolute -top-[30px] left-1/2 -translate-x-1/2 text-white text-sm font-bold whitespace-nowrap">つまり</span>
+                </div>
+                <div class="mt-6 mx-auto max-w-md border-4 border-cta-500 bg-white rounded-2xl px-4 py-5 shadow-md">
+                    <p class="font-bold text-gray-700 text-lg leading-relaxed">
+                        3回通っても<br><span class="fv-marker text-cta-600 text-3xl font-black">合計8,800円おトク</span>に<br>身体を整えられます！
+                    </p>
+                </div>
+
+                <!-- グラフ -->
+                <div class="mt-8 bg-white rounded-xl shadow-sm px-4 sm:px-8 pt-10 pb-6 relative">
+                    <p class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#86a24d] text-white text-sm font-bold px-4 py-1">3回通った場合の金額比較！</p>
+                    <div class="flex items-end justify-center gap-4 sm:gap-10 pr-16 sm:pr-0 h-72 text-white text-xs sm:text-sm font-bold" role="img" aria-label="通常価格で3回通うと合計26,400円、キャンペーンなら1回目4,400円・2回目5,500円・3回目7,700円の合計17,600円で、差額は8,800円です">
+                        <!-- 通常価格 -->
+                        <div class="w-24 sm:w-32 h-full flex flex-col">
+                            <p class="text-gray-700 text-base mb-1">26,400円</p>
+                            <div class="flex-1 flex flex-col gap-0.5">
+                                <div class="flex-1 bg-gray-400 flex flex-col items-center justify-center"><span>3回目</span><span>8,800円</span></div>
+                                <div class="flex-1 bg-gray-400 flex flex-col items-center justify-center"><span>2回目</span><span>8,800円</span></div>
+                                <div class="flex-1 bg-gray-400 flex flex-col items-center justify-center"><span>1回目</span><span>8,800円</span></div>
+                            </div>
+                        </div>
+                        <!-- キャンペーン -->
+                        <div class="relative w-24 sm:w-32 h-full flex flex-col justify-end">
+                            <!-- 差額ブラケット -->
+                            <div class="absolute -right-3 sm:-right-4 top-[1.75rem] h-[calc((100%-1.75rem)/3)] w-3 border-y-2 border-r-2 border-cta-500"></div>
+                            <div class="absolute left-[calc(100%+1rem)] sm:left-[calc(100%+1.25rem)] top-[1.75rem] h-[calc((100%-1.75rem)/3)] flex flex-col justify-center text-left text-cta-600 leading-tight whitespace-nowrap">
+                                <span>差額</span><span class="text-base sm:text-lg">8,800円</span><span>おトク！</span>
+                            </div>
+                            <p class="text-gray-700 text-base mb-1">17,600円</p>
+                            <div class="h-[calc((100%-1.75rem)*2/3)] flex flex-col gap-0.5">
+                                <div class="flex-[7700] bg-[#86a24d] flex flex-col items-center justify-center"><span>3回目</span><span>7,700円</span></div>
+                                <div class="flex-[5500] bg-[#86a24d] flex flex-col items-center justify-center"><span>2回目</span><span>5,500円</span></div>
+                                <div class="flex-[4400] bg-cta-500 flex flex-col items-center justify-center"><span>1回目</span><span>4,400円</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 flex justify-center gap-4 sm:gap-10 pr-16 sm:pr-0 text-sm font-bold text-gray-700">
+                        <p class="w-24 sm:w-32">通常価格</p>
+                        <p class="w-24 sm:w-32 text-cta-600">キャンペーン</p>
+                    </div>
+                    <p class="mt-4 text-xs text-gray-500 text-left sm:text-center">※2回目・3回目の金額は、前回のご来院から2週間以内に次回のご予約をいただいた場合の料金です。</p>
+                </div>
+
+                <!-- まとめ帯 -->
+                <p class="mt-10 bg-[#86a24d] text-white font-bold leading-relaxed px-4 py-5">
+                    おおもり整体院のキャンペーンなら、<br>カウンセリング・オーダーメイド整体・インナーケアが<br><span class="text-lg border-b-2 border-yellow-300">初回4,400円から</span>
+                </p>
+                <div class="mt-6 grid grid-cols-3 gap-2 text-xs sm:text-sm font-bold text-gray-700">
+                    <div><img src="../img/v6_counseling.webp" width="663" height="661" alt="カウンセリングの様子" class="w-full aspect-square object-cover object-[50%_30%]" loading="lazy"><p class="mt-1.5">丁寧な<br>カウンセリング</p></div>
+                    <div><img src="../img/v6_treatment.webp" width="663" height="922" alt="オーダーメイド整体の施術の様子" class="w-full aspect-square object-cover object-[50%_20%]" loading="lazy"><p class="mt-1.5">あなたにあった<br>オーダーメイド整体</p></div>
+                    <div><img src="../img/v6_innercare_green.webp" width="561" height="646" alt="施術後にお出しする青汁を飲む女性" class="w-full aspect-square object-cover object-[50%_40%]" loading="lazy"><p class="mt-1.5">施術後の<br>インナーケア</p></div>
+                </div>
+                <p class="mt-6 font-bold text-gray-700 leading-loose">
+                    カウンセリング、オーダーメイド整体、インナーケアを<br>組み合わせたトータルケアを<br><span class="fv-marker text-cta-600">3回で合計17,600円</span>で<br>受けられるのがおおもり整体院の<br>キャンペーンの魅力です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07. 継続施術で整える -->
+    <section class="py-14 px-5">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-center text-brand-800">継続施術で<br>身体を整える！</h2>
+            <p class="mt-6 text-center leading-loose">
+                「つらくなってから毎回リセットする」だけではなく、<br class="hidden sm:inline"><span class="font-bold text-brand-700">良いコンディションを保ちやすい身体づくり</span>が大切です。
+            </p>
+            <img src="../img/continue_good.webp" width="1027" height="973" alt="身体が整い、元気な笑顔で前を向く女性" class="mt-8 w-full aspect-[4/3] object-cover object-top rounded-xl" loading="lazy">
+            <div class="mt-8 space-y-4">
+                <div class="bg-brand-50 rounded-xl p-5">
+                    <p class="font-bold text-brand-800">① 良い状態が続く期間が長くなる</p>
+                    <p class="mt-2 text-sm leading-relaxed">身体が動きやすい状態を繰り返し経験することで、筋肉や関節がその状態に慣れ、戻りにくくなっていきます。</p>
+                </div>
+                <div class="bg-brand-50 rounded-xl p-5">
+                    <p class="font-bold text-brand-800">② 自分の身体のクセがわかる</p>
+                    <p class="mt-2 text-sm leading-relaxed">通うたびに状態を確認することで、不調が出やすい姿勢や身体の使い方がわかり、日常生活でも気をつけやすくなります。</p>
+                </div>
+                <div class="bg-brand-50 rounded-xl p-5">
+                    <p class="font-bold text-brand-800">③ 不調が出にくい身体へ</p>
+                    <p class="mt-2 text-sm leading-relaxed">施術と日常・インナーケアを組み合わせることで、良い状態が「当たり前」になり、不調に振り回されにくい身体を目指せます。</p>
+                </div>
+            </div>
+            <p class="mt-6 text-sm text-gray-600 text-center">通う頻度は身体の状態や目標によって異なるため、<br class="hidden sm:inline">初回の状態確認後にご案内します。</p>
+        </div>
+    </section>
+
+    <!-- 09. 選ばれる5つの理由 -->
+    <section id="reasons" class="py-14 px-5">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-center text-brand-800">おおもり整体院が<br>選ばれる5つの理由</h2>
+            <div class="mt-8 space-y-8">
+                <div>
+                    <img src="../img/v6_counseling.webp" width="663" height="661" alt="カルテを手に、お客様の話を聞く国家資格を持つ施術者" class="w-full aspect-[16/9] object-cover object-[50%_35%] rounded-xl" loading="lazy">
+                    <p class="mt-4 text-accent-600 font-black text-sm tracking-widest">理由 01</p>
+                    <p class="mt-1 font-bold text-xl text-brand-800">国家資格者による施術</p>
+                    <p class="mt-2 text-sm leading-relaxed">身体の構造を学んだ国家資格者が、身体の状態を確認しながら、一人ひとりに合わせて施術します。</p>
+                </div>
+                <div>
+                    <img src="../img/v6_treatment.webp" width="663" height="922" alt="施術者がお客様の背中に手を当て、身体の状態を確かめながら施術している様子" class="w-full aspect-[16/9] object-cover object-[50%_30%] rounded-xl" loading="lazy">
+                    <p class="mt-4 text-accent-600 font-black text-sm tracking-widest">理由 02</p>
+                    <p class="mt-1 font-bold text-xl text-brand-800">完全オーダーメイドの60分</p>
+                    <p class="mt-2 text-sm leading-relaxed">決まったメニューを全員に行うのではなく、その日の状態や悩みに合わせて内容を組み立てます。</p>
+                </div>
+                <div>
+                    <p class="text-accent-600 font-black text-sm tracking-widest">理由 03</p>
+                    <p class="mt-1 font-bold text-xl text-brand-800">身体全体を見て整える</p>
+                    <p class="mt-2 text-sm leading-relaxed">肩なら肩だけ、腰なら腰だけではなく、姿勢や骨盤など身体全体のバランスを確認します。</p>
+                </div>
+                <div>
+                    <img src="../img/v6_innercare_green.webp" width="561" height="646" alt="施術後に出される青汁を手に、くつろぐ女性" class="w-full aspect-[16/9] object-cover object-[50%_45%] rounded-xl" loading="lazy">
+                    <p class="mt-4 text-accent-600 font-black text-sm tracking-widest">理由 04</p>
+                    <p class="mt-1 font-bold text-xl text-brand-800">施術後、青汁または漢方茶を提供</p>
+                    <p class="mt-2 text-sm leading-relaxed">外側だけではなく内側からも整えることを大切にしています。</p>
+                </div>
+                <div>
+                    <p class="text-accent-600 font-black text-sm tracking-widest">理由 05</p>
+                    <p class="mt-1 font-bold text-xl text-brand-800">良い状態をキープするところまで考える</p>
+                    <p class="mt-2 text-sm leading-relaxed">施術に加え、日常生活やインナーケアも含めた身体づくりをサポートします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. 初回限定コースのご案内 -->
+    <section id="first-offer" class="py-14 px-5 bg-brand-300 text-gray-800">
+        <div class="max-w-2xl mx-auto text-center">
+            <p class="font-bold text-brand-800">ここまで読んで<br>「一度受けてみたい」と思った方へ</p>
+            <p class="mt-4 text-sm leading-loose opacity-90">国家資格者のオーダーメイド整体を<br class="sm:hidden">お得に体験いただける<br>初回限定コースをご用意しました。</p>
+            <!-- 見出しバナー（写真＋縦書きタグ＋ラベル） -->
+            <div class="relative mt-8 -mx-5 sm:mx-0">
+                <img src="../img/v6_firstvisit_profile.webp" width="395" height="308" alt="笑顔で前を向く女性の横顔" class="w-full aspect-[16/9] object-cover object-[50%_30%]" loading="lazy">
+                <p class="absolute top-0 left-4 sm:left-6 bg-[#86a24d] text-white font-serif text-lg sm:text-xl font-semibold tracking-[.3em] px-2 py-3 [writing-mode:vertical-rl]">初めての方へ</p>
+                <h2 class="absolute bottom-0 left-0 bg-white/95 text-[#6f8b3a] font-serif text-xl sm:text-2xl font-bold tracking-wider px-4 py-2">初回限定コースのご案内</h2>
+            </div>
+            <!-- 不安の声 -->
+            <div class="mt-10 mx-auto max-w-md bg-white border border-gray-300 rounded-xl p-4 grid grid-cols-2 gap-x-3 gap-y-6 items-center">
+                <p class="think">整体に行くほどなのか<br>分からない</p>
+                <p class="think think-l">どこへ行っても<br>同じなのでは？</p>
+                <p class="think">自分の症状でも<br>行っていいのかな…</p>
+                <img src="../img/v6_thinking.webp" width="394" height="454" alt="あごに手を当て、考え込む女性" class="w-full aspect-square object-cover object-top rounded-lg" loading="lazy">
+            </div>
+            <p class="mt-6 leading-loose">もし、そんなご不安を感じていたら<br><span class="text-cta-600 font-bold text-lg">初回限定コース</span>をぜひ受けてみてください！</p>
+
+            <!-- 初回限定コース（チケット風） -->
+            <div class="mt-8 -mx-2 sm:mx-0 bg-[#fbeaea] p-3 sm:p-4 text-gray-700">
+                <div class="flex bg-white text-left">
+                    <!-- 左：コース内容 -->
+                    <div class="flex-1 min-w-0 py-4 pr-2">
+                        <p class="inline-block bg-[#86a24d] text-white font-serif font-bold text-lg sm:text-xl tracking-wider pl-3 pr-5 py-1.5">初回限定の体験コース</p>
+                        <div class="mt-4 pl-3 flex items-start gap-1">
+                            <div class="flex-1 flex flex-wrap gap-1.5 font-serif font-semibold text-[#6f8b3a] text-[13px] sm:text-base">
+                                <span class="border-2 border-[#9cbf5a] rounded px-2 py-1">カウンセリング</span>
+                                <span class="border-2 border-[#9cbf5a] rounded px-2 py-1">身体の状態チェック</span>
+                                <span class="border-2 border-[#9cbf5a] rounded px-2 py-1">オーダーメイド整体</span>
+                            </div>
+                            <p class="cloud shrink-0 w-16 sm:w-20 aspect-square flex items-center justify-center text-center text-[11px] sm:text-xs font-serif font-bold text-[#6f8b3a] leading-snug bg-white -rotate-6">全部<br>受けられて</p>
+                        </div>
+                        <p class="mt-3 pl-3 font-serif font-bold text-[#6f8b3a] text-xl sm:text-2xl tracking-wide"><span class="bg-[linear-gradient(transparent_65%,#fcd77f_65%)]">初回限定価格4,400円</span><span class="text-xs font-normal text-gray-600">（税込）</span></p>
+                    </div>
+                    <!-- 切り取り線 -->
+                    <div class="ticket-cut shrink-0 border-l-2 border-dashed border-gray-300"></div>
+                    <!-- 右：所要時間 -->
+                    <div class="shrink-0 flex items-center justify-center px-2 sm:px-4 py-4">
+                        <p class="border-2 border-[#9cbf5a] text-[#6f8b3a] font-serif font-bold text-lg sm:text-xl leading-relaxed text-center px-2 sm:px-4 py-5">所要<br>時間<br>60分</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 bg-white text-gray-800 rounded-2xl px-5 py-8 shadow-lg text-left">
+                <div class="text-center">
+                    <div class="border-2 border-brand-500 rounded-xl px-4 py-5">
+                        <p class="text-gray-500">通常 <span class="line-through">8,800円</span> のところ <span class="inline-block bg-[#86a24d] text-white text-xs font-black px-1.5 py-0.5 no-underline">50%OFF</span></p>
+                        <p class="mt-1"><span class="inline-block bg-accent-500 text-white text-sm font-bold rounded px-2 py-0.5 align-middle">初回限定</span>
+                            <span class="text-4xl font-black text-cta-600 align-middle">4,400<span class="text-xl font-bold">円</span></span><span class="text-sm text-gray-500">（税込）</span></p>
+                        <p class="mt-2 text-sm">でお得に受けていただけます。</p>
+                    </div>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000619064/coupon/" target="_blank" rel="noopener"
+                       class="cta-pulse mt-5 block w-full bg-cta-500 hover:bg-cta-600 text-white text-lg font-bold rounded-full py-4 shadow-md transition">
+                        初回限定コースを予約する
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. 施術の流れ -->
+    <section id="flow" class="py-14 px-5">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-center text-brand-800">施術の流れ</h2>
+            <ol class="mt-8 space-y-8">
+                <li>
+                    <p class="flex items-baseline gap-2 text-brand-600 font-black"><span class="text-xs tracking-widest">STEP</span><span class="text-3xl">1</span><span class="ml-2 text-base sm:text-lg text-brand-800">WEB予約</span></p>
+                    <div class="mt-3 grid grid-cols-[120px_1fr] sm:grid-cols-[180px_1fr] gap-4 items-start">
+                        <img src="../img/v6_step_web_reserve.webp" width="366" height="337" alt="スマートフォンでWEB予約をする女性の手元" class="w-full aspect-[4/3] object-cover rounded-xl" loading="lazy">
+                        <p class="text-sm leading-relaxed">ホットペッパービューティーから24時間ご予約いただけます。スマホで1分ほどで完了します。気になる症状やご要望があれば、要望欄にお気軽にご記入ください。</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="flex items-baseline gap-2 text-brand-600 font-black"><span class="text-xs tracking-widest">STEP</span><span class="text-3xl">2</span><span class="ml-2 text-base sm:text-lg text-brand-800">丁寧なカウンセリング</span></p>
+                    <p class="mt-3 text-sm leading-relaxed bg-brand-50 rounded-xl px-4 py-3">問診票をもとに、いまつらい部分だけでなく、お仕事の内容や生活習慣、睡眠、過去のケガなどもお伺いします。不調の原因を一緒に探るところから始めますので、どんな小さなことでもお話しください。</p>
+                </li>
+                <li>
+                    <p class="flex items-baseline gap-2 text-brand-600 font-black"><span class="text-xs tracking-widest">STEP</span><span class="text-3xl">3</span><span class="ml-2 text-base sm:text-lg text-brand-800">あなたにあったオーダーメイド整体</span></p>
+                    <p class="mt-3 text-sm leading-relaxed bg-brand-50 rounded-xl px-4 py-3">姿勢や身体の動きを確認したうえで、その日の状態に合わせて施術内容を組み立てます。力加減はご希望に合わせて調整しますので、痛みや不安があれば遠慮なくお伝えください。</p>
+                </li>
+                <li>
+                    <p class="flex items-baseline gap-2 text-brand-600 font-black"><span class="text-xs tracking-widest">STEP</span><span class="text-3xl">4</span><span class="ml-2 text-base sm:text-lg text-brand-800">施術後の確認</span></p>
+                    <p class="mt-3 text-sm leading-relaxed bg-brand-50 rounded-xl px-4 py-3">施術前後の姿勢や身体の動きを一緒に確認し、変化を実感していただきます。気になるところが残っていないかもお伺いします。</p>
+                </li>
+                <li>
+                    <p class="flex items-baseline gap-2 text-brand-600 font-black"><span class="text-xs tracking-widest">STEP</span><span class="text-3xl">5</span><span class="ml-2 text-base sm:text-lg text-brand-800">インナーケアと今後のご提案</span></p>
+                    <p class="mt-3 text-sm leading-relaxed bg-brand-50 rounded-xl px-4 py-3">施術後は青汁または漢方茶をお出しし、内側からも整えます。お身体の状態に合わせて、ご自宅でできるセルフケアや日常生活で意識したいこと、次回までの目安をご案内します。</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- 12. お客様の声 -->
+    <section id="voice" class="py-14 px-5 bg-brand-50">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-center text-brand-800">お客様の声</h2>
+            <p class="mt-4 text-center text-sm leading-relaxed">実際に施術を受けられた方の声を<br class="sm:hidden">一部ご紹介します。</p>
+            <!-- 口コミ評価（Googleの数値は要確認：仮の値を赤枠で表示） -->
+            <div class="mt-8 grid grid-cols-3 gap-2 sm:gap-4 max-w-md mx-auto">
+                <div class="laurel"><span class="text-[10px] sm:text-xs font-bold">Google<br>口コミ評価</span><span class="font-black text-lg sm:text-2xl">★<span class="ph-inline">◯.◯</span></span></div>
+                <div class="laurel"><span class="text-[10px] sm:text-xs font-bold">Google<br>口コミ件数</span><span class="font-black text-lg sm:text-2xl"><span class="ph-inline">◯◯</span><span class="text-xs">件</span></span></div>
+                <div class="laurel"><span class="text-[10px] sm:text-xs font-bold">ホットペッパー<br>口コミ評価</span><span class="font-black text-lg sm:text-2xl">★4.93</span><span class="text-[10px]">（118件）</span></div>
+            </div>
+            <p class="mt-2 text-center text-[11px] text-gray-500">※2026年10月17日時点</p>
+            <div class="mt-8 flex items-stretch gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-5 px-5">
+                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-4 shadow-sm flex flex-col">
+                    <img src="../img/review01.webp" width="790" height="1236" alt="Googleの口コミ（星5）：丁寧なヒアリングと全身の施術で、施術後は体がすっきり軽くなったという感想" class="w-full h-auto" loading="lazy">
+                </div>
+                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-4 shadow-sm flex flex-col">
+                    <img src="../img/review02.webp" width="810" height="694" alt="Googleの口コミ（星5）：施術後は体の重さがとれて楽に動くようになり、開かなかった股関節も開くようになったという感想" class="w-full h-auto" loading="lazy">
+                </div>
+                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-4 shadow-sm flex flex-col">
+                    <img src="../img/review03.webp" width="806" height="866" alt="Googleの口コミ（星5）：脚の怪我で来院し、腰や背中も施術してもらい一気に楽になった。23時まで営業で通いやすく、国家資格の先生で安心という感想" class="w-full h-auto" loading="lazy">
+                </div>
+                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
+                    <p class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center">m</span><span><span class="font-bold">mmmさん</span><br><span class="text-xs text-gray-500">30代後半・女性</span></span></p>
+                    <p class="mt-2 text-yellow-500 tracking-wider">★★★★★ <span class="text-xs text-gray-500 tracking-normal">2026年6月・ホットペッパービューティー</span></p>
+                    <p class="mt-1 text-xs text-gray-500">全身オーダーメイド整体60分</p>
+                    <p class="mt-3 leading-relaxed text-gray-700">初めて伺いましたが、とても丁寧に対応していただきました。施術前にしっかり状態を見てくださり、安心して受けることができました。<br><br>施術後は体が軽くなり、気になっていた部分も楽になったように感じます。落ち着いた雰囲気でリラックスして過ごせました。また体のメンテナンスで伺いたいと思います。</p>
+                </div>
+                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
+                    <p class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center">ひ</span><span><span class="font-bold">ひろみんさん</span><br><span class="text-xs text-gray-500">30代後半・女性</span></span></p>
+                    <p class="mt-2 text-yellow-500 tracking-wider">★★★★★ <span class="text-xs text-gray-500 tracking-normal">2025年4月・ホットペッパービューティー</span></p>
+                    <p class="mt-1 text-xs text-gray-500">首肩こり 猫背矯正＆肩甲骨はがし60分</p>
+                    <p class="mt-3 leading-relaxed text-gray-700">肩の特に痛くて悩んでいる箇所やその周辺を丁寧に施術していただいたので、軽くなって頭もスッキリしました。<br><br>漢方茶を初めて飲んだのですが、飲みやすくて美味しかったです。</p>
+                </div>
+                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
+                    <p class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center">み</span><span><span class="font-bold">みつきさん</span><br><span class="text-xs text-gray-500">20代前半・女性</span></span></p>
+                    <p class="mt-2 text-yellow-500 tracking-wider">★★★★★ <span class="text-xs text-gray-500 tracking-normal">2025年7月・ホットペッパービューティー</span></p>
+                    <p class="mt-1 text-xs text-gray-500">オーダーメイド整体（慢性腰痛・猫背矯正）</p>
+                    <p class="mt-3 leading-relaxed text-gray-700">10年前に腰椎分離症を患いそこからずっと色んな整体院に通ってます。<br><br>店内の雰囲気も良く、丁寧な接客、施術と毎日できるトレーニングまで教えていただいてありがたいなと！東京にきてからいい整体院に出会えてなかったのでよかったです！</p>
+                </div>
+            </div>
+            <p class="mt-2 text-center text-xs text-gray-500">← 横にスクロールできます →</p>
+        </div>
+    </section>
+
+    <!-- 13. 店舗情報 -->
+    <section id="shop" class="py-14 px-5">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-center text-brand-800">店舗情報</h2>
+            <div class="mt-8 bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-100">
+                <div class="p-6">
+                    <p class="font-bold text-xl text-brand-800">おおもり整体院</p>
+                    <table class="mt-5 w-full text-sm">
+                        <tbody class="divide-y divide-gray-100">
+                            <tr><th class="py-2.5 pr-4 text-left text-gray-500 font-medium whitespace-nowrap align-top">住所</th><td class="py-2.5">〒140-0013 東京都品川区南大井5-26-14</td></tr>
+                            <tr><th class="py-2.5 pr-4 text-left text-gray-500 font-medium whitespace-nowrap align-top">営業時間</th><td class="py-2.5">月〜金 12:00〜23:00（受付21:45終了）<br>土・日 12:00〜18:00（受付16:45終了）</td></tr>
+                            <tr><th class="py-2.5 pr-4 text-left text-gray-500 font-medium whitespace-nowrap align-top">定休日</th><td class="py-2.5">祝日</td></tr>
+                            <tr><th class="py-2.5 pr-4 text-left text-gray-500 font-medium whitespace-nowrap align-top">電話</th><td class="py-2.5">03-6875-4625</td></tr>
+                            <tr><th class="py-2.5 pr-4 text-left text-gray-500 font-medium whitespace-nowrap align-top">最寄駅</th><td class="py-2.5">京浜東北線 大森駅より徒歩8分</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <iframe class="w-full h-64 border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2962.1821550836007!2d139.73156553723592!3d35.593582638703204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60186108dbe22ec7%3A0xc4bffa2628eefb26!2z44GK44GK44KC44KK5pW05L2T6Zmi!5e0!3m2!1sja!2sjp!4v1674686527906!5m2!1sja!2sjp">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. よくある質問 -->
+    <section id="faq" class="py-14 px-5 bg-brand-50">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-center text-brand-800">よくある質問</h2>
+            <div class="mt-8 space-y-3">
+                <details class="group bg-white rounded-xl">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-bold text-brand-800 list-none">
+                        <span><span class="text-accent-600 mr-1">Q.</span>整体が初めてでも大丈夫ですか？</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="px-5 pb-4 text-sm leading-relaxed">はい。最初に身体のお悩みや状態を確認したうえで施術します。</p>
+                </details>
+                <details class="group bg-white rounded-xl">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-bold text-brand-800 list-none">
+                        <span><span class="text-accent-600 mr-1">Q.</span>痛い施術ですか？</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="px-5 pb-4 text-sm leading-relaxed">身体の状態を確認しながら無理のない範囲で施術します。不安なことがあれば事前にお伝えください。</p>
+                </details>
+                <details class="group bg-white rounded-xl">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-bold text-brand-800 list-none">
+                        <span><span class="text-accent-600 mr-1">Q.</span>仕事帰りでも行けますか？</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="px-5 pb-4 text-sm leading-relaxed">平日は23時まで営業しており、最終受付は21:45です。</p>
+                </details>
+                <details class="group bg-white rounded-xl">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-bold text-brand-800 list-none">
+                        <span><span class="text-accent-600 mr-1">Q.</span>どのくらいの頻度で通えばいいですか？</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="px-5 pb-4 text-sm leading-relaxed">身体の状態や目標によって異なるため、初回の状態確認後にご案内します。</p>
+                </details>
+                <details class="group bg-white rounded-xl">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-bold text-brand-800 list-none">
+                        <span><span class="text-accent-600 mr-1">Q.</span>予約はどうすればいいですか？</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="px-5 pb-4 text-sm leading-relaxed">ページ内の「予約する」ボタンから、ホットペッパービューティーでご予約いただけます。お電話（03-6875-4625）でも承っております。</p>
+                </details>
+                <details class="group bg-white rounded-xl">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-bold text-brand-800 list-none">
+                        <span><span class="text-accent-600 mr-1">Q.</span>服装はどうすれば良いですか？</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="px-5 pb-4 text-sm leading-relaxed">お着替えをご用意しておりますので、お仕事帰りの服装のままでもお気軽にお越しください。</p>
+                </details>
+                <details class="group bg-white rounded-xl">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-bold text-brand-800 list-none">
+                        <span><span class="text-accent-600 mr-1">Q.</span>小さい子供と一緒に行っても大丈夫ですか？</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="px-5 pb-4 text-sm leading-relaxed">お子様連れでのご来院をご希望の場合は、事前にお電話（03-6875-4625）でご相談ください。</p>
+                </details>
+                <details class="group bg-white rounded-xl">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-bold text-brand-800 list-none">
+                        <span><span class="text-accent-600 mr-1">Q.</span>所要時間は？</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="px-5 pb-4 text-sm leading-relaxed">施術時間は60分です。初回は問診票のご記入がありますので、ご予約時間より少し早めにお越しください。施術時間はお身体の状態などにより多少前後する場合がございます。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. 最終CTA -->
+    <section class="pt-14 pb-16 px-5 bg-white">
+        <div class="max-w-md mx-auto">
+            <!-- 見出し帯 -->
+            <div class="relative bg-[#a9c27a] text-white text-center px-4 pt-9 pb-6">
+                <p class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#e8968f] font-bold px-5 py-1.5">初めての方限定！</p>
+                <h2 class="font-bold text-lg sm:text-xl tracking-wider leading-loose">初回限定の60分コースを<br>お得な価格で受けられます！</h2>
+            </div>
+
+            <!-- 写真（リボン・ラベル付き） -->
+            <div class="relative mt-12 mx-4">
+                <p class="absolute -top-8 -left-4 z-10 bg-cta-500 text-white font-serif text-lg sm:text-xl tracking-wider pl-5 pr-10 py-2 [clip-path:polygon(0_0,100%_0,calc(100%-18px)_50%,100%_100%,0_100%)]">初めての方はこちらがお得！</p>
+                <img src="../img/v6_last.webp" width="459" height="443" alt="施術を受けながら、目を閉じてリラックスしている女性" class="w-full aspect-[4/3] object-cover object-[50%_50%]" loading="lazy">
+                <div class="absolute -bottom-6 -left-4 z-10 space-y-2">
+                    <p class="w-fit bg-[#86a24d]/90 text-white font-serif text-base sm:text-lg tracking-wider px-3 py-1.5">整体とカウンセリングが受けられる</p>
+                    <p class="w-fit bg-[#86a24d]/90 text-white font-serif text-base sm:text-lg tracking-wider px-3 py-1.5">お得な初回限定の体験コース</p>
+                </div>
+            </div>
+
+            <!-- 価格 -->
+            <div class="mt-14 px-2 text-gray-700">
+                <p>施術時間60分のコースを</p>
+                <p class="mt-3 text-sm font-bold text-cta-500">通常8,800円のところ <span class="inline-block ml-1 bg-[#86a24d] text-white text-base font-black px-2 py-0.5 align-middle">50%OFF</span></p>
+                <p class="font-bold text-[#86a24d]"><span class="text-xl">初回限定</span><span class="text-3xl tracking-wide">4,400円</span><span class="text-lg">(税込)</span>
+                    <span class="block h-1.5 -mt-1 w-[17rem] max-w-full bg-yellow-300/80"></span></p>
+                <p class="mt-3">でお得に受けていただけます♪</p>
+            </div>
+
+            <!-- 予約ボタン -->
+            <div class="mt-8 text-center">
+                <p class="text-sm font-bold text-cta-500 tracking-wider">＼お得な初回限定コースの予約はこちらから／</p>
+                <a href="https://beauty.hotpepper.jp/kr/slnH000619064/coupon/" target="_blank" rel="noopener"
+                   class="cta-pulse relative mt-3 inline-flex items-center justify-center w-full max-w-xs bg-cta-500 hover:bg-cta-600 text-white font-bold rounded-full py-4 shadow-md transition">
+                    ご予約はコチラから
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-7 h-7 rounded-full bg-white text-cta-500"><i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 text-center text-xs py-6 px-5 pb-24">
+        <img src="../img/logo_seitai_Br.svg" alt="おおもり整体院" class="h-8 mx-auto mb-3 opacity-80">
+        <p>〒140-0013 東京都品川区南大井5-26-14｜TEL 03-6875-4625</p>
+        <p class="mt-2">Copyright©おおもり整体院 All Rights Reserved.</p>
+    </footer>
+
+    <!-- 追従CTA（スマホ） -->
+    <div class="fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 px-4 py-3 sm:hidden">
+        <a href="https://beauty.hotpepper.jp/kr/slnH000619064/coupon/" target="_blank" rel="noopener"
+           class="block w-full bg-cta-500 hover:bg-cta-600 text-white text-center font-bold rounded-full py-3 shadow">
+            初回4,400円で予約する
+        </a>
+    </div>
+
+    <script>lucide.createIcons();</script>
+    <script>
+        (function () {
+            var btn = document.getElementById('menuTrigger');
+            var nav = document.getElementById('siteNav');
+            function setOpen(open) {
+                btn.classList.toggle('is-open', open);
+                nav.classList.toggle('is-open', open);
+                btn.setAttribute('aria-expanded', open);
+                btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+                document.body.style.overflow = open ? 'hidden' : '';
+            }
+            btn.addEventListener('click', function () { setOpen(!nav.classList.contains('is-open')); });
+            nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+        })();
+    </script>
+</body>
+</html>
