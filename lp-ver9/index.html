@@ -119,6 +119,13 @@
         .cloud { border: 2px solid #e8a3a0; border-radius: 52% 48% 55% 45% / 48% 56% 44% 52%; box-shadow: 4px -3px 0 -1px #fff, 4px -3px 0 1px #e8a3a0; }
         .ph-inline { display: inline-block; padding: 0 .1em; border: 1px dashed #d4665f; color: #d4665f; border-radius: 4px; }
         .worry-mark { text-decoration: underline; text-decoration-color: #d4665f; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+        /* 口コミカード：ひろみんさんのカードと同じ高さで切り、「続きを読む」で開く */
+        .rv-body { position: relative; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+        .rv-body::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2.5rem; background: linear-gradient(transparent, #fff); pointer-events: none; }
+        .rv-more { margin-top: .25rem; text-align: left; font-size: 12px; font-weight: 700; color: #c27f88; }
+        .rv-card.is-open { height: auto !important; }
+        .rv-card.is-open .rv-body { overflow: visible; }
+        .rv-card.is-open .rv-body::after, .rv-card.fits .rv-body::after, .rv-card.fits .rv-more { display: none; }
     </style>
 </head>
 <body class="bg-white text-gray-800 leading-relaxed pt-[60px]">
@@ -578,34 +585,43 @@
                 <div class="laurel"><span class="text-[10px] sm:text-xs font-bold">ホットペッパー<br>口コミ評価</span><span class="font-black text-lg sm:text-2xl">★4.9</span></div>
             </div>
             <p class="mt-2 text-center text-[11px] text-gray-500">※2026年10月29日時点</p>
-            <!-- 口コミカードは、ひろみんさんのカードの縦の長さに揃え、長いものは折りたたむ（10/31修正案） -->
+            <!-- 口コミカードは、ひろみんさんのカード（data-rv-ref）の縦の長さに揃え、はみ出す分は「続きを読む」で開く（10/31修正案）。高さは下のスクリプトで合わせる -->
             <div class="mt-8 flex items-start gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-5 px-5">
-                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
-                    <p class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center">み</span><span><span class="font-bold">みつきさん</span><br><span class="text-xs text-gray-500">20代前半・女性</span></span></p>
-                    <p class="mt-2 text-yellow-500 tracking-wider">★★★★★ <span class="text-xs text-gray-500 tracking-normal">2025年7月・ホットペッパービューティー</span></p>
-                    <p class="mt-1 text-xs text-gray-500">オーダーメイド整体（慢性腰痛・猫背矯正）</p>
-                    <details class="group mt-3"><summary class="list-none cursor-pointer [&::-webkit-details-marker]:hidden"><span class="block leading-relaxed text-gray-700 line-clamp-3 group-open:line-clamp-none">10年前に腰椎分離症を患いそこからずっと色んな整体院に通ってます。<br><br>店内の雰囲気も良く、丁寧な接客、施術と毎日できるトレーニングまで教えていただいてありがたいなと！東京にきてからいい整体院に出会えてなかったのでよかったです！</span><span class="mt-1 block text-xs font-bold text-brand-600 group-open:hidden">続きを読む ▼</span></summary></details>
+                <div class="rv-card snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
+                    <div class="rv-body">
+                        <p class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center">み</span><span><span class="font-bold">みつきさん</span><br><span class="text-xs text-gray-500">20代前半・女性</span></span></p>
+                        <p class="mt-2 text-yellow-500 tracking-wider">★★★★★ <span class="text-xs text-gray-500 tracking-normal">2025年7月・ホットペッパービューティー</span></p>
+                        <p class="mt-1 text-xs text-gray-500">オーダーメイド整体（慢性腰痛・猫背矯正）</p>
+                        <p class="mt-3 leading-relaxed text-gray-700">10年前に腰椎分離症を患いそこからずっと色んな整体院に通ってます。<br><br>店内の雰囲気も良く、丁寧な接客、施術と毎日できるトレーニングまで教えていただいてありがたいなと！東京にきてからいい整体院に出会えてなかったのでよかったです！</p>
+                    </div>
+                    <button type="button" class="rv-more">続きを読む ▼</button>
                 </div>
-                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
+                <div data-rv-ref class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
                     <p class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center">ひ</span><span><span class="font-bold">ひろみんさん</span><br><span class="text-xs text-gray-500">30代後半・女性</span></span></p>
                     <p class="mt-2 text-yellow-500 tracking-wider">★★★★★ <span class="text-xs text-gray-500 tracking-normal">2025年4月・ホットペッパービューティー</span></p>
                     <p class="mt-1 text-xs text-gray-500">首肩こり 猫背矯正＆肩甲骨はがし60分</p>
-                    <details class="group mt-3"><summary class="list-none cursor-pointer [&::-webkit-details-marker]:hidden"><span class="block leading-relaxed text-gray-700 line-clamp-3 group-open:line-clamp-none">肩の特に痛くて悩んでいる箇所やその周辺を丁寧に施術していただいたので、軽くなって頭もスッキリしました。<br><br>漢方茶を初めて飲んだのですが、飲みやすくて美味しかったです。</span><span class="mt-1 block text-xs font-bold text-brand-600 group-open:hidden">続きを読む ▼</span></summary></details>
+                    <p class="mt-3 leading-relaxed text-gray-700">肩の特に痛くて悩んでいる箇所やその周辺を丁寧に施術していただいたので、軽くなって頭もスッキリしました。<br><br>漢方茶を初めて飲んだのですが、飲みやすくて美味しかったです。</p>
                 </div>
-                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-4 shadow-sm flex flex-col text-sm">
-                    <details class="group"><summary class="list-none cursor-pointer [&::-webkit-details-marker]:hidden"><span class="block max-h-[170px] overflow-hidden group-open:max-h-none"><img src="../img/review01.webp" width="790" height="1236" alt="Googleの口コミ（星5）：丁寧なヒアリングと全身の施術で、施術後は体がすっきり軽くなったという感想" class="w-full h-auto" loading="lazy"></span><span class="mt-1 block text-xs font-bold text-brand-600 group-open:hidden">続きを読む ▼</span></summary></details>
+                <div class="rv-card snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
+                    <div class="rv-body"><img src="../img/review01.webp" width="790" height="1236" alt="Googleの口コミ（星5）：丁寧なヒアリングと全身の施術で、施術後は体がすっきり軽くなったという感想" class="w-full h-auto" loading="lazy"></div>
+                    <button type="button" class="rv-more">続きを読む ▼</button>
                 </div>
-                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-4 shadow-sm flex flex-col text-sm">
-                    <details class="group"><summary class="list-none cursor-pointer [&::-webkit-details-marker]:hidden"><span class="block max-h-[170px] overflow-hidden group-open:max-h-none"><img src="../img/review02.webp" width="810" height="694" alt="Googleの口コミ（星5）：施術後は体の重さがとれて楽に動くようになり、開かなかった股関節も開くようになったという感想" class="w-full h-auto" loading="lazy"></span><span class="mt-1 block text-xs font-bold text-brand-600 group-open:hidden">続きを読む ▼</span></summary></details>
+                <div class="rv-card snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
+                    <div class="rv-body"><img src="../img/review02.webp" width="810" height="694" alt="Googleの口コミ（星5）：施術後は体の重さがとれて楽に動くようになり、開かなかった股関節も開くようになったという感想" class="w-full h-auto" loading="lazy"></div>
+                    <button type="button" class="rv-more">続きを読む ▼</button>
                 </div>
-                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-4 shadow-sm flex flex-col text-sm">
-                    <details class="group"><summary class="list-none cursor-pointer [&::-webkit-details-marker]:hidden"><span class="block max-h-[170px] overflow-hidden group-open:max-h-none"><img src="../img/review03.webp" width="806" height="866" alt="Googleの口コミ（星5）：脚の怪我で来院し、腰や背中も施術してもらい一気に楽になった。23時まで営業で通いやすく、国家資格の先生で安心という感想" class="w-full h-auto" loading="lazy"></span><span class="mt-1 block text-xs font-bold text-brand-600 group-open:hidden">続きを読む ▼</span></summary></details>
+                <div class="rv-card snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
+                    <div class="rv-body"><img src="../img/review03.webp" width="806" height="866" alt="Googleの口コミ（星5）：脚の怪我で来院し、腰や背中も施術してもらい一気に楽になった。23時まで営業で通いやすく、国家資格の先生で安心という感想" class="w-full h-auto" loading="lazy"></div>
+                    <button type="button" class="rv-more">続きを読む ▼</button>
                 </div>
-                <div class="snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
-                    <p class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center">m</span><span><span class="font-bold">mmmさん</span><br><span class="text-xs text-gray-500">30代後半・女性</span></span></p>
-                    <p class="mt-2 text-yellow-500 tracking-wider">★★★★★ <span class="text-xs text-gray-500 tracking-normal">2026年6月・ホットペッパービューティー</span></p>
-                    <p class="mt-1 text-xs text-gray-500">全身オーダーメイド整体60分</p>
-                    <details class="group mt-3"><summary class="list-none cursor-pointer [&::-webkit-details-marker]:hidden"><span class="block leading-relaxed text-gray-700 line-clamp-3 group-open:line-clamp-none">初めて伺いましたが、とても丁寧に対応していただきました。施術前にしっかり状態を見てくださり、安心して受けることができました。<br><br>施術後は体が軽くなり、気になっていた部分も楽になったように感じます。落ち着いた雰囲気でリラックスして過ごせました。また体のメンテナンスで伺いたいと思います。</span><span class="mt-1 block text-xs font-bold text-brand-600 group-open:hidden">続きを読む ▼</span></summary></details>
+                <div class="rv-card snap-center shrink-0 w-[85%] sm:w-[60%] bg-white rounded-xl p-5 shadow-sm flex flex-col text-sm">
+                    <div class="rv-body">
+                        <p class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center">m</span><span><span class="font-bold">mmmさん</span><br><span class="text-xs text-gray-500">30代後半・女性</span></span></p>
+                        <p class="mt-2 text-yellow-500 tracking-wider">★★★★★ <span class="text-xs text-gray-500 tracking-normal">2026年6月・ホットペッパービューティー</span></p>
+                        <p class="mt-1 text-xs text-gray-500">全身オーダーメイド整体60分</p>
+                        <p class="mt-3 leading-relaxed text-gray-700">初めて伺いましたが、とても丁寧に対応していただきました。施術前にしっかり状態を見てくださり、安心して受けることができました。<br><br>施術後は体が軽くなり、気になっていた部分も楽になったように感じます。落ち着いた雰囲気でリラックスして過ごせました。また体のメンテナンスで伺いたいと思います。</p>
+                    </div>
+                    <button type="button" class="rv-more">続きを読む ▼</button>
                 </div>
             </div>
             <p class="mt-2 text-center text-xs text-gray-500">← 横にスクロールできます →</p>
@@ -779,6 +795,36 @@
             btn.addEventListener('click', function () { setOpen(!nav.classList.contains('is-open')); });
             nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
             document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+        })();
+    </script>
+    <script>
+        /* 口コミカードの高さを、ひろみんさんのカード（閉じた状態）に揃える */
+        (function () {
+            var ref = document.querySelector('[data-rv-ref]');
+            if (!ref) return;
+            var refDetails = ref.querySelector('details');
+            var cards = document.querySelectorAll('.rv-card');
+            var refH = 0;
+            function sync() {
+                if (!refDetails || !refDetails.open) refH = ref.offsetHeight;
+                cards.forEach(function (c) {
+                    if (c.classList.contains('is-open')) return;
+                    c.style.height = refH + 'px';
+                    var body = c.querySelector('.rv-body');
+                    c.classList.toggle('fits', body.scrollHeight <= body.clientHeight + 1);
+                });
+            }
+            cards.forEach(function (c) {
+                c.querySelector('.rv-more').addEventListener('click', function () {
+                    var open = c.classList.toggle('is-open');
+                    this.textContent = open ? '閉じる ▲' : '続きを読む ▼';
+                    if (!open) sync();
+                });
+            });
+            window.addEventListener('load', sync);
+            window.addEventListener('resize', sync);
+            if (document.fonts) document.fonts.ready.then(sync);
+            sync();
         })();
     </script>
 </body>
